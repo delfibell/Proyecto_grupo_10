@@ -32,7 +32,7 @@ INTEGRANTES DEL EQUIPO 🚀
  
 🔥 Delfina Bellagio (Scrum Master): Tengo 32 años. Vivo en provincia de BsAs. Soy docente en un colegio y conocí DH monitoreando clases de mis alumnos en pandemia, me encanta la forma de trabajo de aula invertida y lo didáctico que es trabajar con Playground. Tengo poquita experiencia en programación pero convivo con un Ing en Sistemas. En mi tiempo libre me gusta hacer deportes al aire libre!
 
-🔥 David Castellar (Responsable de Backend): 
+🔥 David Castellar (Responsable de Backend): Tengo 28 años y vivo en la ciudad de Bogotá, Colombia. Soy estudiante de ingeniería mecatrónica y al mismo tiempo trabajo como desarrollador backend con el lenguaje JavaScript (Node.Js). Aprendí a programar desde que ingresé a la universidad, haciendo pequeños programas que me asignaban en las clases. No fue hasta el año pasado (2021) que ingresé a un bootcamp y pude aprender a programar de manera profesional. 
 
 🔥 Koichi Kairiyama (Responsable de Frontend): Tengo 25 años y vivo en CABA. Estoy terminando mi grado en Gestión cultural, trabajo en una productora de contenido audiovisual y en un museo realizando trabajos de recuperación y conservación de fondos documentales. Hace un tiempo que me viene interesando la programación y el diseño web, sobre todo de cara a mejorar la experiencia de los usuarios y los públicos con las instituciones. En mi tiempo libre me gusta  leer, cocinar y salir a andar en bici. 
 
