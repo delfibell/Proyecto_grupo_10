@@ -28,7 +28,7 @@ El público objetivo para la venta minorista son personas de entre 18 y 99 años
 
 INTEGRANTES DEL EQUIPO 🚀
 
-🔥 Fermin Gutierrez (Líder de Proyecto): Tengo 28 años y actualmente vivo en Tandil. Soy ingeniero industrial y me queda una tesis para ser magister en informática en salud. Actualmente trabajo en un sanatorio privado y una de mis tareas es ser el intermediario entre la institución y una empresa de sistemas que esta armando la historia clínica digital del lugar. 
+🔥 Fermin Gutierrez (Líder de Proyecto): Tengo 28 años y actualmente vivo en Tandil. Soy ingeniero industrial y estoy proximo a ser magister en informática en salud. Actualmente trabajo en un sanatorio privado y una de mis tareas es ser el intermediario entre la institución y una empresa de sistemas encargada del armado de la historia clínica digital. Tengo un emprendimiento de cerveza artesanal junto con 2 amigos y en mis tiempos libres me gusta hacer deporte, escuchar musica y ver peliculas.
  
 🔥 Delfina Bellagio (Scrum Master): Tengo 32 años. Vivo en provincia de BsAs. Soy docente en un colegio y conocí DH monitoreando clases de mis alumnos en pandemia, me encanta la forma de trabajo de aula invertida y lo didáctico que es trabajar con Playground. Tengo poquita experiencia en programación pero convivo con un Ing en Sistemas. En mi tiempo libre me gusta hacer deportes al aire libre!
 
