@@ -37,3 +37,11 @@ INTEGRANTES DEL EQUIPO 🚀
 🔥 Koichi Kairiyama (Responsable de Frontend): Tengo 25 años y vivo en CABA. Estoy terminando mi grado en Gestión cultural, trabajo en una productora de contenido audiovisual y en un museo realizando trabajos de recuperación y conservación de fondos documentales. Hace un tiempo que me viene interesando la programación y el diseño web, sobre todo de cara a mejorar la experiencia de los usuarios y los públicos con las instituciones. En mi tiempo libre me gusta  leer, cocinar y salir a andar en bici. 
 
 🔥 Julieta Bertolini (Responsable de bases de datos): Tengo 28 años y vivo en el Oeste del GBA. Soy politóloga y docente, y me especialicé en temas de género y sustentabilidad, trabajando fundamentalmente en ONGs. En los últimos años profundicé en la importancia de la tecnología para el desarrollo de estas temáticas, y así descubrí el mundo de la programación. En mi tiempo libre me gusta entrenar, escalar, salir a comer y escuchar buena música. Amo viajar y estar en la naturaleza...siempre estoy buscando la forma de escaparme al sur.
+
+INSPIRACIÓN 💭
+
+1. https://dribbble.com/shots/17128314-Genies-The-Warehouse: paleta de colores
+2. https://www.templatemonsterpreview.com/es/demo/57718.html?_gl=1*1nmdryq*_ga*OTk3NTY5MDQxLjE2NjI0MjA5OTI.*_ga_FTPYEGT5LY*MTY2MjUwNTM4Mi41LjEuMTY2MjUwNTQxOS4yMy4wLjA.&_ga=2.89489682.826563840.1662420992-997569041.1662420992 
+3. https://www.autofurnish.com/
+4. https://www.chemicalguys.com/
+5. https://www.templatemonsterpreview.com/es/demo/53987.html?_gl=1*5uspey*_ga*MTUwNDYzNC4xNjYyNzU4MTA2*_ga_FTPYEGT5LY*MTY2Mjc1ODEwNi4xLjAuMTY2Mjc1ODEwNy41OS4wLjA.&_ga=2.39023139.1053579624.1662758106-1504634.1662758106 
