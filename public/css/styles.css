@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0; 
+}
+
+header {
+    
+    background-color: black;
+    width: 100vw; 
+    height: 20vh;
+    display: flex;
+}
+
+/* alineación de iconos */
+
+.burger {
+    text-align: left;
+    color: white;
+    font-size: 30px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    color: white;
+    
+}
+
+.lupa {
+   
+    color: white;
+    font-size: 30px;
+}
+
+.carrito {
+   
+    color: white;
+    font-size: 30px;
+}
+
+
