@@ -1,0 +1,22 @@
+{
+  "name": "proyecto_grupo_10",
+  "version": "1.0.0",
+  "description": "Proyecto Grupo 10 - OFT - Digital House",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delfibell/Proyecto_grupo_10.git"
+  },
+  "author": "Julieta Bertolini, Delfina Bellagio, Koichi Kairiyama, Fermin Gutierrez, David Castellar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delfibell/Proyecto_grupo_10/issues"
+  },
+  "homepage": "https://github.com/delfibell/Proyecto_grupo_10#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
