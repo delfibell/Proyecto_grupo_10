@@ -4,39 +4,246 @@
     padding: 0; 
 }
 
-header {
-    
-    background-color: black;
-    width: 100vw; 
-    height: 20vh;
-    display: flex;
+html body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Teko', sans-serif;
 }
 
-/* alineación de iconos */
+/*          Manera alternativa de hacer el header que dejo por las dudas   
+header {
+    background-color: rgb(255, 0, 0);
+    width: 100vw; 
+    height: 20vh;  
+}
+
+.contenedor-logo, .menu{
+    margin:auto;
+	text-align:center;
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around; 
+}
+
+.logo {
+    height: 6em;
+}
+
+.lupa {
+    padding-left: 2em;
+}
+
+*/
+
+
+header {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 30vh; 
+}
+
+
+.headerSection1 {
+    box-sizing: border-box;
+    display: flex; 
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: black;
+    width: 100vw;
+    height: 80%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.headerSection1 p {
+    font-size: 24px;
+}
+
+.contenedorFavoritos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contenedorFavoritos #corazon {
+    padding-right: 15px;
+}
+
+
+.contenedorMiGarage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.contenedorMiGarage #auto {
+    padding-right: 15px;
+}
+
+
+.contenedorFavoritos, .contenedorMiGarage, a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
 
 .burger {
-    text-align: left;
+    
     color: white;
     font-size: 30px;
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
-    color: white;
     
+    height: 100%;
+    width: auto;
+    display: flex;
+    
+
 }
 
 .lupa {
-   
+
     color: white;
     font-size: 30px;
 }
 
 .carrito {
-   
+
     color: white;
-    font-size: 30px;
+    font-size: 2em;
 }
+
+.wrapper {
+    width:200px;
+    justify-content: center;
+}
+
+.searchBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#searchQueryInput {
+    width: 100%;
+    height: 2rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 1.625rem;
+    padding: 0 0.5rem 0 1.5rem;
+    font-size: 1em;
+    font-style: normal;
+    font-family: 'Teko', sans-serif;
+}
+
+#searchQuerySubmit {
+    width: -7rem;
+    height: 2.8rem;
+    margin-left: -3rem;
+    background: none;
+    border: none;
+    outline: none; 
+}
+
+#searchQuerySubmit:hover {
+    cursor: pointer;
+}
+
+.headerSection2 {
+    border-top: 1px solid  white;
+    box-sizing: border-box;
+    background-color: rgb(2, 26, 19);
+    height:20%;
+    font-size: 22px;
+}
+
+.navegador{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1em;
+        
+}
+
+
+
+
+
+/* MEDIA QUERYS del header. No mover / Siempre hacer los media queries despues de la parte que se codeo */ 
+
+@media only screen and (min-width: 600px) {
+
+    .burger{
+        display: none;
+    }
+
+    .lupa{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .contenedorFavoritos {
+        display: none;
+    }
+
+    .contenedorMiGarage {
+        display: none;
+    }
+
+    .wrapper {
+        display: none;
+    }
+    .burger{
+        font-size: 40px;
+    }
+
+    .lupa{
+        font-size: 40px;
+    }
+    .carrito{
+        font-size: 40px;
+    }
+}
+
+/*      /////////////////main/////////////       */
+main {
+    height: 40vh;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+footer {
+    height: 30vh ;
+    background-color: black;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
