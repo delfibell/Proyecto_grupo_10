@@ -49,19 +49,19 @@ header {
 .headerSection1 {
     box-sizing: border-box;
     display: flex; 
-    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
+    flex-wrap: nowrap;
     background-color: black;
     width: 100vw;
-    height: 80%;
+    height: 70%;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 .headerSection1 p {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .contenedorFavoritos {
@@ -79,7 +79,8 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+    float: left;
+    padding-right: 6em;
 }
 
 .contenedorMiGarage #auto {
@@ -116,12 +117,16 @@ header {
 .carrito {
 
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
+    padding-left: 1em;
+    padding-top: 8px;
 }
 
 .wrapper {
-    width:200px;
+    width:300px;
     justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .searchBar {
@@ -129,6 +134,8 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-items: center;
+    justify-items: center;
 }
 
 #searchQueryInput {
@@ -175,6 +182,10 @@ header {
         
 }
 
+.padreNav{
+    display: flex;
+    
+}
 
 
 
@@ -214,6 +225,13 @@ header {
     .carrito{
         font-size: 40px;
     }
+    .headerSection2 {
+        display: none;
+    }
+    .logo{
+        padding: 0;
+    }
+    
 }
 
 /*      /////////////////main/////////////       */
