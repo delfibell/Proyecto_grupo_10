@@ -9,15 +9,51 @@
   html body {
     width: 100vw;
     height: 100vh;
+}
+
+main .container{
+    height: fit-content;
+    display: flex;
+    background-color: rgba(122, 122, 122, 0.143);
+    justify-content: center;
+    /* align-items: center; */
+    padding: 2em;
+    flex-wrap: wrap;
+    width: 100vw;
+    
+}
+
+.right {
+    background-color: #ffffff;
+    width: 600px;
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.095);
+    border: 1px solid black; 
+    height: 500px; 
+    margin-right: 10px;
+}
+
+.left{
+    width: 400px;
+    /* height: 50%; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    background: url('/img/IMG_0609.jpeg');
+    background-size: cover;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.102);
+
+} 
+
+@media (max-width: 1067px) {
+    .left {
+        margin-top: 10px;
+    }
   }
-  
-  main {
-    height: 80vh;
-  }
-  
-  /*---------------HEADER----------------------------------------------------*/
-  
-  header {
+
+header {
     height: fit-content;
     background-color: black;
     display: flex;
@@ -27,9 +63,9 @@
     text-decoration: none;
     padding-top: 10px;
     
-  }
-  
-  header .headerSection1 {
+}
+
+header .headerSection1 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -38,26 +74,27 @@
     flex-wrap: wrap;
     font-size: 1em; 
     padding-bottom:2px;
-  }
-  
-  #burguer {
+}
+
+#burguer {
     display: none;
-  }
-  
-  header a {
+}
+
+header a {
     font-size: 1.5em;
     color: white;
     text-decoration: none;
     font-family: "Teko", sans-serif;
-  }
-  
-  .headerSection1 a:hover {
+}
+
+.headerSection1 a:hover {
     color: #87ff74;
   }
   
   #auto,
   #corazon {
     padding-right: 15px;
+    
 
   }
   
@@ -231,7 +268,6 @@
     padding-top: 1em;
     padding-bottom: 1em;
     width: 95%;
-    
   }
   
   .newsletter .contenedorNews1,
@@ -242,6 +278,7 @@
   .contenedorNews2 {
     display: flex;
     flex-direction: column;
+  
     align-items: flex-start;
   }
   
@@ -295,6 +332,7 @@
     width: 200px;
     font-family: "Teko", sans-serif;
     background-color: #87ff74;
+    
   }
   
   .newsletter .contenedorNews1 p {
