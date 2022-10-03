@@ -36,7 +36,6 @@
     align-items: center;
     width: 100vw;
     flex-wrap: wrap;
-    font-size: 1em; 
     padding-bottom:2px;
   }
   
@@ -45,7 +44,7 @@
   }
   
   header a {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: white;
     text-decoration: none;
     font-family: "Teko", sans-serif;
@@ -62,7 +61,7 @@
   }
   
   #logo {
-    width: 5em;
+    width: 5.5em;
     transition: 0.5s;
     margin-right: 120px;
     margin-left: 160px;
@@ -103,7 +102,7 @@
   }
 
   .carrito {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 
   

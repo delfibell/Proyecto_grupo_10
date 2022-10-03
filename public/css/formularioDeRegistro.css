@@ -11,47 +11,13 @@
     height: 100vh;
 }
 
-main .container{
-    height: fit-content;
-    display: flex;
-    background-color: rgba(122, 122, 122, 0.143);
-    justify-content: center;
-    /* align-items: center; */
-    padding: 2em;
-    flex-wrap: wrap;
-    width: 100vw;
-    
-}
 
-.right {
-    background-color: #ffffff;
-    width: 600px;
-    flex-direction: row;
-    border-radius: 20px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.095);
-    border: 1px solid black; 
-    height: 500px; 
-    margin-right: 10px;
-}
 
-.left{
-    width: 400px;
-    /* height: 50%; */
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    background: url('/img/IMG_0609.jpeg');
-    background-size: cover;
-    height: 500px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.102);
 
-} 
 
-@media (max-width: 1067px) {
-    .left {
-        margin-top: 10px;
-    }
-  }
+
+
+
 
 header {
     height: fit-content;
@@ -103,14 +69,17 @@ header a {
     transition: 0.5s;
     margin-right: 120px;
     margin-left: 160px;
-    
+    animation: fadeIn 1s ease-in both;
+    animation-delay: 1s;
   }
+
   
   #logo:hover {
     transform: rotate(360deg);
-    transition: 2s;
+    transition: 1s;
   }
   
+
   header input {
     padding-left: 15px;
     padding-top: 5px;
@@ -152,8 +121,7 @@ header a {
       rgb(173, 173, 255),
       #d8ffd2,
       rgb(203, 203, 255)
-    );
-    height: 30%;
+    ); 
     font-size: 1em;
     padding-left:20px ;
   }
@@ -166,7 +134,7 @@ header a {
   }
   
   .navegador {
-    height: 3em;
+    height: 2em;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
@@ -178,8 +146,123 @@ header a {
   /*  --------------main--------------------------------------------*/
   
   main {
-    color: rgb(0, 0, 0);
+    margin: 0;
+    box-sizing: border-box;
+    height: fit-content;
+    
+    
   }
+
+  main .container{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 2em;
+    width: 100vw;
+    
+    backdrop-filter: blur(1px);
+    background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
+    background-position: center;
+    background-size: contain;
+}
+
+.crearCuentaForm {
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.412);
+    height: 500px; 
+    margin-right: 10px;
+    padding: 40px;
+    height: fit-content;
+    
+}
+
+.left{
+    width: 480px;
+    /* height: 50%; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    background: url('/img/image.jpg');
+    background-size: cover;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.102);
+    
+
+} 
+
+@media (max-width: 1067px) {
+    .left {
+        margin-top: 10px;
+    }
+  }
+
+  .crearCuentaForm .login {
+    font-family: "Teko", sans-serif;
+    font-size: 3em;
+    color: black;
+    background-color: #ffffff;
+    flex-direction: column;
+  } 
+
+  .crearCuentaForm form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    font-family: "Teko", sans-serif;
+    margin-top: 20px;
+    
+  }
+
+  .crearCuentaForm form label {
+    margin-bottom: 8px;
+  }
+
+  .crearCuentaForm form input {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 0.8em;
+    font-family: "Barlow Condensed", sans-serif;
+  }
+
+  .crearCuentaForm form button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 1em;
+    height: fit-content;
+    font-family: "Teko", sans-serif;
+    background-color: #87ff74;
+    align-items: flex-start;
+    margin-top: 15px;
+    box-shadow: 2px 2px 2px 2px rgba(53, 53, 53, 0.102);
+  }
+
+  button:hover { 
+    opacity: 0.8;
+}
+
+.crearCuentaForm form .CuentaOK {
+  
+  font-size: 0.7em;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  
+}
+  
+.crearCuentaForm form p {
+  margin-top: 10px;
+  font-size: 0.8em;
+  
+}
   
   /*  --------------FOOTER--------------------------------------------*/
   
@@ -230,12 +313,13 @@ header a {
     font-size: 2.2em;
     padding-top: 1em;
     padding-bottom: 1em;
-    width: 60%;
+    width: 90%;
     border-bottom: 1px solid white;
+    margin-bottom: 1em;
   }
   
   footer .social_media_icons i {
-    padding: 20px;
+    padding-left: 40px;
   }
   
   footer .copyright {
