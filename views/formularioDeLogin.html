@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../public/css/formularioDeRegistro.css"> 
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Teko:wght@300;400&display=swap');
@@ -31,7 +32,7 @@
             </a>
             <div>
                 <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="¿Qué estás buscando?" value=""/>
-            <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+               <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
             </div>
             <div class="carrito">
                 <a href=""><i class="fa-solid fa-cart-shopping"></i></a>    
@@ -52,25 +53,21 @@
     <main>
        
         <div class="container">
-           <div class="crearCuentaForm">
-                <div class="login">
-                    <p>CREAR UNA CUENTA</p>
+           <div class="right">
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Ingresar usuario" name="usuario" required>    
+                    <input class="form-control" type="contraseña" placeholder="Ingresar contraseña" name="contraseña" required>
+                    <button type="submit" class="btn btn-success">Ingresar</button>
+                    <input type="checkbox" checked="checked" name="remember"> Recordarme
                 </div>
-                <form action="">
-                    <label for="">Nombre</label> 
-                    <input type="text" class="input-box" placeholder="Ingrese su nombre">
-                    <label for="">Apellido</label> 
-                    <input type="text" class="input-box" placeholder="Ingrese su apellido"> 
-                    <label for="">E-mail</label>
-                    <input type="email" class="input-box" placeholder="Ingrese su e-mail">
-                    <label for="">Contraseña</label> 
-                    <input type="password" class="input-box" placeholder="Contraseña"> 
-                    <label for="">Confirmar contraseña</label> 
-                    <input type="password" class="input-box" placeholder="Confirme su contraseña"> 
-                    <p>Estoy de acuerdo con los <a href="" target="" class="">términos y condiciones</a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="condiciones"/></p>
-                    <button type="button" value="Registrar">Registrarme</button>
-                    <p class="CuentaOK">Ya tenés una cuenta?&nbsp;&nbsp;<a href="">Ingresar</a></p>
-                </form>
+            </form>
+          </div>
+        
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelarbtn">Cancelar</button>
+            <span class="psw">Necesitas <a href="#">ayuda?</a></span>
+          </div>
            </div>
            <div class="left"><img src="" alt=""></div>
        </div> 
