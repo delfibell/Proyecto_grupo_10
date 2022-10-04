@@ -27,4 +27,7 @@ app.get('/formularioDeRegistro.html', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/formularioDeRegistro.html'));
 } );
 
+app.get('/formularioDeLogin.html', (req,res)=>{
+    res.sendFile(path.join(__dirname, '/views/formularioDeLogin.html'));
+} );
 

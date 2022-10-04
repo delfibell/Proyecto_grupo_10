@@ -1,3 +1,4 @@
+/*
 header {
     text-align: center;
     padding: 3px;
@@ -17,7 +18,7 @@ footer {
     border: 3px solid #f1f1f1;
   }
   
-  /* Full-width inputs */
+  /* Full-width inputs 
   input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -29,42 +30,42 @@ footer {
   
 
   
-  /* Add a hover effect for buttons */
+  /* Add a hover effect for buttons 
   button:hover {
     opacity: 0.8;
   }
   
-  /* Extra style for the cancel button (red) */
+  /* Extra style for the cancel button (red)
   .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #000000;
   }
   
-  /* Center the avatar image inside this container */
+  /* Center the avatar image inside this container
   .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
   }
   
-  /* Avatar image */
+  /* Avatar image 
   img.avatar {
     width: 40%;
     border-radius: 50%;
   }
   
-  /* Add padding to containers */
+  /* Add padding to containers 
   .container {
     padding: 16px;
   }
   
-  /* The "Forgot password" text */
+  /* The "Forgot password" text 
   span.psw {
     float: right;
     padding-top: 16px;
   }
   
-  /* Change styles for span and cancel button on extra small screens */
+  /* Change styles for span and cancel button on extra small screens 
   @media screen and (max-width: 300px) {
     span.psw {
       display: block;
@@ -74,3 +75,441 @@ footer {
       width: 100%;
     }
   }
+
+*/
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  width: 100vw;
+  height: 100vh;
+
+}
+
+
+header {
+  height: fit-content;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Teko", sans-serif;
+  text-decoration: none;
+  padding-top: 10px;
+  
+}
+
+header .headerSection1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  flex-wrap: wrap;
+  font-size: 1em;
+  padding-bottom:2px;
+}
+
+#burguer {
+  display: none;
+}
+
+header a {
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  font-family: "Teko", sans-serif;
+}
+
+.headerSection1 a:hover {
+  color: #87ff74;
+}
+
+#auto,
+#corazon {
+  padding-right: 15px;
+  
+
+}
+
+#logo {
+  width: 5em;
+  transition: 0.5s;
+  margin-right: 120px;
+  margin-left: 160px;
+}
+
+
+#logo:hover {
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+
+header input {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  border-radius: 100px;
+  border: 2px solid;
+  font-size: 1em;
+  font-weight: bolder;
+  width: 300px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+header button {
+  padding-top: 5px;
+  padding-bottom: 3px;
+  font-size: 1em;
+  width: 2.5em;
+  border-radius: 100px;
+  font-family: "Teko", sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+
+
+.contenedorMiGarage {
+  padding-right: 30px;
+}
+
+.carrito {
+  font-size: 0.7em;
+}
+
+
+.headerSection2 {
+  border-top: 1px solid rgba(255, 255, 255, 0.342);
+  box-sizing: border-box;
+  background: linear-gradient(
+    to right,
+    rgb(173, 173, 255),
+    #d8ffd2,
+    rgb(203, 203, 255)
+  );
+  font-size: 1em;
+  padding-left:70px ;
+}
+
+.headerSection2 a {
+  color: black;
+}
+.headerSection2 a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.navegador {
+  height: 3em;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 80px;
+}
+
+
+/*  --------------main--------------------------------------------*/
+
+main {
+  margin: 0;
+  box-sizing: border-box;
+  height: fit-content;
+  
+  
+}
+
+main .container{
+  flex-wrap: wrap; 
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 4em;
+  width: 100vw;
+  backdrop-filter: blur(1px);
+  background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
+  background-position: center;
+  background-size: contain;
+}
+
+.crearCuentaForm {
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.412);
+  height: 500px; 
+  margin-right: 10px;
+  padding: 40px;
+  height: fit-content;
+  padding-bottom: 40px;
+  
+}
+
+.left{
+  width: 480px;
+  /* height: 50%; */
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  background: url('/img/image.jpg');
+  background-size: cover;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.102);
+  
+
+} 
+
+@media (max-width: 1067px) {
+  .left {
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 960px) {
+  .left {
+      display: none; }
+  }
+
+
+
+.crearCuentaForm .login {
+  font-family: "Teko", sans-serif;
+  font-size: 3em;
+  color: black;
+  background-color: #ffffff;
+  flex-direction: column;
+} 
+
+.crearCuentaForm form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  font-family: "Teko", sans-serif;
+  margin-top: 20px;
+  
+}
+
+.crearCuentaForm form label {
+  margin-bottom: 8px;
+  font-size: 1em;
+}
+
+.crearCuentaForm form input {
+  margin-bottom: 20px;
+  padding-left: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid;
+  font-size: 0.8em;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.crearCuentaForm form button{
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid white;
+  font-size: 1em;
+  height: fit-content;
+  font-family: "Teko", sans-serif;
+  background-color: #87ff74;
+  align-items: flex-start;
+  margin-top: 15px;
+  box-shadow: 2px 2px 2px 2px rgba(53, 53, 53, 0.102);
+}
+
+button:hover { 
+  opacity: 0.8;
+}
+
+.crearCuentaForm form .CuentaOK {
+
+font-size: 1em;
+justify-content: center;
+display: flex;
+justify-content: center;
+
+}
+
+.crearCuentaForm form p {
+margin-top: 10px;
+font-size: 0.8em;
+
+}
+
+/*  --------------FOOTER--------------------------------------------*/
+
+footer {
+  height: fit-content;
+  width: 100vw;
+  background: rgb(0, 0, 0);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .callUs {
+  display: flex;
+  font-family: "Barlow Condensed", sans-serif;
+  color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 20px;
+  width: 60%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+footer .callUs i {
+  font-size: 1em;
+  padding-right: 10px;
+}
+
+footer .callUs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .social_media_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 2.2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 90%;
+  border-bottom: 1px solid white;
+  margin-bottom: 1em;
+}
+
+footer .social_media_icons i {
+  padding-left: 40px;
+}
+
+footer .copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1em;
+  width: 70%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+footer .copyright p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #acacac;
+}
+footer .copyright p a {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #acacac;
+}
+
+footer .newsletter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-top: 25px;
+  padding-bottom: 1em;
+  width: 95%;
+}
+
+.newsletter .contenedorNews1,
+.contenedorNews2 {
+  padding: 10px;
+}
+
+.contenedorNews2 {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+/*
+.newsletter .contenedorNews1 {
+    border-left: 1px solid white;
+}
+*/
+
+.newsletter input,
+button {
+  margin: 10px;
+  font-family: "Barlow Condensed", sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.newsletter input {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  border-radius: 15px;
+  border: 2px solid;
+  font-size: 1em;
+  width: 300px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+/*
+input[type="text"] {
+    border: 1px solid #ccc;
+    height: 1.6em;
+    width: 20.23em;
+    color: #666;
+  }
+
+  input[type="email"] {
+    border: 1px solid #ccc;
+    height: 1.6em;
+    width: 20.23em;
+    color: #666;
+  }
+*/
+
+.newsletter button {
+  padding-top: 5px;
+  padding-bottom: 3px;
+  border-radius: 15px;
+  border: 2px solid;
+  font-size: 1.2em;
+  width: 200px;
+  font-family: "Teko", sans-serif;
+  background-color: #87ff74;
+  
+}
+
+.newsletter .contenedorNews1 p {
+  font-size: 1.5em;
+  color: white;
+  font-family: "Teko", sans-serif;
+  margin-left: 15px;
+}
+
+.newsletter .contenedorNews2 p {
+  font-size: 1.5em;
+  color: white;
+  font-family: "Teko", sans-serif;
+}
+
+

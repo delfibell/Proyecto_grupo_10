@@ -9,14 +9,8 @@
   html body {
     width: 100vw;
     height: 100vh;
+
 }
-
-
-
-
-
-
-
 
 
 header {
@@ -69,8 +63,6 @@ header a {
     transition: 0.5s;
     margin-right: 120px;
     margin-left: 160px;
-    animation: fadeIn 1s ease-in both;
-    animation-delay: 1s;
   }
 
   
@@ -121,9 +113,9 @@ header a {
       rgb(173, 173, 255),
       #d8ffd2,
       rgb(203, 203, 255)
-    ); 
+    );
     font-size: 1em;
-    padding-left:20px ;
+    padding-left:70px ;
   }
   
   .headerSection2 a {
@@ -134,13 +126,12 @@ header a {
   }
   
   .navegador {
-    height: 2em;
+    height: 3em;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    padding-right: 35px;
-  }
+    padding-right: 80px; }
 
   
   /*  --------------main--------------------------------------------*/
@@ -154,17 +145,16 @@ header a {
   }
 
   main .container{
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    padding: 2em;
-    width: 100vw;
-    
-    backdrop-filter: blur(1px);
-    background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
-    background-position: center;
-    background-size: contain;
+  flex-wrap: wrap; 
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 4em;
+  width: 100vw;
+  backdrop-filter: blur(1px);
+  background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
+  background-size: contain;
+  background-position: center;
 }
 
 .crearCuentaForm {
@@ -199,6 +189,11 @@ header a {
         margin-top: 10px;
     }
   }
+
+  @media (max-width: 960px) {
+    .left {
+        display: none; }
+    }
 
   .crearCuentaForm .login {
     font-family: "Teko", sans-serif;
@@ -251,7 +246,7 @@ header a {
 
 .crearCuentaForm form .CuentaOK {
   
-  font-size: 0.7em;
+  font-size: 1em;
   justify-content: center;
   display: flex;
   justify-content: center;
@@ -286,7 +281,7 @@ header a {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    font-size: 1em;
+    font-size: 20px;
     width: 60%;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -349,7 +344,7 @@ header a {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-top: 1em;
+    padding-top: 25px;
     padding-bottom: 1em;
     width: 95%;
   }
@@ -372,8 +367,7 @@ header a {
   }
   */
   
-  .newsletter input,
-  button {
+  .newsletter input,button {
     margin: 10px;
     font-family: "Barlow Condensed", sans-serif;
     color: black;
@@ -428,6 +422,6 @@ header a {
   
   .newsletter .contenedorNews2 p {
     font-size: 1.5em;
-    color: white;
+    color: white; 
     font-family: "Teko", sans-serif;
   }
