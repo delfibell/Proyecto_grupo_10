@@ -27,4 +27,6 @@ app.get('/formularioDeRegistro.html', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/formularioDeRegistro.html'));
 } );
 
-
+app.get('/carrito', (req,res)=>{
+    res.sendFile(path.join(__dirname, '/views/carrito.html'));
+} );
