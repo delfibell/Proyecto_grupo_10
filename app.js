@@ -15,14 +15,17 @@ app.get('/detalle-de-producto', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/detalle-de-producto.html'));
 } );
 
+//borrar
 app.get('/headerfooter', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/Header&Footer.html'));
 } );
 
+//cambiar a registro
 app.get('/formulario-de-registro', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/formularioDeRegistro.html'));
 } );
 
+//cambiar a login
 app.get('/formularioDeRegistro.html', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/formularioDeRegistro.html'));
 } );
@@ -31,3 +34,6 @@ app.get('/formularioDeLogin.html', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/formularioDeLogin.html'));
 } );
 
+app.get('/carrito', (req,res)=>{
+    res.sendFile(path.join(__dirname, '/views/carrito.html'));
+} );
