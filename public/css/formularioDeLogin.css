@@ -272,9 +272,13 @@ main .container{
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 960px) and (max-width: 0px){
   .left {
       display: none; }
+  .headerSection2 {
+      display: none;
+      }
+    }
   }
 
 
@@ -360,7 +364,7 @@ footer {
 
 footer .callUs {
   display: flex;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Teko", sans-serif;
   color: white;
   flex-direction: row;
   justify-content: space-around;
