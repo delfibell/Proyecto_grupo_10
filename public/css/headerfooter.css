@@ -1,5 +1,6 @@
 /*-------COPIAR Y PEGAR EN EL CSS DE CADA PAGINA Y LLENAR EL MAIN (html y css)-------------*/
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,7 +33,7 @@ header .headerSection1 {
   align-items: center;
   width: 100vw;
   flex-wrap: wrap;
-  font-size: 1em;
+  font-size: 1em; 
   padding-bottom:2px;
 }
 
@@ -105,6 +106,7 @@ header button {
 }
 
 
+
 .headerSection2 {
   border-top: 1px solid rgba(255, 255, 255, 0.342);
   box-sizing: border-box;
@@ -116,6 +118,8 @@ header button {
   );
   font-size: 1em;
   padding-left:70px ;
+  padding-right: 10px;
+
 }
 
 .headerSection2 a {
@@ -131,8 +135,110 @@ header button {
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  padding-right: 80px;
-}
+  padding-right: 80px; }
+
+  #burguer {
+    display: none;
+  }
+  
+  #lupa {
+    display: none;
+  }
+  
+  @media (max-width: 1279px)   { 
+    header {
+      border-bottom: 1px solid white;
+      flex-wrap: nowrap;
+    }
+    .headerSection1{
+      margin-bottom: 30px;
+      flex-wrap: nowrap;
+      margin-top: 30px;
+      padding-left: 40px;
+      padding-right: 20px;
+    }
+    #logo {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    .left {
+      display: none;
+    }
+    .carrito {
+      padding-left: 20px;
+    }
+    .headerSection2 {
+      padding-right: 100px;
+    }
+  }
+
+  @media (max-width : 811px) {
+    .carrito {
+      display: none;
+    }
+  }
+
+
+  @media (max-width : 769px) {
+    .headerSection2 {
+      display: none;
+    }
+    header .carrito {
+      display: none;
+    }
+    header input {
+      display: none;
+    }
+    .contenedorMiGarage, .contenedorFavoritos {
+      display: none;
+    }
+    #burguer {
+      display: block;
+      font-size: 3em;
+      margin-left: 30px;
+    }
+    #lupa {
+      display: block;
+      font-size: 3em;
+      margin-right: 50px;
+      margin-left: 20px;
+
+    }
+    .headerSection1{
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    header {
+      border-bottom: 1px solid white;
+    }
+    #logo {
+      font-size: 1.2em;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      margin-left: 70px;
+    }
+    
+    .left {
+      display: none; }
+  
+    .headerSection2 {
+      display: none;
+      }
+  }
+  
+
+  
+  
+  
+  /*  --------------main--------------------------------------------*/
+  
+
+
+
+/*  --------------main--------------------------------------------*/
+
+
 
 /*  --------------FOOTER--------------------------------------------*/
 
@@ -242,8 +348,7 @@ footer .newsletter {
 }
 */
 
-.newsletter input,
-button {
+.newsletter input,button {
   margin: 10px;
   font-family: "Barlow Condensed", sans-serif;
   color: black;
@@ -298,7 +403,10 @@ input[type="text"] {
 
 .newsletter .contenedorNews2 p {
   font-size: 1.5em;
-  color: white;
+  color: white; 
   font-family: "Teko", sans-serif;
 }
 
+#mediosDePago {
+  padding-bottom: 10px;
+}
