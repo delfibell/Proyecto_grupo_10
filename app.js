@@ -20,17 +20,12 @@ app.get('/headerfooter', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/Header&Footer.html'));
 } );
 
-//cambiar a registro
+//cambiar a login
 app.get('/formulario-de-registro', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/formularioDeRegistro.html'));
 } );
 
-//cambiar a login
-app.get('/formularioDeRegistro.html', (req,res)=>{
-    res.sendFile(path.join(__dirname, '/views/formularioDeRegistro.html'));
-} );
-
-app.get('/formularioDeLogin.html', (req,res)=>{
+app.get('/formulario-de-login', (req,res)=>{
     res.sendFile(path.join(__dirname, '/views/formularioDeLogin.html'));
 } );
 
