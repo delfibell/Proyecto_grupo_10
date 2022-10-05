@@ -196,6 +196,8 @@ header button {
   );
   font-size: 1em;
   padding-left:70px ;
+  padding-right: 60px;
+
 }
 
 .headerSection2 a {
@@ -213,6 +215,98 @@ header button {
   align-items: center;
   padding-right: 80px;
 }
+
+#burguer {
+  display: none;
+}
+
+#lupa {
+  display: none;
+}
+
+
+@media (max-width: 1279px)   { 
+  header {
+    border-bottom: 1px solid white;
+    flex-wrap: nowrap;
+  }
+  .headerSection1{
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  #logo {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .left {
+    display: none;
+  }
+  .carrito {
+    padding-left: 20px;
+  }
+  .headerSection2 {
+    padding-right: 100px;
+  }
+}
+
+@media (max-width : 811px) {
+  .carrito {
+    display: none;
+  }
+}
+
+
+@media (max-width : 769px) {
+  .headerSection2 {
+    display: none;
+  }
+  header .carrito {
+    display: none;
+  }
+  header input {
+    display: none;
+  }
+  .contenedorMiGarage, .contenedorFavoritos {
+    display: none;
+  }
+  #burguer {
+    display: block;
+    font-size: 3em;
+    margin-left: 30px;
+  }
+  #lupa {
+    display: block;
+    font-size: 3em;
+    margin-right: 50px;
+    margin-left: 20px;
+
+  }
+  .headerSection1{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  header {
+    border-bottom: 1px solid white;
+  }
+  #logo {
+    font-size: 1.2em;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 70px;
+  }
+  
+  .left {
+    display: none; }
+
+  .headerSection2 {
+    display: none;
+    }
+}
+
 
 
 /*  --------------main--------------------------------------------*/
@@ -278,7 +372,7 @@ main .container{
   .headerSection2 {
       display: none;
       }
-    }
+    
   }
 
 
