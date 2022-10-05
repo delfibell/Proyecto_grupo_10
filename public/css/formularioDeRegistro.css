@@ -176,8 +176,21 @@ header a {
       }
     }
 
+    @media (min-width : 1000px) {
+      .carrito {
+        margin-right: 0px;
+      }
+      .contenedorMiGarage {
+        margin-left: 20px;
+      }
+    }
 
-    @media (max-width : 769px) {
+
+
+
+
+
+    @media (max-width : 773px) {
       .headerSection2 {
         display: none;
       }
@@ -187,6 +200,18 @@ header a {
       }
 
 
+      @media (max-width :  494px) {
+        #logo {
+          margin: 10px;
+        }
+        #lupa {
+          margin: 0px;
+        }
+        #burguer {
+          margin:0;
+        }
+      }
+      
 
       header input {
         display: none;

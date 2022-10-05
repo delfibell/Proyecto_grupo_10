@@ -258,6 +258,15 @@ header button {
   }
 }
 
+@media (min-width : 1000px) {
+  .carrito {
+    margin-right: 0px;
+  }
+  .contenedorMiGarage {
+    margin-left: 20px;
+  }
+}
+
 
 @media (max-width : 769px) {
   .headerSection2 {
@@ -307,6 +316,19 @@ header button {
     }
 }
 
+@media (max-width :  494px) {
+  #logo {
+    margin: 10px;
+  }
+  #lupa {
+    margin: 0px;
+  }
+  #burguer {
+    margin:0;
+  }
+}
+
+
 
 
 /*  --------------main--------------------------------------------*/
@@ -328,8 +350,10 @@ main .container{
   width: 100vw;
   backdrop-filter: blur(1px);
   background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
-  background-position: center;
+  background-color: #acacac;
   background-size: contain;
+  background-position: center;
+  
 }
 
 .crearCuentaForm {
