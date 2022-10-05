@@ -4,10 +4,23 @@
 
 main {
     font-family: 'Teko', sans-serif;
+    background-color: #ebebeb;
+}
+
+h2 {
+    margin-left: 10%;
+    padding-top: 30px;
 }
 
 h3 {
     margin-left: 10%;
+    padding-top: 15px;
+    font-size: 25px;
+
+}
+
+img {
+    border-radius: 20px;
 }
 
 .buttons {
@@ -19,44 +32,201 @@ h3 {
     padding-bottom: 2px;
 }
 
+.flecha {
+    font-size: 25px;
+    transition-duration: 450ms;
+}
+
 .review {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 15px;
+    margin-left: 10%;
+}
+
+.review i {
+    color:#FF9900
+}
+
+.review p {
+    margin-left: 15px;
+    color:#666
+}
+
+.review-font {
+    color: #FF9900;
 }
 
 .product {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main-image {
     width: 80vw;
 }
 
+.linea-divisora {
+    margin: auto;
+    border: solid 0.5px #666;
+    width: 90%;
+    margin-top: 20px;
+}
+
 .add-also-images {
-    width: 50px;
+    width: 150px;
     display:flex;
     flex-grow: 0.3;
+    transition-duration: 450ms;
 }
 
 .product-details {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.product-description p {
+    margin-left: 10%;
+}
+
+.qty-button {
+    border: solid 2px #000;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.add-to-cart-button {
+    border: solid 0px #000;
+    border-radius: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    background-color: #D2AFFF;
+    color: white;
+    font-family: teko;
+    transition-duration: 450ms;
 }
 
 .add-also {
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.add-also-details {
+    flex-grow: 0.3;
+    width: 30%;
+}
+
+.add-also-details p {
+    font-size: 15px;
 }
 
 .add-also-button {
-    width:140px;
+    width:120px;
     text-align: center;
+    border: solid 1px #000;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;  
+    padding-bottom: 5px;
+    margin-top: 20px;
+    font-family: teko;
+    transition-duration: 450ms;
 }
 
 .reviews {
     display: flex;
     align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
 }
+
+.review-punctuation {
+    display: flex;
+    align-items: center;
+}
+
+.review-punctuation i {
+    color:#FF9900
+}
+
+.review-punctuation p {
+    margin-left: 15px;
+    color:#666
+}
+
+.review-detail {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.corazon {
+    transition-duration: 450ms;
+}
+
+.review-arrow {
+    width:10%;
+}
+
+/* A parti de aca estan los hovers */
+
+.review-font:hover {
+    text-decoration: underline;
+}
+
+.add-to-cart-button:hover {
+    color:#000;
+    transform: scale(1.2);
+}
+
+.flecha:hover {
+    transform: scale(1.2);
+}
+
+.add-also-button:hover {
+    transform: scale(1.2);
+    background-color: #000;
+    color: white;
+}
+
+article:hover .add-also-images {
+    transform: scale(1.1);
+}
+
+article:hover .add-also-details {
+    color:#FF9900
+}
+
+.corazon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px){
+    .more-reviews {
+        display: none;
+        margin-top: 15px;
+    } 
+}
+
+@media (min-width: 769px){
+    .review-arrow {
+        visibility: hidden;
+    }  
+   
+}
+

@@ -4,87 +4,209 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/detalle-de-producto.css">
+    <link rel="stylesheet" href="css/headerfooter.css">
+    <link rel="stylesheet" href="css/detalle-de-producto.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Teko:wght@300;400&display=swap');
+    </style>
     <link rel="icon" type="image/x-icon" href="/img/logo1.png">
     <title>OFT</title>
 </head>
 <body>
-    <header>
-    </header>
-
-    <main>
-        <h3>NOMBRE DE PRODUCTO</h3>
-        <div class="review">
+ <header>  <!-- Divido el header en dos sections, una para la parte de arriba y otra parte de abajo con el navbar-->
+                                        <!--Section 1 del header -->  
+        <section class="headerSection1">   
+            <div class="contenedorMiGarage">        
+                <a href="/views/formularioDeRegistro.html"><p><i id="auto" class="fa-solid fa-car" ></i>Mi Garage</p></a>
+            </div>
+            <div class="contenedorFavoritos">
+                <a href=""><p><i  id="corazon"  class="fa-regular fa-heart"></i>Favoritos</p></a>
+            </div>        
+            <i class="fa-solid fa-bars" id="burguer"></i>      
+            <a class="logo" href="/views/index.html">
+                <img id="logo" src="img/logo1.png"> 
+            </a>
             <div>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
+                <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="¿Qué estás buscando?" value=""/>
+               <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
             </div>
-            <div class="buttons puntaje">
-                0.0
+            <div class="carrito">
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>    
             </div>
-            <div class="buttons write-review">
-                Escribir Reseña
+            <div>
+                <i class="fa-solid fa-magnifying-glass" id="lupa"></i>    
             </div>
+        </section>            
+        <section class="headerSection2">   
+            <nav class="navegador">
+                </div><a href=""class="nav_link"><p>INICIO</p></a>
+                <a href="" class="nav_link" ><p></p>NOSOTRXS</a>
+                <a href=""  class="nav_link"><p></p>CONTACTO</a>
+            </nav>
+        </section> 
+    </header>
+    <main>
+    <div class="desktop">
+        <h2>OMBU SHAMPOO</h2>
+        <div class="review">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p class="buttons">3.2</p>    
+                <p class="review-font">5 Reseñas</p>     
+                <p class="review-font">Escribir Reseña</p>
         </div>
         <div class="product">
-            <img src="img/IMG_0168.jpeg" class="main-image">
+            <i class="fa-solid fa-chevron-left flecha"></i>
+            <img src="img/ombu-shampoo.jpeg" class="main-image">
+            <i class="fa-solid fa-chevron-right flecha"></i>
         </div>
-              <h3>$1500</h3>
+        <div class="product-description">
+              <h3>$ 1500</h3>
+              <p>Shampoo PH Neutro. Sin aditivos para cuidar mejor la pintura de tu vehículo.</p>
+        </div>
         <div class="product-details">
-              <p class="buttons">Cant</p>
-              <p class="buttons">Aroma</p>
-              <p class="buttons">Agregar al carrito</p>
-              <i class="fa-regular fa-heart"></i>
+              <button class="qty-button">- 1 +</button>
+              <button class="add-to-cart-button">Agregar al carrito</button>
+              <i class="fa-regular fa-heart corazon"></i>
         </div>
-        <div>
+    </div>
+        <div class="linea-divisora">
             <!-- aca va la linea divisora-->
         </div>
         <div>
             <h3>USAR CON</h3>
             <article>
                 <div class="add-also">
-                  <img src="img/IMG_0175.jpeg" class="add-also-images">
                   <div>
-                      <h5>Nombre del producto</h5>
-                      <p>$2000</p>
+                      <img src="img/cera-int-uva.jpg" class="add-also-images">
+                      <button class="add-also-button" >Agregar al carrito</button>
+                  </div>
+                  <div class="add-also-details">
+                      <h4>Grape wax</h4>
+                      <h4>$ 2000</h4>
+                      <p>Cera de interior con olor a uva. Apta para plásticos y cueros. No se puede utilizar en tela.</p>
                   </div>
                       <i class="fa-regular fa-heart"></i>
-                </div>
-                      <p class=" buttons add-also-button" >Agregar al carrito</p>
+                </div>     
+            </article>
+            <article>
+                <div class="add-also">
+                  <div>
+                      <img src="img/bug-remover.jpeg" class="add-also-images">
+                      <button class="add-also-button" >Agregar al carrito</button>
+                  </div>
+                  <div class="add-also-details">
+                      <h4>Bug remover Leca</h4>
+                      <h4>$ 3500</h4>
+                      <p>Productos especial para sacar bichos de la carrocería de tu vehículo sin dañar la laca ni tratamiento de pintura. 
+                    </p>
+                  </div>
+                      <i class="fa-regular fa-heart"></i>
+                </div>    
             </article>
         </div>
-        <div>
+        <div class="linea-divisora">
             <!-- aca va una linea divisora-->
         </div>
             <h3>RESEÑAS</h3>
             <div class="reviews">
                 <div>
-                    <div>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                    <div class="review-punctuation">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <p class="buttons">5.0</p> 
                     </div>
-                    <div class="buttons puntaje">
-                         0.0
-                    </div>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, error similique. Animi dignissimos dolorem sit doloribus aspernatur accusantium inventore veritatis alias, amet, adipisci quasi sunt quas voluptatem beatae, nostrum deserunt?</p>
+                    <p class="review-detail"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, error similique. Animi dignissimos dolorem sit doloribus aspernatur accusantium inventore veritatis alias, amet, adipisci quasi sunt quas voluptatem beatae, nostrum deserunt?</p>
                 </div>
-                <div>
-                <i class="fa-solid fa-chevron-right"></i>
+                <div class="review-arrow">
+                <i class="fa-solid fa-chevron-right flecha"></i>
                 </div>
             </div>
-        <div>
-            <!-- aca va una linea divisora-->
-        </div>
+            <div class="reviews more-reviews">
+                <div>
+                    <div class="review-punctuation">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <p class="buttons">2.0</p> 
+                    </div>
+                    <p class="review-detail"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, error similique. Animi dignissimos dolorem sit doloribus aspernatur accusantium inventore veritatis alias, amet, adipisci quasi sunt quas voluptatem beatae, nostrum deserunt?</p>
+                </div>
+            </div>
     </main>
-
     <footer>
-    </footer>
+        <section class="social_media_icons">
+            <a href=""><img src="" alt=""><i class="fa-brands fa-whatsapp"  style="color: rgb(255, 255, 255)" ></i></a></div>
+            <a href="https://www.instagram.com/oft.detailingproducts/"><i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255)"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100080626577480"><i class= "fa-brands fa-facebook" style="color: rgb(255, 255, 255)"></i></a>
+        </section>
+        <section class="callUs">
+            <p>Tenes otras consultas?&nbsp;&nbsp;&nbsp;Llamanos.</p>  
+            <p><i class="fa-solid fa-phone"></i>+54&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;24523606</p>
+            <p>Lunes a Viernes de 10 a 16.30hs</p>
+        </section>
+        <section class="newsletter">
+            <div class="contenedorNews1">
+                <p>NEWSLETTER</p>
+                <div><input type="text" placeholder="Nombre" /></div>
+                <div><input type="email" placeholder="e-mail" /></div>
+                <div><button type="submit" name="button">ENVIAR</button></div>
+            </div>
+            <div class="contenedorNews2">
+                
+                    <p id="mediosDePago">Medios de pago</p>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="icon-logo lazyloaded" alt="visa" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="icon-logo lazyloaded" alt="mastercard" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="icon-logo lazyloaded" alt="amex" width="32" height="20">
+                    </div>
+                    <div>  
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" class="icon-logo lazyloaded" alt="diners" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" class="icon-logo lazyloaded" alt="ar_banelco" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="icon-logo lazyloaded" alt="ar_cabal" width="32" height="20">
+                    </div>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-shopping" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="icon-logo lazyloaded" alt="mercadopago" width="32" height="20">
+                    </div>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" class="icon-logo lazyloaded" alt="ar_argencard" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" class="icon-logo lazyloaded" alt="pagofacil" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="icon-logo lazyloaded" alt="rapipago" width="32" height="20">
+                    </div>
+                    <div>
+
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" class="icon-logo lazyloaded" alt="nativa" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabaldebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabaldebit@2x.png" class="icon-logo lazyloaded" alt="ar_cabaldebit" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercarddebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercarddebit@2x.png" class="icon-logo lazyloaded" alt="mastercarddebit" width="32" height="20">
+                    </div>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" class="icon-logo lazyloaded" alt="visadebit" width="32" height="20">
+                    </div>
+                 
+            </div>
+        </section>
+        <div class="copyright">
+            <p>© 2022 Only For Track</p>
+            <p><a href="https://www.chemicalguys.com/terms-and-conditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
+            <p><a href="https://www.chemicalguys.com/privacy-policy.html" title="Privacy Policy">Políticas de privacidad</a></p>
+            <p><a href="https://www.chemicalguys.com/reseller-policy.html" title="Reseller Policy">Reseller Policy</a></p>
+            <p><a href="https://www.chemicalguys.com/sds-sheets-page.html" title="Material Safety Data">Material Safety Data</a></p>
+            <p><a href="https://www.chemicalguys.com/on/demandware.store/Sites-chemicalguys-Site/default/PressMediaService-Show" title="Media/Press">Prensa</a></p>
+        </div>
+    
+</footer>
+
+
 </body>
 </html>
