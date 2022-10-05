@@ -2,18 +2,14 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
   }
   
   html body {
     width: 100vw;
     height: 100vh;
     font-family: "Teko", sans-serif;
-  }
-  
-  main {
-    height: 80vh;
   }
   
   /*---------------HEADER----------------------------------------------------*/
@@ -85,6 +81,7 @@
     font-size: 1em;
     font-weight: bolder;
     width: 300px;
+    font-family: "Teko", sans-serif;
   }
   
   header button {
@@ -140,10 +137,142 @@
 
   
   /*  --------------main--------------------------------------------*/
-  
-  main {
-    color: rgb(0, 0, 0);
+  .page-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 20px; 
+    border-bottom: 1.5px solid black;
   }
+
+  .titulo{
+    display: flex;
+    font-size: 2rem; 
+    margin-left: 15px;
+  }
+
+  .login{
+    display: flex;
+    font-size: 1.2rem;
+    margin-left: 15px; 
+    margin-bottom: 15px;
+  }
+  
+  .preg-login{
+    display: inline-block;
+  }
+
+  .redirec-login{
+    display: inline-block;
+  }
+
+  .items {
+    margin: 20px; 
+    padding-bottom: 20px; 
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid black;
+
+  }
+
+  .items-cant {
+    display: flex; 
+    justify-content: space-between;
+    margin-left: 10px; 
+  }
+ 
+  .p-items{
+    margin-right: 20px;
+    margin-left: 10px; 
+    font-size: 1.5rem;
+  }
+
+  .p-cant{
+    margin-top: 5px; 
+  }
+
+  .p-precio{
+    font-size: 1.3rem; 
+    margin-right: 20px; 
+  }
+
+  .principal{
+    display: flex; 
+    flex-wrap: wrap;
+  }
+
+  .productos{
+    display: flex;
+    margin: 5px 20px 10px 20px; 
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid black;
+  }
+
+  .producto{
+    display: flex;
+  }
+
+  .foto-producto{
+    display: block;
+    margin-right: 30px; 
+    margin-left: 5px; 
+  }
+
+  .foto-producto img{
+    width:100%; 
+  }
+
+  .datos-producto{
+    width: 60%;
+  }
+
+  .detalle-total{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .detalle-total p{
+    display: inline-block;
+  }
+
+  .cantidad-unidades button {
+    border: solid 2px #000;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.acciones{
+    display: flex;
+}
+
+.eliminar, .editar {
+    border: solid 0px #000;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    background-color: #D2AFFF;
+    color: white;
+    font-family: teko;
+    display: inline-block;
+}
+
+.like{
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+}
+
+
+  
+
+
   
   /*  --------------FOOTER--------------------------------------------*/
   
@@ -307,4 +436,101 @@
     font-size: 1.5em;
     color: white;
     font-family: "Teko", sans-serif;
+  }
+
+
+  @media (min-width: 780px){
+    .page-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 15px; 
+        border-bottom: 1.5px solid black;
+      }
+    
+      .titulo{
+        display: flex;
+        align-self: flex-start;
+        width: 65%;
+        margin: 15px 20px 10px 15px; 
+        font-size: 2rem; 
+      }
+    
+      .login{
+        display: flex;
+        width: 35%;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1.2rem;
+        margin: 15px 20px 10px 20px; 
+      }
+
+      .preg-login{
+        display: inline-block;
+      }
+    
+      .redirec-login{
+        display: inline-block;
+      }
+    
+      .items{
+        display:none; 
+      }
+
+      .foto-producto{
+        display: block;
+        margin-right: 30px; 
+        margin-left: 5px; 
+        width: 40%;
+      }
+
+      .nombre-producto{
+        font-size: 2rem;
+      }
+
+      .detalle-total .descripcion-prod{
+        font-size: 1.1rem;
+      }
+    
+      .detalle-total .precio-total{
+        font-size: 1.5rem;
+      }
+    
+      .precio-unitario{
+        font-size: 1.3rem;
+      }
+
+      .cantidad-unidades button {
+        border: solid 2px #000;
+        border-radius: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 18px;
+    }
+    
+    .acciones{
+        display: flex;
+    }
+    
+    .eliminar, .editar {
+        border: solid 0px #000;
+        border-radius: 10px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 20px;
+        background-color: #D2AFFF;
+        color: white;
+        font-family: teko;
+        display: inline-block;
+    }
+    
+    .like{
+        background-color: white;
+        border: none;
+        font-size: 20px;
+    }
   }
