@@ -22,6 +22,7 @@ header {
     font-family: "Teko", sans-serif;
     text-decoration: none;
     padding-top: 10px;
+    position: relative;
     
 }
 
@@ -125,7 +126,9 @@ header a {
   }
   .headerSection2 a:hover {
     color: rgb(255, 255, 255);
-  }
+    font-size: 25px;
+    transition-duration: 450ms;
+    }
   
   .navegador {
     height: 3em;
@@ -183,6 +186,7 @@ header a {
       .contenedorMiGarage {
         margin-left: 20px;
       }
+      
     }
 
 
@@ -351,7 +355,7 @@ header a {
     padding-left: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
-    border-radius: 10px;
+    border-radius: 100px;
     border: 1px solid;
     font-size: 0.8em;
     font-family: "Barlow Condensed", sans-serif;
@@ -372,7 +376,16 @@ header a {
 
   button:hover { 
     opacity: 0.8;
+    font-size: 25px;
+    transition-duration: 450ms;
 }
+
+form button:hover { 
+  
+  font-size: 25px;
+  transition-duration: 0.5s;
+}
+
 
 .crearCuentaForm form .CuentaOK {
   
@@ -381,8 +394,10 @@ header a {
   display: flex;
   justify-content: center;
   
-}
   
+}
+
+
 .crearCuentaForm form p {
   margin-top: 10px;
   font-size: 0.8em;
@@ -475,7 +490,7 @@ header a {
     flex-wrap: wrap;
     align-items: flex-start;
     padding-top: 25px;
-    padding-bottom: 1em;
+    padding-bottom: 4em;
     width: 100%;
   
   }
@@ -510,7 +525,7 @@ header a {
     padding-left: 15px;
     padding-top: 5px;
     padding-bottom: 8px;
-    border-radius: 15px;
+    border-radius: 100px;
     border: 2px solid;
     font-size: 1em;
     width: 300px;
@@ -540,7 +555,7 @@ header a {
     font-size: 1.2em;
     width: 200px;
     font-family: "Teko", sans-serif;
-    background-color: #87ff74;
+    background-color: #D2AFFF
     
   }
   

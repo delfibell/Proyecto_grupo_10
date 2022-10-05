@@ -79,7 +79,6 @@ footer {
 */
 
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -112,7 +111,7 @@ header .headerSection1 {
   align-items: center;
   width: 100vw;
   flex-wrap: wrap;
-  font-size: 1em;
+  font-size: 1em; 
   padding-bottom:2px;
 }
 
@@ -196,7 +195,7 @@ header button {
   );
   font-size: 1em;
   padding-left:70px ;
-  padding-right: 60px;
+  padding-right: 10px;
 
 }
 
@@ -205,6 +204,10 @@ header button {
 }
 .headerSection2 a:hover {
   color: rgb(255, 255, 255);
+  
+  font-size: 25px;
+  transition-duration: 450ms;
+    
 }
 
 .navegador {
@@ -213,123 +216,132 @@ header button {
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
-  padding-right: 80px;
-}
+  padding-right: 80px; }
 
-#burguer {
-  display: none;
-}
-
-#lupa {
-  display: none;
-}
-
-
-@media (max-width: 1279px)   { 
-  header {
-    border-bottom: 1px solid white;
-    flex-wrap: nowrap;
-  }
-  .headerSection1{
-    margin-bottom: 30px;
-    flex-wrap: nowrap;
-    margin-top: 30px;
-    padding-left: 40px;
-    padding-right: 20px;
-  }
-  #logo {
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-  .left {
-    display: none;
-  }
-  .carrito {
-    padding-left: 20px;
-  }
-  .headerSection2 {
-    padding-right: 100px;
-  }
-}
-
-@media (max-width : 811px) {
-  .carrito {
-    display: none;
-  }
-}
-
-@media (min-width : 1000px) {
-  .carrito {
-    margin-right: 0px;
-  }
-  .contenedorMiGarage {
-    margin-left: 20px;
-  }
-}
-
-
-@media (max-width : 769px) {
-  .headerSection2 {
-    display: none;
-  }
-  header .carrito {
-    display: none;
-  }
-  header input {
-    display: none;
-  }
-  .contenedorMiGarage, .contenedorFavoritos {
-    display: none;
-  }
   #burguer {
-    display: block;
-    font-size: 3em;
-    margin-left: 30px;
-  }
-  #lupa {
-    display: block;
-    font-size: 3em;
-    margin-right: 50px;
-    margin-left: 20px;
-
-  }
-  .headerSection1{
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
-  header {
-    border-bottom: 1px solid white;
-  }
-  #logo {
-    font-size: 1.2em;
-    justify-content: center;
-    align-items: center;
-    margin-right: 30px;
-    margin-left: 70px;
+    display: none;
   }
   
-  .left {
-    display: none; }
-
-  .headerSection2 {
-    display: none;
-    }
-}
-
-@media (max-width :  494px) {
-  #logo {
-    margin: 10px;
-  }
   #lupa {
-    margin: 0px;
+    display: none;
   }
-  #burguer {
-    margin:0;
+  
+  @media (max-width: 1279px)   { 
+    header {
+      border-bottom: 1px solid white;
+      flex-wrap: nowrap;
+    }
+    .headerSection1{
+      margin-bottom: 30px;
+      flex-wrap: nowrap;
+      margin-top: 30px;
+      padding-left: 40px;
+      padding-right: 20px;
+    }
+    #logo {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    .left {
+      display: none;
+    }
+    .carrito {
+      padding-left: 20px;
+    }
+    .headerSection2 {
+      padding-right: 100px;
+    }
   }
-}
+
+  @media (max-width : 811px) {
+    .carrito {
+      display: none;
+    }
+  }
+
+  @media (min-width : 1000px) {
+    .carrito {
+      margin-right: 0px;
+    }
+    .contenedorMiGarage {
+      margin-left: 20px;
+    }
+    .headerSection1 {
+      padding-left: 60px;
+    }
+  }
 
 
 
+
+
+
+  @media (max-width : 773px) {
+    .headerSection2 {
+      display: none;
+    }
+
+    header .carrito {
+      display: none;
+    }
+
+
+    @media (max-width :  494px) {
+      #logo {
+        margin: 10px;
+      }
+      #lupa {
+        margin: 0px;
+      }
+      #burguer {
+        margin:0;
+      }
+    }
+    
+
+    header input {
+      display: none;
+    }
+    .contenedorMiGarage, .contenedorFavoritos {
+      display: none;
+    }
+    #burguer {
+      display: block;
+      font-size: 3em;
+      margin-left: 30px;
+    }
+    #lupa {
+      display: block;
+      font-size: 3em;
+      margin-right: 50px;
+      margin-left: 20px;
+
+    }
+    .headerSection1{
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    header {
+      border-bottom: 1px solid white;
+    }
+    #logo {
+      font-size: 1.2em;
+      justify-content: center;
+      align-items: center;
+      margin-right: 30px;
+      margin-left: 70px;
+    }
+    
+    .left {
+      display: none; }
+  
+    .headerSection2 {
+      display: none;
+      }
+  }
+  
+
+  
 
 /*  --------------main--------------------------------------------*/
 
@@ -356,6 +368,8 @@ main .container{
   
 }
 
+
+
 .crearCuentaForm {
   background-color: rgb(255, 255, 255);
   width: 600px;
@@ -368,6 +382,12 @@ main .container{
   height: fit-content;
   padding-bottom: 40px;
   
+}
+
+@media (max-width : 773px) { 
+  main .crearCuentaForm {
+    width: 100%;
+}
 }
 
 .left{
@@ -428,7 +448,7 @@ main .container{
   padding-left: 15px;
   padding-top: 8px;
   padding-bottom: 8px;
-  border-radius: 10px;
+  border-radius: 100px;
   border: 1px solid;
   font-size: 0.8em;
   font-family: "Barlow Condensed", sans-serif;
@@ -449,6 +469,15 @@ main .container{
 
 button:hover { 
   opacity: 0.8;
+  font-size: 30px;
+  transition-duration: 450ms;
+    
+}
+
+form button:hover { 
+  
+  font-size: 25px;
+  transition-duration: 0.5s;
 }
 
 .crearCuentaForm form .CuentaOK {
@@ -552,7 +581,7 @@ footer .newsletter {
   flex-wrap: wrap;
   align-items: flex-start;
   padding-top: 25px;
-  padding-bottom: 1em;
+  padding-bottom: 4em;
   width: 95%;
 }
 
@@ -587,7 +616,7 @@ button {
   padding-left: 15px;
   padding-top: 5px;
   padding-bottom: 8px;
-  border-radius: 15px;
+  border-radius: 100px;
   border: 2px solid;
   font-size: 1em;
   width: 300px;
@@ -617,7 +646,7 @@ input[type="text"] {
   font-size: 1.2em;
   width: 200px;
   font-family: "Teko", sans-serif;
-  background-color: #87ff74;
+  background-color: #D2AFFF;
   
 }
 

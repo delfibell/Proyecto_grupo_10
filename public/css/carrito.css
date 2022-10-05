@@ -127,7 +127,10 @@
   }
   .headerSection2 a:hover {
     color: rgb(255, 255, 255);
-  }
+    font-size: 25px;
+    transition-duration: 450ms;
+    }
+  
   
   .navegador {
     height: 3em;
@@ -177,9 +180,23 @@
         display: none;
       }
     }
+
+    @media (min-width : 1000px) {
+      .carrito {
+        margin-right: 0px;
+      }
+      .contenedorMiGarage {
+        margin-left: 20px;
+      }
+      .headerSection1 {
+        padding-left: 60px;
+      }
+    }
+
+
   
   
-    @media (max-width : 769px) {
+    @media (max-width : 773px) {
       .headerSection2 {
         display: none;
       }
@@ -238,6 +255,8 @@
           margin: 0;
         }
       }
+
+
   /*  --------------main--------------------------------------------*/
   .page-header{
     display: flex;
@@ -531,7 +550,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     padding-top: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 4em;
     width: 95%;
   }
   
@@ -566,7 +585,7 @@
     padding-left: 15px;
     padding-top: 5px;
     padding-bottom: 8px;
-    border-radius: 15px;
+    border-radius: 100px;
     border: 2px solid;
     font-size: 1em;
     width: 300px;
@@ -596,7 +615,7 @@
     font-size: 1.2em;
     width: 200px;
     font-family: "Teko", sans-serif;
-    background-color: #87ff74;
+    background-color: #D2AFFF;
     
   }
   

@@ -1,18 +1,18 @@
 /*-------COPIAR Y PEGAR EN EL CSS DE CADA PAGINA Y LLENAR EL MAIN (html y css)-------------*/
 
-
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 html body {
   width: 100vw;
   height: 100vh;
-
+  font-family: "Teko", sans-serif;
 }
 
+/*---------------HEADER----------------------------------------------------*/
 
 header {
   height: fit-content;
@@ -82,7 +82,7 @@ header input {
   font-size: 1em;
   font-weight: bolder;
   width: 300px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Teko", sans-serif;
 }
 
 header button {
@@ -127,6 +127,8 @@ header button {
 }
 .headerSection2 a:hover {
   color: rgb(255, 255, 255);
+  font-size: 25px;
+    transition-duration: 450ms;
 }
 
 .navegador {
@@ -178,8 +180,22 @@ header button {
     }
   }
 
+  @media (min-width : 1000px) {
+    .carrito {
+      margin-right: 0px;
+    }
+    .contenedorMiGarage {
+      margin-left: 20px;
+    }
+    .headerSection1 {
+      padding-left: 60px;
+    }
+  }
 
-  @media (max-width : 769px) {
+
+
+
+  @media (max-width : 773px) {
     .headerSection2 {
       display: none;
     }
@@ -226,7 +242,18 @@ header button {
       display: none;
       }
   }
-  
+
+  @media (max-width :  494px) {
+      #logo {
+        margin: 10px;
+      }
+      #lupa {
+        margin: 0;
+      }
+      #burguer {
+        margin: 0;
+      }
+    }
 
   
   
@@ -326,7 +353,7 @@ footer .newsletter {
   flex-wrap: wrap;
   align-items: flex-start;
   padding-top: 25px;
-  padding-bottom: 1em;
+  padding-bottom: 4em;
   width: 95%;
 }
 
@@ -360,7 +387,7 @@ footer .newsletter {
   padding-left: 15px;
   padding-top: 5px;
   padding-bottom: 8px;
-  border-radius: 15px;
+  border-radius: 100px;
   border: 2px solid;
   font-size: 1em;
   width: 300px;
@@ -390,7 +417,7 @@ input[type="text"] {
   font-size: 1.2em;
   width: 200px;
   font-family: "Teko", sans-serif;
-  background-color: #87ff74;
+  background-color: #D2AFFF;
   
 }
 
