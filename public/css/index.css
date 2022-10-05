@@ -4,15 +4,11 @@
   box-sizing: border-box;
 }
 
-/* html body {
-  width: 100vw;
-  height: 100vh;
-} */
-
 main {
   color: rgb(0, 0, 0);
   font-family: "Teko", sans-serif;
   background-color: #ebebeb;
+  padding-top: 30px;
 }
 
 main h2 {
@@ -25,16 +21,17 @@ main h2 {
   padding: 5vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .article {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  /* padding-bottom: 10px; */
 }
 
 .imag {
@@ -49,16 +46,29 @@ main h2 {
 
 @media (min-width: 768px) {
   .cards {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  
+
+  .imag {
+    width: 60%;
+    border-radius: 20px;
+    margin-bottom: 0%;
+  }
+
+  .class-description {
+    margin: 0;
+  }
+
   .article {
-      width: 30%;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-self: auto;
-      justify-content: space-between;
+    width: 30%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* align-self: auto; */
+    /* justify-content: space-between; */
+    padding: 0%;
+    margin-bottom: 30px;
   }
 }
