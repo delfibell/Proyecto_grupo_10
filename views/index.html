@@ -1,91 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/headerfooter.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/headerfooter.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Teko:wght@300;400&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Teko:wght@300;400&display=swap");
     </style>
-    <link rel="icon" type="image/x-icon" href="/img/logo1.png">
+    <link rel="icon" type="image/x-icon" href="/img/logo1.png" />
     <title>Only For Track</title>
-</head>
-<body>
-    <header>  <!-- Divido el header en dos sections, una para la parte de arriba y otra parte de abajo con el navbar-->
-        <!--Section 1 del header -->  
-<section class="headerSection1">   
-<div class="contenedorMiGarage">        
-<a href="/views/formularioDeRegistro.html"><p><i id="auto" class="fa-solid fa-car" ></i>Mi Garage</p></a>
-</div>
-<div class="contenedorFavoritos">
-<a href=""><p><i  id="corazon"  class="fa-regular fa-heart"></i>Favoritos</p></a>
-</div>        
-<i class="fa-solid fa-bars" id="burguer"></i>      
-<a class="logo" href="/views/index.html">
-<img id="logo" src="img/logo1.png"> 
-</a>
-<div>
-<input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="¿Qué estás buscando?" value=""/>
-<!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
-</div>
-<div class="carrito">
-<a href=""><i class="fa-solid fa-cart-shopping"></i></a>    
-</div>
-<div>
-<i class="fa-solid fa-magnifying-glass" id="lupa"></i>    
-</div>
-</section>            
-<section class="headerSection2">   
-<nav class="navegador">
-</div><a href=""class="nav_link"><p>INICIO</p></a>
-<a href="" class="nav_link" ><p></p>NOSOTRXS</a>
-<a href=""  class="nav_link"><p></p>CONTACTO</a>
-</nav>
-</section> 
-</header>
+  </head>
+  <body>
+    <header>
+      <!-- Divido el header en dos sections, una para la parte de arriba y otra parte de abajo con el navbar-->
+      <!--Section 1 del header -->
+      <section class="headerSection1">
+        <div class="contenedorMiGarage">
+          <a href="/views/formularioDeRegistro.html"
+            ><p><i id="auto" class="fa-solid fa-car"></i>Mi Garage</p></a
+          >
+        </div>
+        <div class="contenedorFavoritos">
+          <a href=""
+            ><p><i id="corazon" class="fa-regular fa-heart"></i>Favoritos</p></a
+          >
+        </div>
+        <i class="fa-solid fa-bars" id="burguer"></i>
+        <a class="logo" href="/views/index.html">
+          <img id="logo" src="img/logo1.png" />
+        </a>
+        <div>
+          <input
+            id="searchQueryInput"
+            type="text"
+            name="searchQueryInput"
+            placeholder="¿Qué estás buscando?"
+            value=""
+          />
+          <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+        </div>
+        <div class="carrito">
+          <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div>
+          <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
+        </div>
+      </section>
+      <section class="headerSection2">
+        <nav class="navegador">
+          <a href="" class="nav_link"><p>INICIO</p></a>
+          <a href="" class="nav_link"
+            ><p></p>
+            NOSOTRXS</a
+          >
+          <a href="" class="nav_link"
+            ><p></p>
+            CONTACTO</a
+          >
+        </nav>
+      </section>
+    </header>
 
     <main>
-        <h2>PRODUCTOS</h2>
-       
-        <section class="cards"> 
-            <article id="first-product" class="article">
-                <img class="imag" src="/img/IMG_0175.jpeg">
-                <div class="product-description">
-                    <p>ombu-shampoo</p>
-                    <h3>$ 1500</h3>
-              </div>
-            </article>
-            <article id="second-product" class="article">
-                <img class="imag"   src="/img/IMG_4335.jpeg" >
-                <div class="product-description">
-                    <p>ombu-shampoo</p>
-                    <h3>$ 1500</h3>
-              </div>
-            </article>
-            <article id="third-product" class="article">
-                <img class="imag"   src="/img/IMG_4335.jpeg" >
-                <div class="product-description">
-                    <p>ombu-shampoo</p>
-                    <h3>$ 1500</h3>
-              </div>
-            </article>
-            <article id="fourth-product" class="article">
-                <img class="imag"   src="/img/IMG_4335.jpeg" >
-                <div class="product-description">
-                    <p>ombu-shampoo</p>
-                    <h3>$ 1500</h3>
-              </div>
-            </article> 
-            <article id="fifth-product" class="article">
-                <img class="imag"   src="/img/IMG_4335.jpeg" >
-                <div class="product-description">
-                    <p>ombu-shampoo</p>
-                    <h3>$ 1500</h3>
-              </div>
-            </article>
-        </section>
+      <h2>PRODUCTOS</h2>
+
+      <section class="cards">
+        <article id="first-product" class="article">
+          <img class="imag" src="/img/IMG_0175.jpeg" />
+          <div class="product-description">
+            <p>ombu-shampoo</p>
+            <h3>$ 1500</h3>
+          </div>
+        </article>
+        <article id="second-product" class="article">
+          <img class="imag" src="/img/IMG_4335.jpeg" />
+          <div class="product-description">
+            <p>ombu-shampoo</p>
+            <h3>$ 1500</h3>
+          </div>
+        </article>
+        <article id="third-product" class="article">
+          <img class="imag" src="/img/IMG_4335.jpeg" />
+          <div class="product-description">
+            <p>ombu-shampoo</p>
+            <h3>$ 1500</h3>
+          </div>
+        </article>
+        <article id="fourth-product" class="article">
+          <img class="imag" src="/img/IMG_4335.jpeg" />
+          <div class="product-description">
+            <p>ombu-shampoo</p>
+            <h3>$ 1500</h3>
+          </div>
+        </article>
+        <article id="fifth-product" class="article">
+          <img class="imag" src="/img/IMG_4335.jpeg" />
+          <div class="product-description">
+            <p>ombu-shampoo</p>
+            <h3>$ 1500</h3>
+          </div>
+        </article>
+      </section>
     </main>
 
     <!-- <footer>
@@ -150,5 +171,5 @@
             <p><a href="https://www.chemicalguys.com/on/demandware.store/Sites-chemicalguys-Site/default/PressMediaService-Show" title="Media/Press">Prensa</a></p>
         </div>
     </footer> -->
-</body>
+  </body>
 </html>
