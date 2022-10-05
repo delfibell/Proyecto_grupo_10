@@ -12,38 +12,35 @@
 <body>
     <header>  <!-- Divido el header en dos sections, una para la parte de arriba y otra parte de abajo con el navbar-->
         <!--Section 1 del header -->  
-<section class="headerSection1"> 
-<div>
-
-    </div>    
-        <div class="contenedorMiGarage">        
-        <a href="/views/formularioDeRegistro.html"><p><i id="auto" class="fa-solid fa-car" ></i>Mi Garage</p></a>
-        </div>
-        <div class="contenedorFavoritos">
-        <a href=""><p><i  id="corazon"  class="fa-regular fa-heart"></i>Favoritos</p></a>
-        </div>        
-        <i class="fa-solid fa-bars" style="display:none"></i>      
-        <a class="logo" href="/views/index.html">
-        <img id="logo" src="img/logo1.png"> 
-        </a>
-        <div>
-        <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="¿Qué estás buscando?" value=""/>
-        <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
-        </div>
-        <div class="carrito">
-        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>    
-        </div>
-    <div>
-
-</div>
-</section>            
-<section class="headerSection2">   
-    <nav class="navegador">
-        </div><a href=""class="nav_link"><p>INICIO</p></a>
-        <a href="" class="nav_link" ><p></p>NOSOTRXS</a>
-        <a href=""  class="nav_link"><p></p>CONTACTO</a>
-    </nav>
-</section> 
+            <section class="headerSection1">    
+                <div class="contenedorMiGarage">        
+                <a href="/views/formularioDeRegistro.html"><p><i id="auto" class="fa-solid fa-car" ></i>Mi Garage</p></a>
+                </div>
+                <div class="contenedorFavoritos">
+                <a href=""><p><i  id="corazon"  class="fa-regular fa-heart"></i>Favoritos</p></a>
+                </div>        
+                <i class="fa-solid fa-bars" id="burguer"></i>      
+                <a class="logo" href="/views/index.html">
+                <img id="logo" src="img/logo1.png"> 
+                </a>
+                <div>
+                <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="¿Qué estás buscando?" value=""/>
+                <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+                </div>
+                <div class="carrito">
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>    
+                </div>
+                <div>
+                <i class="fa-solid fa-magnifying-glass" id="lupa"></i>    
+                </div>
+            </section>            
+            <section class="headerSection2">   
+                <nav class="navegador">
+                </div><a href=""class="nav_link"><p>INICIO</p></a>
+                <a href="" class="nav_link" ><p></p>NOSOTRXS</a>
+                <a href=""  class="nav_link"><p></p>CONTACTO</a>
+                </nav>
+            </section> 
 </header>
 
     <main>
@@ -54,7 +51,7 @@
                 </div>
                 <div class="login">
                     <!--cambiar action a la ruta del login cuando esté-->
-                    <form action="/" method="GET">
+                    <form action="/login" method="GET">
                         <p class="preg-login">¿Ya tenés una cuenta? Iniciá sesión</p>
                         <button type="submit" class="redirec-login">Login</button>
                     </form>
@@ -82,14 +79,14 @@
                         </div>
                         <div class="precio-unitario">
                             <p>$700</p>
+                            <p class="descripcion-prod">500cc</p>
                         </div>
                         <div class="agregar-total">
                             <div class="cantidad-unidades">
                                 <!--este boton tiene que hacer que se sume o se reste una cantidad de producto, lo dejo estático hasta que hagamos ABM-->
-                                <button>- 1 +</button>
+                                <button class="editar-cantidades">- 1 +</button>
                             </div>
                             <div class="detalle-total">
-                                <p class="descripcion-prod">Shampoo</p>
                                 <p class="precio-total">$700</p>
                             </div>
                         </div>
@@ -102,7 +99,7 @@
                 </div>
             </div>
             <div class="resumen-compra">
-                <p>Resumen de compra</p>
+                <div class="titulo-resumen"><p>Resumen de compra</p></div>
                 <div class="datos">
                     <div class="subtotal">
                         <p>Subtotal</p>
@@ -122,21 +119,22 @@
                     <div class="ingreso-codigo">
                         <form>
                             <input type="text" placeholder="Ingresá el código" class="codigo-desc">
-                            <button type="submit" class="aplicar-codigo">Aplicar</button> 
-                        </form>
-                    </div>
-                    <div class="checkout">
-                        <!--esto deberiamos verlo pero supongo que redirecciona a Mercado Pago o algo así-->
-                        <form></form>
-                            <button type="submit" class="aplicar-codigo">Checkout</button> 
+                            <button type="submit" class="aplicar-codigo" id="codigo-desc-btn">Aplicar</button> 
                         </form>
                     </div>
                     <div class="checkout-total">
                         <p>Total</p>
                         <p>$</p>
                     </div>
+                    <div class="checkout">
+                        <!--esto deberiamos verlo pero supongo que redirecciona a Mercado Pago o algo así-->
+                        <form></form>
+                            <button type="submit" class="aplicar-codigo" id="checkout-btn">Checkout</button> 
+                        </form>
+                    </div>
+                    
                     <div class="bases">
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam doloremque in aliquam facere sit harum consequuntur error temporibus magnam, ipsam animi accusantium, nemo, iste cumque. Aut blanditiis mollitia dolorum architecto?</p>
+                        <p>Por favor, chequeá que tu orden sea correcta antes de proceder al checkout. No se permiten cambios por equivocaciones al momento de la compra.</p>
                     </div>
                 </div>
             </div>

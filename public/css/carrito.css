@@ -56,7 +56,7 @@
   #corazon {
     padding-right: 15px;
     
-
+  
   }
   
   #logo {
@@ -64,13 +64,14 @@
     transition: 0.5s;
     margin-right: 120px;
     margin-left: 160px;
-    
   }
+  
   
   #logo:hover {
     transform: rotate(360deg);
-    transition: 2s;
+    transition: 1s;
   }
+  
   
   header input {
     padding-left: 15px;
@@ -94,16 +95,17 @@
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
   }
-
-
+  
+  
   .contenedorMiGarage {
     padding-right: 30px;
   }
-
+  
   .carrito {
     font-size: 0.7em;
   }
-
+  
+  
   
   .headerSection2 {
     border-top: 1px solid rgba(255, 255, 255, 0.342);
@@ -114,9 +116,10 @@
       #d8ffd2,
       rgb(203, 203, 255)
     );
-    height: 30%;
     font-size: 1em;
-    padding-left:20px ;
+    padding-left:70px ;
+    padding-right: 10px;
+  
   }
   
   .headerSection2 a {
@@ -132,10 +135,109 @@
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    padding-right: 35px;
-  }
-
+    padding-right: 80px; }
   
+    #burguer {
+      display: none;
+    }
+    
+    #lupa {
+      display: none;
+    }
+    
+    @media (max-width: 1279px)   { 
+      header {
+        border-bottom: 1px solid white;
+        flex-wrap: nowrap;
+      }
+      .headerSection1{
+        margin-bottom: 30px;
+        flex-wrap: nowrap;
+        margin-top: 30px;
+        padding-left: 40px;
+        padding-right: 20px;
+      }
+      #logo {
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+      .left {
+        display: none;
+      }
+      .carrito {
+        padding-left: 20px;
+      }
+      .headerSection2 {
+        padding-right: 100px;
+      }
+    }
+  
+    @media (max-width : 811px) {
+      .carrito {
+        display: none;
+      }
+    }
+  
+  
+    @media (max-width : 769px) {
+      .headerSection2 {
+        display: none;
+      }
+      header .carrito {
+        display: none;
+      }
+      header input {
+        display: none;
+      }
+      .contenedorMiGarage, .contenedorFavoritos {
+        display: none;
+      }
+      #burguer {
+        display: block;
+        font-size: 3em;
+        margin-left: 30px;
+      }
+      #lupa {
+        display: block;
+        font-size: 3em;
+        margin-right: 50px;
+        margin-left: 20px;
+  
+      }
+      .headerSection1{
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      header {
+        border-bottom: 1px solid white;
+      }
+      #logo {
+        font-size: 1.2em;
+        justify-content: center;
+        align-items: center;
+        margin-right: 30px;
+        margin-left: 70px;
+      }
+      
+      .left {
+        display: none; }
+    
+      .headerSection2 {
+        display: none;
+        }
+    }
+  
+    @media (max-width :  494px) {
+        #logo {
+          margin: 10px;
+        }
+        #lupa {
+          margin: 0;
+        }
+        #burguer {
+          margin: 0;
+        }
+      }
   /*  --------------main--------------------------------------------*/
   .page-header{
     display: flex;
@@ -164,6 +266,16 @@
 
   .redirec-login{
     display: inline-block;
+    border: solid 0px #000;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+    background-color: #D2AFFF;
+    color: white;
+    font-family: teko;
   }
 
   .items {
@@ -235,8 +347,8 @@
     display: inline-block;
   }
 
-  .cantidad-unidades button {
-    border: solid 2px #000;
+  .editar-cantidades {
+    border: solid 0px #000;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
@@ -249,7 +361,7 @@
     display: flex;
 }
 
-.eliminar, .editar {
+.eliminar, .editar, .aplicar-codigo {
     border: solid 0px #000;
     border-radius: 10px;
     padding-left: 5px;
@@ -265,15 +377,78 @@
 
 .like{
     background-color: white;
+    color: #D2AFFF;
     border: none;
     font-size: 1rem;
 }
 
-
+.like:hover{
+    color: black;
+}
   
+.resumen-compra{
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 5px 20px 10px 20px;
+}
 
+.titulo-resumen{
+    font-size: 32px;
+    display: inline-block;
+}
 
+.subtotal{
+    display:flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.costo-envio{
+    display:flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.descuento{
+    display:flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.codigo-descuento{
+    margin: 5px;
+}
   
+.codigo-desc{
+    font-family: "Teko", sans-serif;
+    border-radius: 15px;
+    padding: 8px 2px 8px 8px;
+    margin: 5px;
+}
+
+.checkout-total{
+    display:flex;
+    justify-content: space-between;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+#checkout-btn{
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: 1.2rem;
+}
+
+.bases{
+    font-size: 0.8rem;
+    margin-left: 5px;
+    padding-bottom: 20px;
+}
+
+.bases p{
+    width: 60%;
+}
   /*  --------------FOOTER--------------------------------------------*/
   
   footer {
@@ -439,7 +614,22 @@
   }
 
 
+  @media (min-width: 500px){
+    .foto-producto{
+        display: block;
+        margin-right: 30px; 
+        margin-left: 5px; 
+        width: 40%;
+      }
+  }
+
   @media (min-width: 780px){
+
+    main{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     .page-header{
         display: flex;
         flex-direction: row;
@@ -452,7 +642,7 @@
         display: flex;
         align-self: flex-start;
         width: 65%;
-        margin: 15px 20px 10px 15px; 
+        margin: 0px 20px 10px 15px; 
         font-size: 2rem; 
       }
     
@@ -462,7 +652,7 @@
         justify-content: flex-end;
         align-items: center;
         font-size: 1.2rem;
-        margin: 15px 20px 10px 20px; 
+        margin: 0px 20px 10px 20px; 
       }
 
       .preg-login{
@@ -477,11 +667,14 @@
         display:none; 
       }
 
-      .foto-producto{
-        display: block;
-        margin-right: 30px; 
-        margin-left: 5px; 
-        width: 40%;
+      .principal{
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .productos{
+        padding-right: 30px;
+        border-bottom: 0px;
       }
 
       .nombre-producto{
@@ -496,18 +689,29 @@
         font-size: 1.5rem;
       }
     
+      .agregar-total{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
       .precio-unitario{
         font-size: 1.3rem;
       }
 
       .cantidad-unidades button {
-        border: solid 2px #000;
+        border: solid 0px #000;
         border-radius: 10px;
         padding-left: 15px;
         padding-right: 15px;
         padding-top: 5px;
         padding-bottom: 5px;
         font-size: 18px;
+    }
+
+    .detalle-total{
+        padding-top: 10px;
+        padding-left: 170px;
     }
     
     .acciones{
