@@ -7,8 +7,11 @@ main {
     background-color: #ebebeb;
 }
 
+h1 {
+    padding-top: 30px;
+}
+
 h2 {
-    margin-left: 10%;
     padding-top: 30px;
 }
 
@@ -42,7 +45,6 @@ img {
     align-items: center;
     margin-top: 20px;
     margin-bottom: 15px;
-    margin-left: 10%;
 }
 
 .review i {
@@ -61,7 +63,6 @@ img {
 .product {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .main-image {
@@ -83,15 +84,15 @@ img {
 }
 
 .product-details {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
+    
     font-size: 25px;
+    bottom: 5px;
 }
 
-.product-description p {
-    margin-left: 10%;
+.desktop {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .qty-button {
@@ -221,12 +222,76 @@ article:hover .add-also-details {
         display: none;
         margin-top: 15px;
     } 
+    .desktop {
+        position: relative;
+    }
+    h1 {
+        position:absolute;
+        top: 0px;
+        left: 10%;
+    }
+    .review {
+        position: absolute;
+        top: 65px;
+        left: 10%;
+    }
+    .product {
+        padding-top: 130px;
+    }
+    .product-description {
+        width: 100%;
+        margin-left: 9%;
+        margin-bottom: 30px;
+    }
+    .position {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .add-to-cart-button {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .product-details {
+        width: 85vw;
+        text-align: center;
+    }
 }
 
 @media (min-width: 769px){
     .review-arrow {
         visibility: hidden;
     }  
-   
+    .desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 30px;
+        align-items: stretch;
+    }
+    .product {
+        display: flex;
+        align-items: center;
+    }
+    .position {
+        position: relative;
+    }
+    .review {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .product-description {
+        margin-left: 0;
+    }
+    .product-details {
+        font-size: 25px;
+        position: absolute;
+        bottom: 5px;
+    }
+    .main-image {
+        width: 50vw;
+    }
 }
 
