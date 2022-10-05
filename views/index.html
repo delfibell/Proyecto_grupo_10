@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/headerfooter.css"> 
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Teko:wght@300;400&display=swap');
@@ -14,110 +15,141 @@
 </head>
 <body>
     <header>  <!-- Divido el header en dos sections, una para la parte de arriba y otra parte de abajo con el navbar-->
-                                        <!--Section 1 del header -->  
-        <section class="headerSection1"> 
-            <div>
-
-            </div>    
-            <div class="contenedorMiGarage">        
-                <a href="formularioDeRegistro.html"><p><i id="auto" class="fa-solid fa-car" ></i>Mi Garage</p></a>
-            </div>
-            <div class="contenedorFavoritos">
-                <a href=""><p><i  id="corazon"  class="fa-regular fa-heart"></i>Favoritos</p></a>
-            </div>        
-            <i class="fa-solid fa-bars" style="display:none"></i>      
-            <a class="logo" href="/views/index.html">
-                <img id="logo" src="img/logo1.png"> 
-            </a>
-            <div>
-                <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="¿Qué estás buscando?" value=""/>
-               <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
-            </div>
-            <div class="carrito">
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>    
-            </div>
-            <div>
-
-            </div>
-        </section>            
-        <section class="headerSection2">   
-            <nav class="navegador">
-                </div><a href=""class="nav_link"><p>INICIO</p></a>
-                <a href="" class="nav_link" ><p></p>NOSOTRXS</a>
-                <a href=""  class="nav_link"><p></p>CONTACTO</a>
-            </nav>
-        </section> 
-    </header>
+        <!--Section 1 del header -->  
+<section class="headerSection1">   
+<div class="contenedorMiGarage">        
+<a href="/views/formularioDeRegistro.html"><p><i id="auto" class="fa-solid fa-car" ></i>Mi Garage</p></a>
+</div>
+<div class="contenedorFavoritos">
+<a href=""><p><i  id="corazon"  class="fa-regular fa-heart"></i>Favoritos</p></a>
+</div>        
+<i class="fa-solid fa-bars" id="burguer"></i>      
+<a class="logo" href="/views/index.html">
+<img id="logo" src="img/logo1.png"> 
+</a>
+<div>
+<input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="¿Qué estás buscando?" value=""/>
+<!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+</div>
+<div class="carrito">
+<a href=""><i class="fa-solid fa-cart-shopping"></i></a>    
+</div>
+<div>
+<i class="fa-solid fa-magnifying-glass" id="lupa"></i>    
+</div>
+</section>            
+<section class="headerSection2">   
+<nav class="navegador">
+</div><a href=""class="nav_link"><p>INICIO</p></a>
+<a href="" class="nav_link" ><p></p>NOSOTRXS</a>
+<a href=""  class="nav_link"><p></p>CONTACTO</a>
+</nav>
+</section> 
+</header>
 
     <main>
- <p>MAIN</p>
+        <h2>PRODUCTOS</h2>
+       
+        <section class="cards"> 
+            <article id="first-product" class="article">
+                <img class="imag" src="/img/IMG_0175.jpeg">
+                <div class="product-description">
+                    <p>ombu-shampoo</p>
+                    <h3>$ 1500</h3>
+              </div>
+            </article>
+            <article id="second-product" class="article">
+                <img class="imag"   src="/img/IMG_4335.jpeg" >
+                <div class="product-description">
+                    <p>ombu-shampoo</p>
+                    <h3>$ 1500</h3>
+              </div>
+            </article>
+            <article id="third-product" class="article">
+                <img class="imag"   src="/img/IMG_4335.jpeg" >
+                <div class="product-description">
+                    <p>ombu-shampoo</p>
+                    <h3>$ 1500</h3>
+              </div>
+            </article>
+            <article id="fourth-product" class="article">
+                <img class="imag"   src="/img/IMG_4335.jpeg" >
+                <div class="product-description">
+                    <p>ombu-shampoo</p>
+                    <h3>$ 1500</h3>
+              </div>
+            </article> 
+            <article id="fifth-product" class="article">
+                <img class="imag"   src="/img/IMG_4335.jpeg" >
+                <div class="product-description">
+                    <p>ombu-shampoo</p>
+                    <h3>$ 1500</h3>
+              </div>
+            </article>
+        </section>
     </main>
 
-    <footer>
-            <section class="social_media_icons">
-                <a href=""><img src="" alt=""><i class="fa-brands fa-whatsapp"  style="color: rgb(255, 255, 255)" ></i></a></div>
-                <a href="https://www.instagram.com/oft.detailingproducts/"><i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255)"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100080626577480"><i class= "fa-brands fa-facebook" style="color: rgb(255, 255, 255)"></i></a>
-            </section>
-            <section class="callUs">
-                <p>Tenes otras consultas?&nbsp;&nbsp;&nbsp;Llamanos.</p>  
-                <p><i class="fa-solid fa-phone"></i>+54&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;24523606</p>
-                <p>Lunes a Viernes de 10am a 16.30pm</p>
-            </section>
-            <section class="newsletter">
-                <div class="contenedorNews1">
-                    <p>NEWSLETTER</p>
-                    <div><input type="text" placeholder="Nombre" /></div>
-                    <div><input type="email" placeholder="e-mail" /></div>
-                    <div><button type="submit" name="button">ENVIAR</button></div>
-                </div>
-                <div class="contenedorNews2">
-                    
-                        <p id="mediosDePago">Medios de pago</p>
-                        <div>
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="icon-logo lazyloaded" alt="visa" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="icon-logo lazyloaded" alt="mastercard" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="icon-logo lazyloaded" alt="amex" width="32" height="20">
-                        </div>
-                        <div>  
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" class="icon-logo lazyloaded" alt="diners" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" class="icon-logo lazyloaded" alt="ar_banelco" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="icon-logo lazyloaded" alt="ar_cabal" width="32" height="20">
-                        </div>
-                        <div>
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-shopping" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="icon-logo lazyloaded" alt="mercadopago" width="32" height="20">
-                        </div>
-                        <div>
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" class="icon-logo lazyloaded" alt="ar_argencard" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" class="icon-logo lazyloaded" alt="pagofacil" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="icon-logo lazyloaded" alt="rapipago" width="32" height="20">
-                        </div>
-                        <div>
-
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" class="icon-logo lazyloaded" alt="nativa" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabaldebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabaldebit@2x.png" class="icon-logo lazyloaded" alt="ar_cabaldebit" width="32" height="20">
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercarddebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercarddebit@2x.png" class="icon-logo lazyloaded" alt="mastercarddebit" width="32" height="20">
-                        </div>
-                        <div>
-                            <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" class="icon-logo lazyloaded" alt="visadebit" width="32" height="20">
-                        </div>
-                     
-                </div>
-            </section>
-            <div class="copyright">
-                <p>© 2022 Only For Track</p>
-                <p><a href="https://www.chemicalguys.com/terms-and-conditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
-                <p><a href="https://www.chemicalguys.com/privacy-policy.html" title="Privacy Policy">Privacy Policy</a></p>
-                <p><a href="https://www.chemicalguys.com/reseller-policy.html" title="Reseller Policy">Reseller Policy</a></p>
-                <p><a href="https://www.chemicalguys.com/sds-sheets-page.html" title="Material Safety Data">Material Safety Data</a></p>
-                <p><a href="https://www.chemicalguys.com/on/demandware.store/Sites-chemicalguys-Site/default/PressMediaService-Show" title="Media/Press">Media/Press</a></p>
+    <!-- <footer>
+        <section class="social_media_icons">
+            <a href=""><img src="" alt=""><i class="fa-brands fa-whatsapp"  style="color: rgb(255, 255, 255)" ></i></a></div>
+            <a href="https://www.instagram.com/oft.detailingproducts/"><i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255)"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100080626577480"><i class= "fa-brands fa-facebook" style="color: rgb(255, 255, 255)"></i></a>
+        </section>
+        <section class="callUs">
+            <p>Tenes otras consultas?&nbsp;&nbsp;&nbsp;Llamanos.</p>  
+            <p><i class="fa-solid fa-phone"></i>+54&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;24523606</p>
+            <p>Lunes a Viernes de 10 a 16.30hs</p>
+        </section>
+        <section class="newsletter">
+            <div class="contenedorNews1">
+                <p>NEWSLETTER</p>
+                <div><input type="text" placeholder="Nombre" /></div>
+                <div><input type="email" placeholder="e-mail" /></div>
+                <div><button type="submit" name="button">ENVIAR</button></div>
             </div>
-        
-    </footer>
+            <div class="contenedorNews2">
+                
+                    <p id="mediosDePago">Medios de pago</p>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visa@2x.png" class="icon-logo lazyloaded" alt="visa" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercard@2x.png" class="icon-logo lazyloaded" alt="mastercard" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/amex@2x.png" class="icon-logo lazyloaded" alt="amex" width="32" height="20">
+                    </div>
+                    <div>  
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/diners@2x.png" class="icon-logo lazyloaded" alt="diners" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/banelco@2x.png" class="icon-logo lazyloaded" alt="ar_banelco" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabal@2x.png" class="icon-logo lazyloaded" alt="ar_cabal" width="32" height="20">
+                    </div>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-naranja@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-naranja" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/tarjeta-shopping@2x.png" class="icon-logo lazyloaded" alt="ar_tarjeta-shopping" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mercadopago@2x.png" class="icon-logo lazyloaded" alt="mercadopago" width="32" height="20">
+                    </div>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/argencard@2x.png" class="icon-logo lazyloaded" alt="ar_argencard" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/pagofacil@2x.png" class="icon-logo lazyloaded" alt="pagofacil" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/rapipago@2x.png" class="icon-logo lazyloaded" alt="rapipago" width="32" height="20">
+                    </div>
+                    <div>
 
-
-
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/nativa@2x.png" class="icon-logo lazyloaded" alt="nativa" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabaldebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/ar/cabaldebit@2x.png" class="icon-logo lazyloaded" alt="ar_cabaldebit" width="32" height="20">
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercarddebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/mastercarddebit@2x.png" class="icon-logo lazyloaded" alt="mastercarddebit" width="32" height="20">
+                    </div>
+                    <div>
+                        <img src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" data-src="//d26lpennugtm8s.cloudfront.net/assets/common/img/logos/payment/new_logos_payment/visadebit@2x.png" class="icon-logo lazyloaded" alt="visadebit" width="32" height="20">
+                    </div>
+                 
+            </div>
+        </section>
+        <div class="copyright">
+            <p>© 2022 Only For Track</p>
+            <p><a href="https://www.chemicalguys.com/terms-and-conditions.html" title="Terms &amp; Conditions">Terms &amp; Conditions</a></p>
+            <p><a href="https://www.chemicalguys.com/privacy-policy.html" title="Privacy Policy">Políticas de privacidad</a></p>
+            <p><a href="https://www.chemicalguys.com/reseller-policy.html" title="Reseller Policy">Reseller Policy</a></p>
+            <p><a href="https://www.chemicalguys.com/sds-sheets-page.html" title="Material Safety Data">Material Safety Data</a></p>
+            <p><a href="https://www.chemicalguys.com/on/demandware.store/Sites-chemicalguys-Site/default/PressMediaService-Show" title="Media/Press">Prensa</a></p>
+        </div>
+    </footer> -->
 </body>
 </html>

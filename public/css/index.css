@@ -141,6 +141,48 @@
   
   main {
     color: rgb(0, 0, 0);
+    font-family: 'Teko', sans-serif;
+    background-color: #ebebeb;
+    /* text-align: center; */
+    /* display: flex;
+    flex-direction: column; */
+    margin: auto;
+    /* position: static; */
+  }
+
+  main h2 {
+    text-align: center;
+    /* margin: 15px; */
+  }
+
+  .cards {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+
+  .article {
+    text-align: center;
+  }
+
+  .imag {
+    width: 80vw;
+    border-radius: 20px;
+  }
+
+  .product-description {
+    width: 60vw;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .cards {
+        flex-direction: row;
+        justify-content: space-around;
+    }
   }
   
   /*  --------------FOOTER--------------------------------------------*/
