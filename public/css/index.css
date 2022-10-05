@@ -44,6 +44,10 @@ main h2 {
   text-align: center;
 }
 
+.article:hover .product-description {
+  color:#FF9900
+}
+
 @media (min-width: 768px) {
   .cards {
     width: 100vw;
