@@ -476,7 +476,8 @@ header a {
     align-items: flex-start;
     padding-top: 25px;
     padding-bottom: 1em;
-    width: 95%;
+    width: 100%;
+  
   }
   
   .newsletter .contenedorNews1,
@@ -554,4 +555,8 @@ header a {
     font-size: 1.5em;
     color: white; 
     font-family: "Teko", sans-serif;
+  }
+
+  #mediosDePago {
+    padding-bottom: 10px;
   }

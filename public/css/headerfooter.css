@@ -406,3 +406,7 @@ input[type="text"] {
   color: white; 
   font-family: "Teko", sans-serif;
 }
+
+#mediosDePago {
+  padding-bottom: 10px;
+}
