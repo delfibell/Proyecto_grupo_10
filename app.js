@@ -3,6 +3,7 @@ const path = require("path");
 const mainRoutes = require("./src/routes/main");
 const productsRoutes = require("./src/routes/products");
 const usersRoutes = require("./src/routes/users");
+const notFoundRoutes = require("./src/routes/notFound")
 
 const app = express();
 
@@ -18,6 +19,4 @@ app.use("/productos", productsRoutes);
 
 app.use("/usuarios", usersRoutes);
 
-app.use("/*", (req, res) => {
-  res.send("Página no encontrada");
-});
+app.use("/*", notFoundRoutes);
