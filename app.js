@@ -3,6 +3,8 @@ const path = require("path");
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 const mainRoutes = require("./src/routes/main");
+const productsRoutes = require("./src/routes/products");
+const usersRoutes = require("./src/routes/users");
 
 app.listen(3000, () => {
   console.log("Servidor funcionando");
@@ -10,22 +12,10 @@ app.listen(3000, () => {
 
 app.use("/", mainRoutes);
 
-app.get("/detalle-de-producto", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "/src/views/products/detalle-de-producto.html")
-  );
-});
+app.use("/detalle-de-producto", productsRoutes);
 
-app.get("/registro", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "/src/views/users/formularioDeRegistro.html")
-  );
-});
+app.use("/carrito", productsRoutes);
 
-app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "/src/views/users/formularioDeLogin.html"));
-});
+app.use("/registro", usersRoutes);
 
-app.get("/carrito", (req, res) => {
-  res.sendFile(path.join(__dirname, "/src/views/products/carrito.html"));
-});
+app.use("/login", usersRoutes);
