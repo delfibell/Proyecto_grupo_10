@@ -2,11 +2,11 @@ const path = require("path");
 
 let productsControllers = {
   detalleProducto: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/products/detalleDeProducto.html"));
+    res.render("products/detalleDeProducto")
   },
 
   carrito: (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/products/carrito.html"));
+    res.render("products/carrito");
   },
 };
 
