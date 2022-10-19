@@ -3,6 +3,7 @@ const path = require("path");
 const mainRoutes = require("./src/routes/main");
 const productsRoutes = require("./src/routes/products");
 const usersRoutes = require("./src/routes/users");
+const cartRoutes = require("./src/routes/cart");
 const notFoundRoutes = require("./src/routes/notFound")
 
 const app = express();
@@ -20,5 +21,7 @@ app.use("/", mainRoutes);
 app.use("/productos", productsRoutes);
 
 app.use("/usuarios", usersRoutes);
+
+app.use("/carrito", cartRoutes);
 
 app.use("/*", notFoundRoutes);
