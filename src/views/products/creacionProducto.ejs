@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <%- include("../partials/head")%>
+        <link rel="stylesheet" href="/css/formularioDeRegistro.css">
+    </head>
+<body>
+    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
+
+    <main>
+        <div class="container">
+           <div class="crearCuentaForm">
+                <div class="login">
+                    <p>CREAR UN NUEVO PRODUCTO</p>
+                </div>
+                <form action="" method="">
+                    <label for="nombre-producto">Nombre del producto</label> 
+                    <input type="text" name="nombre-producto" class="input-box" required>
+                    <label for="descripcion-producto">Descripción del producto</label> 
+                    <textarea name="descripcion-producto" class="input-box" required>Ingresá la descripción del producto</textarea>
+                    <label for="imagen">Imagen</label>
+                    <input type="file" name ="imagen-producto" class="input-box" accept=".jpg, .png, .jpeg" required>
+                    <label for="categoria">Categoria</label> 
+                    <select name="categoria" class="input-box" required> 
+                        <option value="exterior">Exterior</option>
+                        <option value="interior">Interior</option>
+                        <option value="neumaticos">Neumáticos</option>
+                        <option value="vidrios">Vidrios</option>
+                        <option value="accesorios">Accesorios</option>
+                    </select>
+                    <label for="aroma">Aroma</label> 
+                    <select name="aroma" class="input-box"> 
+                        <option value="uva">Uva</option>
+                        <option value="chicle">Chicle</option>
+                        <option value="fresa">Fresa</option>
+                        <option value="vainicoco">Vainicoco</option>
+                        <option value="autosport">Autosport</option>
+                        <option value="vainilla">Vainilla</option>
+                    </select>
+                    <label for="tamaño">Aroma</label> 
+                    <select name="tamaño" class="input-box"> 
+                        <option value="120">120cc</option>
+                        <option value="500">500cc</option>
+                        <option value="1000">1l</option>
+                        <option value="500">5l</option>
+                    </select>
+                    <label for="precio">Precio</label> 
+                    <input type="text" name="precio" class="input-box" required>
+                    <button type="submit" value="cargar">Cargar</button>
+                    <button type="reset" value="borrar">Borrar</button>
+                </form>
+           </div>
+       </div> 
+    
+    </main>
+
+    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+</body>
+</html>
