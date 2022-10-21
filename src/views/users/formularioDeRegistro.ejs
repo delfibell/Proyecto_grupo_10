@@ -15,16 +15,16 @@
                     <p>CREAR UNA CUENTA</p>
                 </div>
                 <form action="">
-                    <label for="">Nombre</label> 
-                    <input type="text" class="input-box" placeholder="Ingrese su nombre" required>
-                    <label for="">Apellido</label> 
-                    <input type="text" class="input-box" placeholder="Ingrese su apellido" required> 
-                    <label for="">E-mail</label>
-                    <input type="email" class="input-box" placeholder="Ingrese su e-mail" required>
-                    <label for="">Contraseña</label> 
-                    <input type="password" class="input-box" placeholder="Ingrese una contraseña" required> 
-                    <label for="">Confirmar contraseña</label> 
-                    <input type="password" class="input-box" placeholder="Confirme su contraseña" required> 
+                    <label for="nombre">Nombre</label> 
+                    <input type="text" name="nombre" class="input-box" placeholder="Ingrese su nombre" required>
+                    <label for="apellido">Apellido</label> 
+                    <input type="text" name="apellido" class="input-box" placeholder="Ingrese su apellido" required> 
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" class="input-box" placeholder="Ingrese su e-mail" required>
+                    <label for="contraseña">Contraseña</label> 
+                    <input type="password" name="contraseña" class="input-box" placeholder="Ingrese una contraseña" required> 
+                    <label for="confirmacion-contraseña">Confirmar contraseña</label> 
+                    <input type="password" name="confirmacion-contraseña" class="input-box" placeholder="Confirme su contraseña" required> 
                     <p>Estoy de acuerdo con los <a href="" target="" class="">términos y condiciones</a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="condiciones"/></p>
                     <button type="submit" value="Registrar">Registrarme</button>
                     <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/usuarios/login">Ingresar</a></p>
