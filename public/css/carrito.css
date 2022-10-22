@@ -211,4 +211,131 @@
 .bases p{
     width: 60%;
 }
+
+
+
+@media (min-width: 500px){
+  .foto-producto{
+      display: block;
+      margin-right: 30px; 
+      margin-left: 5px; 
+      width: 40%;
+    }
+}
+
+@media (min-width: 780px){
+
+  main{
+      padding-left: 50px;
+      padding-right: 50px;
+  }
+
+  .page-header{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 15px; 
+      border-bottom: 1.5px solid black;
+    }
   
+    .titulo{
+      display: flex;
+      align-self: flex-start;
+      width: 65%;
+      margin: 0px 20px 10px 15px; 
+      font-size: 2rem; 
+    }
+  
+    .login{
+      display: flex;
+      width: 35%;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 1.2rem;
+      margin: 0px 20px 10px 20px; 
+    }
+
+    .preg-login{
+      display: inline-block;
+    }
+  
+    .redirec-login{
+      display: inline-block;
+    }
+  
+    .items{
+      display:none; 
+    }
+
+    .principal{
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .productos{
+      padding-right: 30px;
+      border-bottom: 0px;
+    }
+
+    .nombre-producto{
+      font-size: 2rem;
+    }
+
+    .detalle-total .descripcion-prod{
+      font-size: 1.1rem;
+    }
+  
+    .detalle-total .precio-total{
+      font-size: 1.5rem;
+    }
+  
+    .agregar-total{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .precio-unitario{
+      font-size: 1.3rem;
+    }
+
+    .cantidad-unidades button {
+      border: solid 0px #000;
+      border-radius: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 18px;
+  }
+
+  .detalle-total{
+      padding-top: 10px;
+      padding-left: 170px;
+  }
+  
+  .acciones{
+      display: flex;
+  }
+  
+  .eliminar, .editar {
+      border: solid 0px #000;
+      border-radius: 10px;
+      padding-left: 32px;
+      padding-right: 32px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 20px;
+      background-color: #D2AFFF;
+      color: white;
+      font-family: teko;
+      display: inline-block;
+  }
+  
+  .like{
+      background-color: white;
+      border: none;
+      font-size: 20px;
+  }
+}
+
