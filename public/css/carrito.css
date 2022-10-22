@@ -37,7 +37,8 @@
     font-size: 1rem;
     background-color: #D2AFFF;
     color: white;
-    font-family: teko;
+    font-family: "Teko", "sans-serif";
+    transition-duration: 450ms;
   }
 
   .items {
@@ -94,6 +95,7 @@
 
   .foto-producto img{
     width:100%; 
+    border-radius: 25px;
   }
 
   .datos-producto{
@@ -135,6 +137,7 @@
     color: white;
     font-family: teko;
     display: inline-block;
+    transition-duration: 450ms;
 }
 
 .like{
@@ -142,10 +145,7 @@
     color: #D2AFFF;
     border: none;
     font-size: 1rem;
-}
-
-.like:hover{
-    color: black;
+    transition-duration: 450ms;
 }
   
 .resumen-compra{
@@ -200,6 +200,7 @@
     padding-left: 32px;
     padding-right: 32px;
     font-size: 1.2rem;
+    transition-duration: 450ms;
 }
 
 .bases{
@@ -212,6 +213,36 @@
     width: 60%;
 }
 
+/* Hovers */
+
+.redirec-login:hover{
+  color:#000;
+  transform: scale(1.2);
+}
+
+.aplicar-codigo:hover {
+  color:#000;
+  transform: scale(1.2);
+}
+
+.editar:hover {
+  color:#000;
+  transform: scale(1.2);
+}
+
+.eliminar:hover {
+  color:#000;
+  transform: scale(1.2);
+}
+
+#checkout-btn:hover {
+  color:#000;
+  transform: scale(1.2);
+}
+
+.like:hover {
+  transform: scale(1.2);
+}
 
 
 @media (min-width: 500px){
