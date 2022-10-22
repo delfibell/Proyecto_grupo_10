@@ -1,6 +1,9 @@
 const path = require("path");
 
 let productsControllers = {
+  listarProductos: (req,res) => {
+    res.render("products/listadoDeProductos")
+  },
   detalleProducto: (req, res) => {
     res.render("products/detalleDeProducto")
   },

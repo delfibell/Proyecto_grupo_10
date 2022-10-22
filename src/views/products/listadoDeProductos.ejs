@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head")%>
+        <link rel="stylesheet" href="/css/detalleDeProducto.css">
+    </head>
+<body>
+
+    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
+
+    <main>
+        <h2>Acá va el listado de productos</h2>
+        <form action="/productos/crear" method="GET">
+            <button type="submit" class="redirec-login">Creá un nuevo producto</button>
+        </form>
+
+
+    </main>
+    
+    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+
+</body>
+</html>

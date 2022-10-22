@@ -1,42 +1,35 @@
 
-    
-    /*  --------------main--------------------------------------------*/
-    
-    main {
-      margin: 0;
-      box-sizing: border-box;
-      height: fit-content;
-      
-      
-    }
 
-  
-  /*  --------------main--------------------------------------------*/
-  
-  main {
+/*  --------------main--------------------------------------------*/
+
+main {
     margin: 0;
     box-sizing: border-box;
     height: fit-content;
     
     
   }
-
+  
   main .container{
-  flex-wrap: wrap; 
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  padding: 4em;
-  width: 100vw;
-  backdrop-filter: blur(1px);
-  background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
-  background-size: contain;
-  background-position: center;
-}
-
-.crearCuentaForm {
+    flex-wrap: wrap; 
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 4em;
+    width: 100vw;
+    backdrop-filter: blur(1px);
+    background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
+    background-color: #acacac;
+    background-size: contain;
+    background-position: center;
+    
+  }
+  
+  
+  
+  .crearCuentaForm {
     background-color: rgb(255, 255, 255);
-    width: 500px;
+    width: 600px;
     flex-direction: column;
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.412);
@@ -44,10 +37,17 @@
     margin-right: 20px;
     padding: 40px;
     height: fit-content;
-    font-family: "Teko", sans-serif;
-}
-
-.left{
+    padding-bottom: 40px;
+    
+  }
+  
+  @media (max-width : 773px) { 
+    main .crearCuentaForm {
+      width: 100%;
+  }
+  }
+  
+  .left{
     width: 480px;
     /* height: 50%; */
     flex-direction: row;
@@ -58,15 +58,26 @@
     border-radius: 10px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.102);
     
-
-} 
-
-@media (max-width: 1067px) {
+  
+  } 
+  
+  @media (max-width: 1067px) {
     .left {
         margin-top: 10px;
     }
   }
-
+  
+  @media (max-width: 960px) and (max-width: 0px){
+    .left {
+        display: none; }
+    .headerSection2 {
+        display: none;
+        }
+      
+    }
+  
+  
+  
   .crearCuentaForm .login {
     font-family: "Teko", sans-serif;
     font-size: 3em;
@@ -74,7 +85,7 @@
     background-color: #ffffff;
     flex-direction: column;
   } 
-
+  
   .crearCuentaForm form {
     display: flex;
     flex-direction: column;
@@ -83,11 +94,12 @@
     margin-top: 20px;
     
   }
-
+  
   .crearCuentaForm form label {
     margin-bottom: 8px;
+    font-size: 1em;
   }
-
+  
   .crearCuentaForm form input {
     margin-bottom: 20px;
     padding-left: 15px;
@@ -98,7 +110,7 @@
     font-size: 0.8em;
     font-family: "Barlow Condensed", sans-serif;
   }
-
+  
   .crearCuentaForm form button{
     padding: 10px;
     border-radius: 10px;
@@ -111,34 +123,33 @@
     margin-top: 15px;
     box-shadow: 2px 2px 2px 2px rgba(53, 53, 53, 0.102);
   }
-
+  
   button:hover { 
     opacity: 0.8;
-    font-size: 25px;
+    font-size: 30px;
     transition-duration: 450ms;
-}
-
-form button:hover { 
+      
+  }
   
-  font-size: 25px;
-  transition-duration: 0.5s;
-}
-
-
-.crearCuentaForm form .CuentaOK {
+  form button:hover { 
+    
+    font-size: 25px;
+    transition-duration: 0.5s;
+  }
+  
+  .crearCuentaForm form .CuentaOK {
   
   font-size: 1em;
   justify-content: center;
   display: flex;
   justify-content: center;
   
+  }
   
-}
-
-
-.crearCuentaForm form p {
+  .crearCuentaForm form p {
   margin-top: 10px;
   font-size: 0.8em;
   
-}
- 
+  }
+  
+  
