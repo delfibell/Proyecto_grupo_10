@@ -8,7 +8,7 @@ main {
   color: rgb(0, 0, 0);
   font-family: "Teko", sans-serif;
   background-color: #ebebeb;
-  padding-top: 30px;
+  padding: 0px;
 }
 
 main h2 {
@@ -48,7 +48,88 @@ main h2 {
   color: #ff9900;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 480px) {
+  #offers h2 {
+    border: solid black 2px;
+    border-radius: 5px;
+    width: 90vw;
+    margin: auto;
+  }
+
+  .cards {
+    width: 100vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .imag {
+    width: 60%;
+    border-radius: 20px;
+    margin-bottom: 0%;
+  }
+
+  .class-description {
+    margin: 0;
+  }
+
+  .article {
+    width: 30%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* align-self: auto; */
+    /* justify-content: space-between; */
+    padding: 0%;
+    margin-bottom: 30px;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  /*.carousel-list {
+    display: flex;
+    animation: cambio 10s infinite normal linear;
+  }
+
+  .moving-image {
+    max-width: 100vw;
+    list-style: none;
+    display: flex;
+  }
+
+  .moving-image img {
+    width: 100vw;
+  }
+
+  @keyframes cambio {
+    0% {
+      margin-left: 0;
+    }
+    31.3% {
+      margin-left: 0;
+    }
+    33.3% {
+      margin-left: -100.7%;
+    }
+    64.6% {
+      margin-left: -100.7%;
+    }
+    66.6% {
+      margin-left: -200.5%;
+    }
+    100% {
+      margin-left: -200.5%;
+    }
+  } */
+}
+
+
+@media (max-width: 1440px) {
   #offers h2 {
     border: solid black 2px;
     border-radius: 5px;
@@ -106,9 +187,9 @@ main h2 {
 
   .slider {
     width: 100vw;
+    height: 25vw;
     border: solid 2px #ebebeb;
     overflow: hidden;
-    position: absolute;
     left: 0%;
     top: 0%;
   }
