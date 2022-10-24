@@ -8,7 +8,7 @@ main {
   color: rgb(0, 0, 0);
   font-family: "Teko", sans-serif;
   background-color: #ebebeb;
-  padding-top: 30px;
+  padding: 0px;
 }
 
 main h2 {
@@ -106,9 +106,9 @@ main h2 {
 
   .slider {
     width: 100vw;
+    height: 25vw;
     border: solid 2px #ebebeb;
     overflow: hidden;
-    position: absolute;
     left: 0%;
     top: 0%;
   }
