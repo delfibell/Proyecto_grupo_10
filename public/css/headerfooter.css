@@ -131,6 +131,22 @@ header button {
     transition-duration: 450ms;
 }
 
+
+
+#heart {
+  color: grey;  
+  font-size: 50px;
+}
+
+#heart.red {
+  color: red;
+}
+
+
+
+
+
+
 .navegador {
   height: 3em;
   display: flex;

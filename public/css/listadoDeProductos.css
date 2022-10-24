@@ -2,10 +2,47 @@ main {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
+    font-family: "Barlow Condensed", sans-serif;
+    font-family:  "Teko", sans-serif;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    font-size: 1.4em;
+    flex-wrap: wrap;
+    text-decoration: none;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 30px;
+    
+}   
+
+.nav li {
+    border-right: 1px black solid;
+    height: 30px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    align-self: center;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover{
+    color: #afffba;
+    
+    transition-duration: 450ms;
 }
 
 #productos{
-    font-size: 2em;
+    font-size: 1.8em;
     padding-left: px;
     padding-top: 30px;
     border-bottom: 1px black solid;
@@ -29,19 +66,28 @@ main {
     margin-right: 15px;
 }
 
+.productos {
+    font-size: 1.8em;
+    padding-left: px;
+    padding-top: 30px;
+    border-bottom: 1px black solid;
+    margin-left: 75px;
+    margin-right: 75px;
+}
 
 .cards1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 20px;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 70px;
+    padding-right: 0px;
     padding-top: 0px;
     padding-bottom: 40px;
     margin: 15px;
+    
     
 }
 
@@ -50,31 +96,40 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 20px;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-start;
     padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
     padding-bottom: 50px;
     background-color: rgb(0, 0, 0);
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 0px;
 
+
 }
 
 article {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: baseline;
     background-color: rgb(246, 246, 246);
     list-style: none;
-    padding: 10px;
+    padding: 8px;
     margin: 8px;
+    margin-right: 40px;
     margin-top: 30px;
     position: relative;
     border: 1px rgb(0, 0, 0) solid;
+    
+}
+
+
+
+article:hover {
+    box-shadow: 1px 1px 10px rgb(156, 255, 151); 
 }
 
 ul {
@@ -88,12 +143,18 @@ article .productoNombre {
     
 }
 
-article li i {
-    position: absolute;
-    top: 300px;
-    left: 220px;
-    font-size: 1em
+.imag {
+    position: relative;
 }
+
+.corazon{
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+}
+
 
 #carrito {
     color: white;
@@ -104,9 +165,8 @@ article li i {
 .cajaChica {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 3px
 }
 
 .cajaChica div {
@@ -114,27 +174,95 @@ article li i {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 3px;
     
 }
 
-.cajaChica .comprar {
-    background-color: aqua;
+
+
+#detalles {
+    width: 50%; 
+    background-color: #D2AFFF;
+    margin-right: 5px;
+}
+
+.comprar{
+    width: 50%; 
+    background-color: black;
+    cursor: pointer;
+}
+
+.comprar:hover {
+    background-color: rgb(171, 171, 171);
+}
+
+
+#txt {
+    background-color: rgb(182, 182, 182);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6em;
+    font-family: "Barlow Condensed", sans-serif;
+    display: none;
+    padding: 15px;
+    margin-top: 5px;
+    width: 260px
+}
+
+#txt1 {
+    background-color: rgb(182, 182, 182);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6em;
+    font-family: "Barlow Condensed", sans-serif;
+    display: none;
+    padding: 15px;
+    margin-top: 5px;
+    width: 200px
+}
+
+
+article:hover #txt {
+    background-color: rgb(107, 107, 107);
+    display: block;
+}
+
+
+article:hover #txt1 {
+    background-color: rgb(107, 107, 107);
+    display: block;
 }
 
 .cajaChica p {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
     color: white;
 }
 
+form {
+display: flex;
+width: 100%;
+justify-content: center;
+align-items: center;
+height: 100%;
+}
 
-
-
-
+form button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: none;
+	border: none;
+	font: inherit;
+    font-size: 1em;
+    height: 40px;
+    
+}
 
 
 .slider{
@@ -182,4 +310,36 @@ article li i {
 .slider, .slider ul, .slider img{
     height: 100vh;
 }
+}
+
+
+.nuevoProducto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(202, 233, 216);
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+
+.nuevoProducto button {
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-size: 2em;
+    width: auto;
+}
+
+.corazones {
+    position: absolute;
+    color:white;
+    top:20px;
+    left: 170px;
+    font-size: 1.2em;
 }

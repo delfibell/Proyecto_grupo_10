@@ -7,7 +7,6 @@ const cartRoutes = require("./src/routes/cart");
 const notFoundRoutes = require("./src/routes/notFound")
 
 const app = express();
-
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "src/views"))
@@ -25,3 +24,12 @@ app.use("/usuarios", usersRoutes);
 app.use("/carrito", cartRoutes);
 
 app.use("/*", notFoundRoutes);
+
+
+
+(function() {
+  const heart = document.getElementById('heart');
+  heart.addEventListener('click', function() {
+    heart.classList.toggle('red');
+  });
+})();
