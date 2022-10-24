@@ -1,0 +1,185 @@
+main {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+#productos{
+    font-size: 2em;
+    padding-left: px;
+    padding-top: 30px;
+    border-bottom: 1px black solid;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+#shampoos {
+    padding-left: 70px;
+    padding-top: 50px;
+    font-size: 1.5em;
+}
+
+#perfumes {
+    padding-left: 60px;
+    padding-top: 40px;
+    font-size: 2em;
+    background-color: black;
+    color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+
+.cards1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    margin: 15px;
+    
+}
+
+.cards2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: rgb(0, 0, 0);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0px;
+
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    background-color: rgb(246, 246, 246);
+    list-style: none;
+    padding: 10px;
+    margin: 8px;
+    margin-top: 30px;
+    position: relative;
+    border: 1px rgb(0, 0, 0) solid;
+}
+
+ul {
+    list-style: none;
+}
+
+article .productoNombre {
+    margin: 5px;
+    padding-left: 5px;
+    font-size: 1.2em;
+    
+}
+
+article li i {
+    position: absolute;
+    top: 300px;
+    left: 220px;
+    font-size: 1em
+}
+
+#carrito {
+    color: white;
+    font-size: 0.7em;
+    padding-left: 10px;
+}
+
+.cajaChica {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3px
+}
+
+.cajaChica div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    
+}
+
+.cajaChica .comprar {
+    background-color: aqua;
+}
+
+.cajaChica p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: white;
+}
+
+
+
+
+
+
+
+.slider{
+    overflow: hidden;
+    height: 100px;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+.slider ul{
+    display: flex;
+    animation: cambio 20s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 769px) {
+
+    .slider {
+        display: none;
+    }
+
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+@media only screen and (min-width:320px) and (max-width:768px){
+.slider, .slider ul, .slider img{
+    height: 100vh;
+}
+}
