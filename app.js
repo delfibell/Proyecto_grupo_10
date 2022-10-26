@@ -6,6 +6,7 @@ const usersRoutes = require("./src/routes/users");
 const cartRoutes = require("./src/routes/cart");
 const notFoundRoutes = require("./src/routes/notFound")
 
+
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs")
@@ -25,11 +26,6 @@ app.use("/carrito", cartRoutes);
 
 app.use("/*", notFoundRoutes);
 
-
-
-(function() {
-  const heart = document.getElementById('heart');
-  heart.addEventListener('click', function() {
-    heart.classList.toggle('red');
-  });
-})();
+app.get('/lista', (req, res) => {   // parametro1 ('/') : pad,   // parametro2 : callback que obtiene como argumentos dos argumentos (req,res)
+  res.sendFile(path.join(__dirname, '/views/productos.html') )
+}); 
