@@ -1,3 +1,7 @@
+SPRINT #4
+Jamboard retrospectiva #4:
+
+
 SPRINT #3
 Jamboard retrospectiva #3: https://jamboard.google.com/d/1_13H07L0wkhPXjb8y3dgOfcav9-M0ak43C158fGfXbw/edit?usp=sharing
 
