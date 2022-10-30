@@ -6,7 +6,7 @@
   "category": "Exterior",
   "fragance": "Uva",
   "size": "500cc",
-  "price": 5892.87,
+  "price": 800.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -17,7 +17,7 @@
   "category": "Interior",
   "fragance": "Chicle",
   "size": "500cc",
-  "price": 4156.16,
+  "price": 600.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -28,7 +28,7 @@
   "category": "Exterior",
   "fragance": "Fresa",
   "size": "5litros",
-  "price": 2996.9,
+  "price": 2800.00,
   "discount": 15,
   "type": "promocion"
 }, {
@@ -39,7 +39,7 @@
   "category": "Vidrios",
   "fragance": "",
   "size": "500cc",
-  "price": 617.78,
+  "price": 600.00,
   "discount": 25,
   "type": "promocion"
 }, {
@@ -50,7 +50,7 @@
   "category": "Exterior",
   "fragance": "",
   "size": "500cc",
-  "price": 5293.55,
+  "price": 1000.00,
   "discount": 15,
   "type": "promocion"
 }, {
@@ -61,7 +61,7 @@
   "category": "Desengrasantes",
   "fragance": "",
   "size": "5litros",
-  "price": 1875.63,
+  "price": 2600.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -72,7 +72,7 @@
   "category": "Desengrasantes",
   "fragance": "",
   "size": "500cc",
-  "price": 4900.11,
+  "price": 3200.00,
   "discount": 25,
   "type": "promocion"
 }, {
@@ -83,7 +83,7 @@
   "category": "Exterior",
   "fragance": "",
   "size": "500cc",
-  "price": 2872.83,
+  "price": 700.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -93,8 +93,8 @@
   "image": "IMG_6564.jpg",
   "category": "Exterior",
   "fragance": "",
-  "size": "5litros",
-  "price": 5005.7,
+  "size": "500cc",
+  "price": 2000,
   "discount": 0,
   "type": "nuevo"
 }, {
@@ -105,7 +105,7 @@
   "category": "Exterior",
   "fragance": "",
   "size": "500cc",
-  "price": 5920.78,
+  "price": 750.00,
   "discount": 0,
   "type": "nuevo"
 }, {
@@ -116,7 +116,7 @@
   "category": "Interior",
   "fragance": "",
   "size": "500cc",
-  "price": 1207.4,
+  "price": 1000.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -126,8 +126,8 @@
   "image": "IMG_0597.jpeg",
   "category": "Interior",
   "fragance": "",
-  "size": "5litros",
-  "price": 8332.15,
+  "size": "500cc",
+  "price": 900.00,
   "discount": 0,
   "type": "nuevo"
 }, {
@@ -138,7 +138,7 @@
   "category": "Exterior",
   "fragance": "",
   "size": "500cc",
-  "price": 4306.24,
+  "price": 1100.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -149,7 +149,7 @@
   "category": "Perfumes",
   "fragance": "Chicle",
   "size": "500cc",
-  "price": 5065.69,
+  "price": 1600.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -160,7 +160,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 3760.22,
+  "price": 1100.00,
   "discount": 0,
   "type": "promocion"
 }, {
@@ -171,7 +171,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 7767.92,
+  "price": 250.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -182,7 +182,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 9234.97,
+  "price": 1000.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -193,7 +193,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 5524.81,
+  "price": 1600.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -204,7 +204,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 6107.76,
+  "price": 2300.00,
   "discount": 30,
   "type": "promocion"
 }, {
@@ -215,7 +215,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 242.72,
+  "price": 450.00,
   "discount": 0,
   "type": "nuevo"
 }, {
@@ -226,7 +226,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 5059.16,
+  "price": 900.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -237,7 +237,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 5478.76,
+  "price": 450.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -248,7 +248,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 9111.01,
+  "price": 1200.00,
   "discount": 0,
   "type": "mas-vendido"
 }, {
@@ -259,7 +259,7 @@
   "category": "Accesorios",
   "fragance": "",
   "size": "",
-  "price": 4015.3,
+  "price": 2400.00,
   "discount": 0,
   "type": "nuevo"
 }, {
@@ -270,7 +270,7 @@
   "category": "Interior",
   "fragance": "Uva",
   "size": "5litros",
-  "price": 1512.82,
+  "price": 3500.00,
   "discount": 15,
   "type": "promocion"
 }, {
@@ -281,7 +281,7 @@
   "category": "Exterior",
   "fragance": "Chicle",
   "size": "5litros",
-  "price": 5663.41,
+  "price": 2400.00,
   "discount": 0,
   "type": "nuevo"
 }, {
@@ -292,7 +292,7 @@
   "category": "Vidrios",
   "fragance": "Fresa",
   "size": "5litros",
-  "price": 1570.68,
+  "price": 2800.00,
   "discount": 30,
   "type": "promocion"
 }, {
@@ -303,7 +303,7 @@
   "category": "Perfumes",
   "fragance": "Chicle",
   "size": "500cc",
-  "price": 8539.43,
+  "price": 1600.00,
   "discount": 0,
   "type": "nuevo"
 },
@@ -315,7 +315,7 @@
     "category": "Perfumes",
     "fragance": "Vainilla",
     "size": "500cc",
-    "price": 8539.43,
+    "price": 1600.00,
     "discount": 0,
     "type": "nuevo"
   },
@@ -327,7 +327,7 @@
     "category": "Perfumes",
     "fragance": "Uva",
     "size": "120cc",
-    "price": 8539.43,
+    "price": 500.00,
     "discount": 0,
     "type": "nuevo"
   },
@@ -338,8 +338,8 @@
     "image": "IMG_0164.jpeg",
     "category": "Exterior",
     "fragance": "Autosport",
-    "size": "500cc",
-    "price": 8539.43,
+    "size": "120cc",
+    "price": 500.00,
     "discount": 0,
     "type": "nuevo"
   },
@@ -351,7 +351,7 @@
     "category": "Exterior",
     "fragance": "Vainicoco",
     "size": "120cc",
-    "price": 8539.43,
+    "price": 500.00,
     "discount": 0,
     "type": "nuevo"
   },
@@ -363,7 +363,7 @@
     "category": "Perfumes",
     "fragance": "Fresa",
     "size": "500cc",
-    "price": 8539.43,
+    "price": 1600.00,
     "discount": 0,
     "type": "nuevo"
   },
@@ -375,7 +375,7 @@
     "category": "Exterior",
     "fragance": "Fresa",
     "size": "120cc",
-    "price": 8539.43,
+    "price": 500.00,
     "discount": 0,
     "type": "nuevo"
   }]
