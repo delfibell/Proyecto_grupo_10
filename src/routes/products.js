@@ -18,6 +18,9 @@ router.get("/:id", productsControllers.detalleProducto);
 router.get("/edit/:id", productsControllers.editarProducto)
 
 //ruta: /products/:id (PUT) - Acción de edición (a donde se envía el formulario):
-router.put("/:id", productsControllers.modificarProducto)
+router.put("/edit/:id", productsControllers.modificarProducto)
+
+//ruta: /products/:id (DELETE) - Acción de borrado
+router.delete("/:id", productsControllers.eliminarProducto)
  
 module.exports = router;

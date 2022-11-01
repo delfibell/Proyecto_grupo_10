@@ -418,5 +418,17 @@
     "price": 24,
     "discount": 34,
     "type": "nuevo"
+  },
+  {
+    "id": 1667331517792,
+    "name": "lksjkjs",
+    "description": "sdafdasdas",
+    "image": "Flyer 2 A4.jpeg",
+    "category": "exterior",
+    "fragance": "uva",
+    "size": "120",
+    "price": 24,
+    "discount": 2,
+    "type": "nuevo"
   }
 ]

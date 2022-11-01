@@ -49,6 +49,12 @@ let productsControllers = {
     product.price = req.body.price
     product.discount = req.body.discount
     product.type = req.body.type
+    res.redirect("/products/:id")
+  },
+  eliminarProducto: (req,res) => {
+    let idProducto = req.params.id;
+    products = products.filter(product => product.id !== idProducto)
+    res.render("/products")
   }
 };
 

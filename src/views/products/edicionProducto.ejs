@@ -14,7 +14,7 @@
                 <div class="editar">
                     <p>EDITAR PRODUCTO</p>
                 </div>
-                <form action="/products/:id?_method=PUT" method="POST">
+                <form action="/products/edit/:id?_method=PUT" method="POST">
                     <label for="nombre-producto">Nombre del producto*</label> 
                     <input type="text" name="nombre-producto" class="input-box" required value="<%= product.name %>">
                     <label for="descripcion-producto">Descripción del producto*</label> 
@@ -48,7 +48,10 @@
                     <label for="precio">Precio*</label> 
                     <input type="text" name="precio" class="input-box" required>
                     <button type="submit" value="cargar">Cargar</button>
-                    <button type="reset" value="borrar">Borrar</button>
+                    <form action="/products/:id?_method=DELETE" method="POST">
+                        <button type="reset" value="borrar">Borrar</button>
+                    </form>
+                    
                 </form>
            </div>
        </div> 
