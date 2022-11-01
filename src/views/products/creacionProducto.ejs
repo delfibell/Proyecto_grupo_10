@@ -14,15 +14,15 @@
                 <div class="crear">
                     <p>CREAR UN NUEVO PRODUCTO</p>
                 </div>
-                <form action="" method="">
+                <form action="/products" method="POST">
                     <label for="nombre-producto">Nombre del producto*</label> 
-                    <input type="text" name="nombre-producto" class="input-box" required>
+                    <input type="text" name="name" class="input-box" required>
                     <label for="descripcion-producto">Descripción del producto*</label> 
-                    <textarea name="descripcion-producto" class="input-box" required>Ingresá la descripción del producto</textarea>
+                    <textarea name="description" class="input-box" required placeholder="Ingresá la descripción del producto"></textarea>
                     <label for="imagen">Imagen*</label>
-                    <input type="file" name ="imagen-producto" class="input-box" accept=".jpg, .png, .jpeg" required>
+                    <input type="file" name ="image" class="input-box" accept=".jpg, .png, .jpeg" required>
                     <label for="categoria">Categoria*</label> 
-                    <select name="categoria" class="input-box" required> 
+                    <select name="category" class="input-box" required> 
                         <option value="exterior">Exterior</option>
                         <option value="interior">Interior</option>
                         <option value="neumaticos">Neumáticos</option>
@@ -30,7 +30,7 @@
                         <option value="accesorios">Accesorios</option>
                     </select>
                     <label for="aroma">Aroma</label> 
-                    <select name="aroma" class="input-box"> 
+                    <select name="fragance" class="input-box"> 
                         <option value="uva">Uva</option>
                         <option value="chicle">Chicle</option>
                         <option value="fresa">Fresa</option>
@@ -39,14 +39,22 @@
                         <option value="vainilla">Vainilla</option>
                     </select>
                     <label for="tamaño">Tamaño</label> 
-                    <select name="tamaño" class="input-box"> 
+                    <select name="size" class="input-box"> 
                         <option value="120">120cc</option>
                         <option value="500">500cc</option>
                         <option value="1000">1l</option>
                         <option value="500">5l</option>
                     </select>
                     <label for="precio">Precio</label> 
-                    <input type="text" name="precio" class="input-box" required>
+                    <input type="text" name="price" class="input-box" required>
+                    <label for="descuento">Descuento</label> 
+                    <input type="text" name="discount" class="input-box" required>
+                    <label for="tamaño">Tipo de producto</label> 
+                    <select name="type" class="input-box"> 
+                        <option value="nuevo">Nuevo</option>
+                        <option value="mas-vendidos">Más vendidos</option>
+                        <option value="promocion">Promoción</option>
+                    </select>
                     <button type="submit" value="cargar">Cargar</button>
                     <button type="reset" value="borrar">Borrar</button>
                 </form>

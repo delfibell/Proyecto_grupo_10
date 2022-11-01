@@ -12,12 +12,12 @@
     <div class="desktop">
         <div class="product">
             <i class="fa-solid fa-chevron-left flecha"></i>
-            <img src="/img/ombu-shampoo.jpeg" class="main-image">
+            <img src="/img/<%= product.image %>" class="main-image">
             <i class="fa-solid fa-chevron-right flecha"></i>
         </div>
         <div class="position">
 
-        <h1>OMBU SHAMPOO</h1>
+        <h1><%= product.name %></h1>
         <div class="review">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -30,8 +30,8 @@
         </div>
        
         <div class="product-description">
-              <h2>$ 1500</h2>
-              <p>Shampoo PH Neutro. Sin aditivos para cuidar mejor la pintura de tu vehículo.</p>
+              <h2><%= product.price %></h2>
+              <p><%= product.description %></p>
         </div>
         <div class="product-details">
               <button class="qty-button">- 1 +</button>

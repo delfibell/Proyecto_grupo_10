@@ -14,9 +14,9 @@
                 <div class="editar">
                     <p>EDITAR PRODUCTO</p>
                 </div>
-                <form action="" method="">
+                <form action="/products/:id?_method=PUT" method="POST">
                     <label for="nombre-producto">Nombre del producto*</label> 
-                    <input type="text" name="nombre-producto" class="input-box" required>
+                    <input type="text" name="nombre-producto" class="input-box" required value="<%= product.name %>">
                     <label for="descripcion-producto">Descripción del producto*</label> 
                     <textarea name="descripcion-producto" class="input-box" required>Ingresá la descripción del producto</textarea>
                     <label for="imagen">Imagen</label>
