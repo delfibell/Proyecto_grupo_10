@@ -18,11 +18,11 @@
                     <label for="nombre-producto">Nombre del producto*</label> 
                     <input type="text" name="nombre-producto" class="input-box" required value="<%= product.name %>">
                     <label for="descripcion-producto">Descripción del producto*</label> 
-                    <textarea name="descripcion-producto" class="input-box" required>Ingresá la descripción del producto</textarea>
+                    <textarea name="descripcion-producto" class="input-box" required><%= product.description %></textarea>
                     <label for="imagen">Imagen</label>
-                    <input type="file" name ="imagen-producto" class="input-box" accept=".jpg, .png, .jpeg" required>
+                    <input type="file" name ="imagen-producto" class="input-box" accept=".jpg, .png, .jpeg" required value="<%= product.image %>">
                     <label for="categoria">Categoria*</label> 
-                    <select name="categoria" class="input-box" required> 
+                    <select name="categoria" class="input-box" required value="<%= product.category %>"> 
                         <option value="exterior">Exterior</option>
                         <option value="interior">Interior</option>
                         <option value="neumaticos">Neumáticos</option>
@@ -30,7 +30,7 @@
                         <option value="accesorios">Accesorios</option>
                     </select>
                     <label for="aroma">Aroma</label> 
-                    <select name="aroma" class="input-box"> 
+                    <select name="aroma" class="input-box" value="<%= product.fragance %>"> 
                         <option value="uva">Uva</option>
                         <option value="chicle">Chicle</option>
                         <option value="fresa">Fresa</option>
@@ -39,14 +39,22 @@
                         <option value="vainilla">Vainilla</option>
                     </select>
                     <label for="tamaño">Tamaño</label> 
-                    <select name="tamaño" class="input-box"> 
+                    <select name="tamaño" class="input-box" value="<%= product.size %>"> 
                         <option value="120">120cc</option>
                         <option value="500">500cc</option>
                         <option value="1000">1l</option>
                         <option value="500">5l</option>
                     </select>
                     <label for="precio">Precio*</label> 
-                    <input type="text" name="precio" class="input-box" required>
+                    <input type="text" name="precio" class="input-box" required value="<%= product.price %>">
+                    <label for="descuento">Descuento</label> 
+                    <input type="text" name="discount" class="input-box" required value="<%= product.discount %>">
+                    <label for="tamaño">Tipo de producto</label> 
+                    <select name="type" class="input-box" value="<%= product.type %>"> 
+                        <option value="nuevo">Nuevo</option>
+                        <option value="mas-vendidos">Más vendidos</option>
+                        <option value="promocion">Promoción</option>
+                    </select>
                     <button type="submit" value="cargar">Cargar</button>
                     <form action="/products/:id?_method=DELETE" method="POST">
                         <button type="reset" value="borrar">Borrar</button>
