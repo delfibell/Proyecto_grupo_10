@@ -29,7 +29,7 @@ let productsControllers = {
       type: req.body.type
     }
     products.push(newProduct)
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ""))
+    fs.writeFileSync(productsFilePath,JSON.stringify(products, null, ""))
     res.redirect("/products")
   },
   editarProducto: (req, res) => {

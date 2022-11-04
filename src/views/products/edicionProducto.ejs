@@ -14,13 +14,13 @@
                 <div class="editar">
                     <p>EDITAR PRODUCTO</p>
                 </div>
-                <form action="/products/edit/:id?_method=PUT" method="POST">
+                <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST">
                     <label for="nombre-producto">Nombre del producto*</label> 
                     <input type="text" name="name" class="input-box" required value="<%= product.name %>">
                     <label for="descripcion-producto">Descripción del producto*</label> 
                     <textarea name="description" class="input-box" required><%= product.description %></textarea>
                     <label for="imagen">Imagen</label>
-                    <input type="file" name ="image" class="input-box" accept=".jpg, .png, .jpeg" required value="<%= product.image %>">
+                    <input type="file" name ="image" class="input-box" accept=".jpg, .png, .jpeg" value="<%= product.image %>">
                     <label for="categoria">Categoria*</label> 
                     <select name="category" class="input-box" required value="<%= product.category %>"> 
                         <option value="exterior">Exterior</option>
