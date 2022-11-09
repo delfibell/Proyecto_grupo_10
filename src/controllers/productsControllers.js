@@ -42,7 +42,12 @@ let productsControllers = {
     let product = products.find(product => product.id == idProducto) 
     product.name = req.body.name
     product.description = req.body.description
-    product.image = req.body.image
+    product.image = ""
+    if(req.files){
+      if(req.files.image){
+        product.image = req.file.image
+      }
+    }
     product.category = req.body.category
     product.fragance = req.body.fragance
     product.size = req.body.size
@@ -50,7 +55,7 @@ let productsControllers = {
     product.discount = req.body.discount
     product.type = req.body.type
     // error en la redirección
-    res.redirect("/products/:id")
+    res.redirect("/products/" + idProducto)
   },
   eliminarProducto: (req,res) => {
     let idProducto = req.params.id;

@@ -14,7 +14,7 @@
                 <div class="editar">
                     <p>EDITAR PRODUCTO</p>
                 </div>
-                <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST">
+                <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
                     <label for="nombre-producto">Nombre del producto*</label> 
                     <input type="text" name="name" class="input-box" required value="<%= product.name %>">
                     <label for="descripcion-producto">Descripción del producto*</label> 

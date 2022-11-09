@@ -1,6 +1,19 @@
 const express = require("express");
 const productsControllers = require("../controllers/productsControllers.js");
 const router = express.Router();
+const multer  = require('multer');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/img")
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+    cb(null, file.fieldname + '-' + uniqueSuffix)
+  }
+})
+
+const upload = multer({ storage: storage })
 
 // ruta: /products (GET) - Listado de productos
 router.get("/", productsControllers.listarProductos);
@@ -18,7 +31,7 @@ router.get("/:id", productsControllers.detalleProducto);
 router.get("/edit/:id", productsControllers.editarProducto)
 
 //ruta: /products/:id (PUT) - Acción de edición (a donde se envía el formulario):
-router.put("/edit/:id", productsControllers.modificarProducto)
+router.put("/edit/:id", upload.any(), productsControllers.modificarProducto)
 
 //ruta: /products/:id (DELETE) - Acción de borrado
 router.delete("/:id", productsControllers.eliminarProducto)
