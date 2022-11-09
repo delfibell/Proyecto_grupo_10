@@ -5,7 +5,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, "UTF-8"))
 
 let productsControllers = {
   listarProductos: (req,res) => {
-    res.render("products/listadoDeProductos")
+    res.render("products/listadoDeProductos",{products:products} )
   },
   detalleProducto: (req, res) => {
     let idProducto = req.params.id
@@ -49,6 +49,7 @@ let productsControllers = {
     product.price = req.body.price
     product.discount = req.body.discount
     product.type = req.body.type
+    // error en la redirección
     res.redirect("/products/:id")
   },
   eliminarProducto: (req,res) => {

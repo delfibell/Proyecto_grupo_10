@@ -74,368 +74,62 @@
                 </li>
             </ul> 
         <section class="cards1"> 
+            <% products.filter(product => product.category != "Perfumes").forEach(product => { %>
             <article id="article">
                 <ul>
-                    <li class="imagen"><img class="imag" src="/img/IMG_0168.jpg" width="260px"></li>
+                    <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
                     <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>SHAMPOO</p></li> 
+                    <li class="productoNombre"><p><%= product.name %></p></li> 
+                    <h2><%= product.price %></h2>
                     <div class="cajaChica"> 
                         <div   id="detalles"  class="detalles"><p>+ Detalles </p></div>
                         <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
                     </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
+                    <li id="txt" class="texto"><%= product.description %></li> 
                 </ul>
             </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="/img/SHAMPOO FRESA.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>SHAMPOO / Fresa</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="CERA" category="cera">
-                <ul>
-                    <li class="imagen"><img class="imag" src="/img/IMG_0149.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA INTERIOR</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>  
-            <article id="CERA">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0140.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="CERA">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0140.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR / Fresa</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="CERA">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_6536.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR / Uva</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0161.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>LIMPIA VIDRIOS</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_6554.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>ESPUMA ACTIVA</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>  
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_6540.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>DESENGRASANTE DE<br> LLANTAS</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article> 
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0171.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>DESENGRASANTE DE <br> MOTOR</li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article> 
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_6541.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>BUG REMOVER <br> / Saca bichos</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/SILICONA PARA CUBIERTAS.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>SILICONA PARA<br> CUBIERTAS</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/APC.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>APC <br>  / All Clean Propouse</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0615.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>ACONDICIONADOR <br> DE PLÁSTICOS</p></li> 
-                    <div class="cajaChica">
-                        <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div> 
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>  
-                </ul>
-            </article>
-            <!--
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0615.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>ACONDICIONADOR <br> DE CUEROS</p></li> 
-                    <div class="cajaChica">
-                        <div style="width: 50%; background-color: #D2AFFF"><p>+ Detalles </p></div>
-                        <div  style="width: 50%; background-color: black;"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                </ul>
-            </article>  
-            --> 
+            <% }) %>
             
         </section>
         <h2 id="perfumes">PERFUMES</h2>
         <section class="cards2">
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/UVA.jpg" width="200px"></li>
-                    <li class="corazones"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>PERFUME UVA</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('/');"  style="width: 50%; background-color: #D2AFFF ;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('/');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt1" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/FRESA.jpg" width="200px"></li>
-                    <li class="corazones"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>PERFUME FRESA</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');"  style="width: 50%; background-color: #D2AFFF ;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt1" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/VAINILLA.jpg" width="200px"></li>
-                    <li class="corazones"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>PERFUME VAINILLA</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');" style="width: 50%; background-color: #D2AFFF ;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div  class="comprar"  onclick="window.open('newurl.html','mywindow');"  ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt1" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/VAINICOCO.jpg" width="200px"></li>
-                    <li class="corazones"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>PERFUME VAINICOCO</p></li> 
-                    <div class="cajaChica">
-                        <div  onclick="window.open('newurl.html','mywindow');" style="width: 50%; background-color: #D2AFFF; cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt1" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article> 
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/VAINICOCO.jpg" width="200px"></li>
-                    <li class="corazones"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>PERFUME AUTOSPORT</p></li> 
-                    <div class="cajaChica">
-                        <div  onclick="window.open('newurl.html','mywindow');" style="width: 50%; background-color: #D2AFFF; cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                        <!--
-                        <div style="width: 50%; background-color: #D2AFFF"><p></p></div>
-                        <div  style="width: 50%; background-color: black;"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> -->
-                    </div>
-                    <li id="txt1" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article> 
+            <% products.filter(product => product.category == "Perfumes").forEach(product => { %>
+                <article id="article">
+                    <ul>
+                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
+                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
+                        <li class="productoNombre"><p><%= product.name %></p></li> 
+                        <h2><%= product.price %></h2>
+                        <div class="cajaChica"> 
+                            <div   id="detalles"  class="detalles"><p>+ Detalles </p></div>
+                            <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                        </div>
+                        <li id="txt" class="texto"><%= product.description %></li> 
+                    </ul>
+                </article>
+                <% }) %>
         </section>  
 
         <h2 id="productos3" >ACCESORIOS</h2>
         <section id="cards3"  class="cards1"> 
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="/img/IMG_0168.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>SHAMPOO</p></li> 
-                    <div class="cajaChica"> 
-                        <div   id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');"  ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="/img/SHAMPOO FRESA.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>SHAMPOO / Fresa</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');" style="width: 50%; background-color: #D2AFFF;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');"  ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="/img/IMG_0149.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA INTERIOR</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');" style="width: 50%; background-color: #D2AFFF;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');" ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>  
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0140.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');"  style="width: 50%; background-color: #D2AFFF;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');" ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0140.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR / Fresa</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');"   style="width: 50%; background-color: #D2AFFF;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');"   ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0140.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR / Fresa</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');"   style="width: 50%; background-color: #D2AFFF;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');" ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
-            <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0140.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR / Fresa</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');"   style="width: 50%; background-color: #D2AFFF;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');" ><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article> <article id="article">
-                <ul>
-                    <li class="imagen"><img class="imag" src="img/IMG_0140.jpg" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                    <li class="productoNombre"><p>CERA EXTERIOR / Fresa</p></li> 
-                    <div class="cajaChica">
-                        <div onclick="window.open('newurl.html','mywindow');"   style="width: 50%; background-color: #D2AFFF;cursor: pointer;"><p>+ Detalles </p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                    </div>
-                    <li id="txt" class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li> 
-                </ul>
-            </article>
+            <% products.filter(product => product.category == "Accesorios").forEach(product => { %>
+                <article id="article">
+                    <ul>
+                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
+                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
+                        <li class="productoNombre"><p><%= product.name %></p></li> 
+                        <h2><%= product.price %></h2>
+                        <div class="cajaChica"> 
+                            <div id="detalles" class="detalles"><p>+ Detalles </p></div>
+                            <div class="comprar" onclick="window.open('carrito.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                        </div>
+                        <li id="txt" class="texto"><%= product.description %></li> 
+                    </ul>
+                </article>
+                <% }) %>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <form class="nuevoProducto" action="/productos/crear" method="GET">
+        <form class="nuevoProducto" action="/products/create" method="GET">
             <button type="submit" class="redirec-login">Creá un nuevo producto</button>
         </form>
     </main>
