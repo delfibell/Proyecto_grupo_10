@@ -54,6 +54,7 @@ let productsControllers = {
     product.price = req.body.price
     product.discount = req.body.discount
     product.type = req.body.type
+    //fs.writeFileSync(productsFilePath,JSON.stringify(products, null, "")) -> buscar alternativa para sobreescribir el JSON
     res.redirect("/products/" + idProducto)
   },
   eliminarProducto: (req,res) => {
