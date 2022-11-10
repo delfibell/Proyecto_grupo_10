@@ -54,13 +54,13 @@ let productsControllers = {
     product.price = req.body.price
     product.discount = req.body.discount
     product.type = req.body.type
-    // error en la redirección
     res.redirect("/products/" + idProducto)
   },
   eliminarProducto: (req,res) => {
     let idProducto = req.params.id;
-    products = products.filter(product => product.id !== idProducto)
-    res.render("/products")
+    let updateProducts = products.filter(product => product.id != idProducto)
+    fs.writeFileSync(productsFilePath,JSON.stringify(updateProducts, null, ""))
+    res.redirect("/products")
   }
 };
 

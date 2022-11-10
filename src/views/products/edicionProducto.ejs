@@ -56,10 +56,9 @@
                         <option value="promocion">Promoción</option>
                     </select>
                     <button type="submit" value="cargar">Cargar</button>
-                    <form action="/products/:id?_method=DELETE" method="POST">
-                        <button type="reset" value="borrar">Borrar</button>
-                    </form>
-                    
+                </form>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit" value="borrar">Borrar</button>
                 </form>
            </div>
        </div> 
