@@ -33,11 +33,13 @@ let productsControllers = {
     res.redirect("/products")
   },
   editarProducto: (req, res) => {
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     let idProducto = req.params.id
     let product = products.find(product => product.id == idProducto) 
     res.render("products/edicionProducto", {product:product})
   },
   modificarProducto: (req,res) =>{
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     let idProducto = req.params.id
     let product = products.find(product => product.id == idProducto) 
     product.name = req.body.name
@@ -54,15 +56,25 @@ let productsControllers = {
     product.price = req.body.price
     product.discount = req.body.discount
     product.type = req.body.type
-    //fs.writeFileSync(productsFilePath,JSON.stringify(products, null, "")) -> buscar alternativa para sobreescribir el JSON
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
     res.redirect("/products/" + idProducto)
   },
   eliminarProducto: (req,res) => {
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
     let idProducto = req.params.id;
-    let updateProducts = products.filter(product => product.id != idProducto)
-    fs.writeFileSync(productsFilePath,JSON.stringify(updateProducts, null, ""))
-    res.redirect("/products")
-  }
+    let product = products.find(product => product.id == idProducto);
+    res.render('products/edicionProducto', { product:product });
+  },
+  destruirProducto: (req, res) => {
+    let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    let idProducto = req.params.id;
+    let product = products.find(product => product.id == idProducto);
+    let index = products.indexOf(product);
+    products.splice(index, 1);
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+    res.redirect('/products');
+}
 };
+
 
 module.exports = productsControllers;

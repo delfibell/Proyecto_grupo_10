@@ -33,7 +33,10 @@ router.get("/edit/:id", productsControllers.editarProducto)
 //ruta: /products/:id (PUT) - Acción de edición (a donde se envía el formulario):
 router.put("/edit/:id", upload.any(), productsControllers.modificarProducto)
 
+//ruta para eliminar producto
+router.get("/:id/delete", productsControllers.eliminarProducto)
+
 //ruta: /products/:id (DELETE) - Acción de borrado
-router.delete("/:id", productsControllers.eliminarProducto)
+router.delete("/:id", productsControllers.destruirProducto)
  
 module.exports = router;
