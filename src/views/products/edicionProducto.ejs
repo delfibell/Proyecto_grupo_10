@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/css/edicionProducto.css">
     </head>
 <body>
-    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
+    <%- include("../partials/header")%> <!-- Importacion del header desde los archivos parciales (views/partials) -->
 
     <main>
         <div class="container">
@@ -14,7 +14,10 @@
                 <div class="editar">
                     <p>EDITAR PRODUCTO</p>
                 </div>
-                <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
+                <!-- el action lleva javascript adentro para ir al producto con el id especifico segun la url -->
+                <!-- para usar PUT el method sigue siendo POST pero se debe agregar ?_method=PUT luego de la url -->
+                <!-- el enctype="multipart/form-data" es necesario para poder procesar el archivo (en este caso la imagen), sino el formulario solo es capaz de procesar archivos de texto -->
+                <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST"> 
                     <label for="nombre-producto">Nombre del producto*</label> 
                     <input type="text" name="name" class="input-box" required value="<%= product.name %>">
                     <label for="descripcion-producto">Descripción del producto*</label> 
@@ -65,6 +68,6 @@
     
     </main>
 
-    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+    <%- include("../partials/footer")%> <!-- Importacion del footer desde los archivos parciales (views/partials) -->
 </body>
 </html>
