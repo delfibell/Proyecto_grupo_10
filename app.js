@@ -26,7 +26,7 @@ app.listen(3000, () => {
 //direccionamiento hacia todos los archivos de rutas requeridos segun la url del browser
 app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
-app.use("/usuarios", usersRoutes);
+app.use("/users", usersRoutes);
 app.use("/carrito", cartRoutes);
 app.use("/*", notFoundRoutes);
 

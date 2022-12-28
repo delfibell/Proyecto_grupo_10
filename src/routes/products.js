@@ -23,7 +23,7 @@ router.get("/", productsControllers.listarProductos);
 router.get("/create", productsControllers.crearProducto); //cambiar ruta en los href
 
 //ruta: /products (POST) - Acción de creación (a donde se envía el formulario)
-router.post("/", productsControllers.store)
+router.post("/", upload.any("image"), productsControllers.store)
 
 //ruta: /products/:id (GET) - Detalle de un producto particular
 router.get("/:id", productsControllers.detalleProducto);
@@ -32,7 +32,7 @@ router.get("/:id", productsControllers.detalleProducto);
 router.get("/edit/:id", productsControllers.editarProducto)
 
 //ruta: /products/:id (PUT) - Acción de edición (a donde se envía el formulario):
-router.put("/edit/:id", upload.any(), productsControllers.modificarProducto)
+router.put("/edit/:id", upload.any("image"), productsControllers.modificarProducto)
 
 //ruta para eliminar producto
 router.get("/:id/delete", productsControllers.eliminarProducto)
