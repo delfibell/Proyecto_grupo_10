@@ -1,1 +1,106 @@
-[{"id":1,"firstName":"Micah","lastName":"Gooday","email":"mgooday0@tripadvisor.com","password":"A3rcSkdvB","username":"mgooday0","category":"Customer","profilePic":"2.jpg"},{"id":2,"firstName":"Pat","lastName":"Pomeroy","email":"ppomeroy1@icio.us","password":"lqGXaz","username":"ppomeroy1","category":"Admin","profilePic":"3.jpg"},{"id":3,"firstName":"Michaelina","lastName":"Winning","email":"mwinning2@loc.gov","password":"CDPc2EgJG","username":"mwinning2","category":"Admin","profilePic":"1.jpg"},{"id":4,"firstName":"Stephanus","lastName":"Piola","email":"spiola3@umn.edu","password":"JaRWwMH0Y33","username":"spiola3","category":"Customer","profilePic":"5.jpg"},{"id":5,"firstName":"Issiah","lastName":"Kyffin","email":"ikyffin4@about.com","password":"vQTQLTwphXh","username":"ikyffin4","category":"Admin","profilePic":"4.jpg"},{"id":1672267082719},{"id":1672267593784,"category":"Customer"},{"id":1672267805378,"category":"Customer"},{"id":1672268067770,"category":"Customer"},{"id":1672268457883,"firstName":"Juli","lastName":"Ber","email":"dd@gmail.com","password":"dfhkads","username":"juli","category":"Customer"},{"id":1672269735553,"firstName":"sd","lastName":"ds","email":"sdd@gmail.com","password":"sdkfjkad","username":"juli","profilePic":"user1672269735547","category":"Customer"},{"id":1672269881128,"firstName":"Julieta Sofia","lastName":"Bertolini","email":"bertolini.julieta@gmail.com","password":"sadas","username":"julibertolini","profilePic":"profilePic-1672269881108-462154032.jpeg","category":"Customer"},{"id":1672270993400,"firstName":"juli","lastName":"ber","email":"jkshd@gmail.com","password":"$2a$10$cWUcYRo0y/5OO9N8k/LnVeZiyie0NR6mLd6REhwZRC.WqMps/RS/a","username":"juliber","profilePic":"profilePic-1672270993379-248757038","category":"Customer"}]
+[
+    {
+        "id": 1,
+        "firstName": "Micah",
+        "lastName": "Gooday",
+        "email": "mgooday0@tripadvisor.com",
+        "password": "A3rcSkdvB",
+        "username": "mgooday0",
+        "category": "Customer",
+        "profilePic": "2.jpg"
+    },
+    {
+        "id": 2,
+        "firstName": "Pat",
+        "lastName": "Pomeroy",
+        "email": "ppomeroy1@icio.us",
+        "password": "lqGXaz",
+        "username": "ppomeroy1",
+        "category": "Admin",
+        "profilePic": "3.jpg"
+    },
+    {
+        "id": 3,
+        "firstName": "Michaelina",
+        "lastName": "Winning",
+        "email": "mwinning2@loc.gov",
+        "password": "CDPc2EgJG",
+        "username": "mwinning2",
+        "category": "Admin",
+        "profilePic": "1.jpg"
+    },
+    {
+        "id": 4,
+        "firstName": "Stephanus",
+        "lastName": "Piola",
+        "email": "spiola3@umn.edu",
+        "password": "JaRWwMH0Y33",
+        "username": "spiola3",
+        "category": "Customer",
+        "profilePic": "5.jpg"
+    },
+    {
+        "id": 5,
+        "firstName": "Issiah",
+        "lastName": "Kyffin",
+        "email": "ikyffin4@about.com",
+        "password": "vQTQLTwphXh",
+        "username": "ikyffin4",
+        "category": "Admin",
+        "profilePic": "4.jpg"
+    },
+    {
+        "id": 1672267082719
+    },
+    {
+        "id": 1672267593784,
+        "category": "Customer"
+    },
+    {
+        "id": 1672267805378,
+        "category": "Customer"
+    },
+    {
+        "id": 1672268067770,
+        "category": "Customer"
+    },
+    {
+        "id": 1672268457883,
+        "firstName": "Juli",
+        "lastName": "Ber",
+        "email": "dd@gmail.com",
+        "password": "dfhkads",
+        "username": "juli",
+        "category": "Customer"
+    },
+    {
+        "id": 1672269735553,
+        "firstName": "sd",
+        "lastName": "ds",
+        "email": "sdd@gmail.com",
+        "password": "sdkfjkad",
+        "username": "juli",
+        "profilePic": "user1672269735547",
+        "category": "Customer"
+    },
+    {
+        "id": 1672269881128,
+        "firstName": "Julieta Sofia",
+        "lastName": "Bertolini",
+        "email": "bertolini.julieta@gmail.com",
+        "password": "sadas",
+        "username": "julibertolini",
+        "profilePic": "profilePic-1672269881108-462154032.jpeg",
+        "category": "Customer"
+    },
+    {
+        "id": 1672270993400,
+        "firstName": "juli",
+        "lastName": "ber",
+        "email": "jkshd@gmail.com",
+        "password": "$2a$10$cWUcYRo0y/5OO9N8k/LnVeZiyie0NR6mLd6REhwZRC.WqMps/RS/a",
+        "username": "juliber",
+        "profilePic": "profilePic-1672270993379-248757038",
+        "category": "Customer"
+    }
+]
