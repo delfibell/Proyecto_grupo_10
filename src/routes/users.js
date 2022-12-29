@@ -2,6 +2,7 @@ const express = require("express"); //requerimiento de express
 const usersControllers = require("../controllers/usersControllers.js"); //requerimiento del controlador
 const router = express.Router(); //necesario para poder usar los metodos GET, POST, PUT, DELETE
 const multer = require("multer");
+const validateCreateForm = require("../middlewares/validateRegisterMiddleware")
 
 
 const storage = multer.diskStorage({  //recibe un objeto literal compuesto de dos metodos, destination y filename
@@ -17,7 +18,7 @@ const storage = multer.diskStorage({  //recibe un objeto literal compuesto de do
 const upload = multer({ storage: storage })
 
 router.get("/register", usersControllers.registro); //direccionamiento al archivo del controlador requerido segun la url del browser
-router.post("/register", upload.single("profilePic"), usersControllers.store); 
+router.post("/register", upload.single("profilePic"), validateCreateForm, usersControllers.procesoRegistro); 
 router.get("/login", usersControllers.login); //direccionamiento al archivo del controlador requerido segun la url del browser
  
  

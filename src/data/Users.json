@@ -48,59 +48,5 @@
         "username": "ikyffin4",
         "category": "Admin",
         "profilePic": "4.jpg"
-    },
-    {
-        "id": 1672267082719
-    },
-    {
-        "id": 1672267593784,
-        "category": "Customer"
-    },
-    {
-        "id": 1672267805378,
-        "category": "Customer"
-    },
-    {
-        "id": 1672268067770,
-        "category": "Customer"
-    },
-    {
-        "id": 1672268457883,
-        "firstName": "Juli",
-        "lastName": "Ber",
-        "email": "dd@gmail.com",
-        "password": "dfhkads",
-        "username": "juli",
-        "category": "Customer"
-    },
-    {
-        "id": 1672269735553,
-        "firstName": "sd",
-        "lastName": "ds",
-        "email": "sdd@gmail.com",
-        "password": "sdkfjkad",
-        "username": "juli",
-        "profilePic": "user1672269735547",
-        "category": "Customer"
-    },
-    {
-        "id": 1672269881128,
-        "firstName": "Julieta Sofia",
-        "lastName": "Bertolini",
-        "email": "bertolini.julieta@gmail.com",
-        "password": "sadas",
-        "username": "julibertolini",
-        "profilePic": "profilePic-1672269881108-462154032.jpeg",
-        "category": "Customer"
-    },
-    {
-        "id": 1672270993400,
-        "firstName": "juli",
-        "lastName": "ber",
-        "email": "jkshd@gmail.com",
-        "password": "$2a$10$cWUcYRo0y/5OO9N8k/LnVeZiyie0NR6mLd6REhwZRC.WqMps/RS/a",
-        "username": "juliber",
-        "profilePic": "profilePic-1672270993379-248757038",
-        "category": "Customer"
     }
 ]

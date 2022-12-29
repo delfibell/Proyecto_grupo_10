@@ -14,17 +14,23 @@
                 <div class="login">
                     <p>CREAR UNA CUENTA</p>
                 </div>
+                <% if (locals.errors) { %>
+                    <% errors.forEach (error => { %>
+                        <p> <%= error.msg %> </p>
+                   <% }) %>
+               <% } %>
+                
                 <form action="/users/register" method="POST" enctype="multipart/form-data">
                     <label for="firstName">Nombre</label> 
-                    <input type="text" name="firstName" class="input-box" placeholder="Ingrese su nombre" required>
+                    <input type="text" name="firstName" class="input-box" placeholder="Ingrese su nombre" >
                     <label for="lastName">Apellido</label> 
-                    <input type="text" name="lastName" class="input-box" placeholder="Ingrese su apellido" required> 
+                    <input type="text" name="lastName" class="input-box" placeholder="Ingrese su apellido" > 
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" class="input-box" placeholder="Ingrese su e-mail" required>
+                    <input type="email" name="email" class="input-box" placeholder="Ingrese su e-mail" >
                     <label for="password">Contraseña</label> 
-                    <input type="password" name="password" class="input-box" placeholder="Ingrese una contraseña" required> 
+                    <input type="password" name="password" class="input-box" placeholder="Ingrese una contraseña" > 
                     <label for="username">Nombre de usuario</label> 
-                    <input type="text" name="username" class="input-box" placeholder="Ingrese su nombre de usuario" required>
+                    <input type="text" name="username" class="input-box" placeholder="Ingrese su nombre de usuario" >
                     <label for="profilePic">Foto de perfil</label>
                     <input type="file" name ="profilePic" class="input-box" accept=".jpg, .png, .jpeg"> 
                     <p>Estoy de acuerdo con los <a href="" target="" class="">términos y condiciones</a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="condiciones"/></p>
