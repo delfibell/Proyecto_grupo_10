@@ -1,25 +1,26 @@
 const express = require("express"); //requerimiento de express
-const usersControllers = require("../controllers/usersControllers.js"); //requerimiento del controlador
 const router = express.Router(); //necesario para poder usar los metodos GET, POST, PUT, DELETE
-const multer = require("multer");
+
+//controladores
+const usersControllers = require("../controllers/usersControllers.js"); //requerimiento del controlador
+
+//middlewares
 const validateCreateForm = require("../middlewares/validateRegisterMiddleware")
+const uploadFile = require('../middlewares/multerMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-
-const storage = multer.diskStorage({  //recibe un objeto literal compuesto de dos metodos, destination y filename
-    destination: function (req, file, cb) {
-      cb(null, "./public/img/users")
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-      cb(null, file.fieldname + '-' + uniqueSuffix)
-    }
-  })
-  
-const upload = multer({ storage: storage })
-
+//Formulario de registro
 router.get("/register", usersControllers.registro); //direccionamiento al archivo del controlador requerido segun la url del browser
-router.post("/register", upload.single("profilePic"), validateCreateForm, usersControllers.procesoRegistro); 
-router.get("/login", usersControllers.login); //direccionamiento al archivo del controlador requerido segun la url del browser
- 
- 
+//Procesamiento del registro
+router.post("/register", uploadFile.single("profilePic"), validateCreateForm, usersControllers.procesoRegistro); 
+//Formulario de login
+router.get("/login", guestMiddleware, usersControllers.login); //direccionamiento al archivo del controlador requerido segun la url del browser
+//Procesamiento del login
+router.post("/login'", usersControllers.procesoLogin);
+//Usuario logueado - eventualmente lleva a perfil
+router.get('/', authMiddleware, usersControllers.profile);
+// Logout
+router.get("/logout/", usersControllers.logout);
+
 module.exports = router; //necesario para poder requerirlo desde app.js

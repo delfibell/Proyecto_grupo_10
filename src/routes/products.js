@@ -16,28 +16,30 @@ const storage = multer.diskStorage({  //recibe un objeto literal compuesto de do
 
 const upload = multer({ storage: storage })
 
+const authMiddleware = require('../middlewares/authMiddleware');
+
 // ruta: /products (GET) - Listado de productos
 router.get("/", productsControllers.listarProductos);
 
 // ruta: /products/create (GET) - Formulario de creación de productos
-router.get("/create", productsControllers.crearProducto); //cambiar ruta en los href
+router.get("/create", authMiddleware, productsControllers.crearProducto); //cambiar ruta en los href
 
 //ruta: /products (POST) - Acción de creación (a donde se envía el formulario)
-router.post("/", upload.any("image"), productsControllers.store)
+router.post("/", upload.any("image"), authMiddleware, productsControllers.store)
 
 //ruta: /products/:id (GET) - Detalle de un producto particular
 router.get("/:id", productsControllers.detalleProducto);
 
 // ruta: /products/:id/edit (GET) - Formulario de edición de productos
-router.get("/edit/:id", productsControllers.editarProducto)
+router.get("/edit/:id", authMiddleware, productsControllers.editarProducto)
 
 //ruta: /products/:id (PUT) - Acción de edición (a donde se envía el formulario):
-router.put("/edit/:id", upload.any("image"), productsControllers.modificarProducto)
+router.put("/edit/:id", upload.any("image"), authMiddleware, productsControllers.modificarProducto)
 
 //ruta para eliminar producto
-router.get("/:id/delete", productsControllers.eliminarProducto)
+router.get("/:id/delete", authMiddleware, productsControllers.eliminarProducto)
 
 //ruta: /products/:id (DELETE) - Acción de borrado
-router.delete("/:id", productsControllers.destruirProducto)
+router.delete("/:id", authMiddleware, productsControllers.destruirProducto)
  
 module.exports = router;

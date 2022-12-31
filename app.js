@@ -1,5 +1,8 @@
 const express = require("express"); //requerimiento de express para poder usarlo
 const path = require("path"); //requerimiento del metodo path de express para usarlo
+const session = require('express-session');
+const cookies = require('cookie-parser');
+
 
 //requerimiento de todas las rutas
 const mainRoutes = require("./src/routes/main");
@@ -10,6 +13,18 @@ const notFoundRoutes = require("./src/routes/notFound")
 
 const methodOverride = require('method-override'); //requerimiento del metodo override para poder utilizar PUT
 const app = express(); //necesario para poder usar todos los metodos de express que aparecen abajo
+
+const loggedMiddleware = require('./src/middlewares/loggedMiddleware');
+
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+
+app.use(loggedMiddleware);
 
 app.use(express.urlencoded({ extended: true })); //es lo que nos permite procesar los formularios
 app.use(express.static(path.join(__dirname, "public"))); //definicion de carpeta de archivos estaticos
