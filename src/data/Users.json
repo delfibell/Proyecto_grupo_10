@@ -1,52 +1,62 @@
 [
-    {
-        "id": 1,
-        "firstName": "Micah",
-        "lastName": "Gooday",
-        "email": "mgooday0@tripadvisor.com",
-        "password": "A3rcSkdvB",
-        "username": "mgooday0",
-        "category": "Customer",
-        "profilePic": "2.jpg"
-    },
-    {
-        "id": 2,
-        "firstName": "Pat",
-        "lastName": "Pomeroy",
-        "email": "ppomeroy1@icio.us",
-        "password": "lqGXaz",
-        "username": "ppomeroy1",
-        "category": "Admin",
-        "profilePic": "3.jpg"
-    },
-    {
-        "id": 3,
-        "firstName": "Michaelina",
-        "lastName": "Winning",
-        "email": "mwinning2@loc.gov",
-        "password": "CDPc2EgJG",
-        "username": "mwinning2",
-        "category": "Admin",
-        "profilePic": "1.jpg"
-    },
-    {
-        "id": 4,
-        "firstName": "Stephanus",
-        "lastName": "Piola",
-        "email": "spiola3@umn.edu",
-        "password": "JaRWwMH0Y33",
-        "username": "spiola3",
-        "category": "Customer",
-        "profilePic": "5.jpg"
-    },
-    {
-        "id": 5,
-        "firstName": "Issiah",
-        "lastName": "Kyffin",
-        "email": "ikyffin4@about.com",
-        "password": "vQTQLTwphXh",
-        "username": "ikyffin4",
-        "category": "Admin",
-        "profilePic": "4.jpg"
-    }
+ {
+  "id": 1,
+  "firstName": "Micah",
+  "lastName": "Gooday",
+  "email": "mgooday0@tripadvisor.com",
+  "password": "A3rcSkdvB",
+  "username": "mgooday0",
+  "category": "Customer",
+  "profilePic": "2.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "Pat",
+  "lastName": "Pomeroy",
+  "email": "ppomeroy1@icio.us",
+  "password": "lqGXaz",
+  "username": "ppomeroy1",
+  "category": "Admin",
+  "profilePic": "3.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "Michaelina",
+  "lastName": "Winning",
+  "email": "mwinning2@loc.gov",
+  "password": "CDPc2EgJG",
+  "username": "mwinning2",
+  "category": "Admin",
+  "profilePic": "1.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Stephanus",
+  "lastName": "Piola",
+  "email": "spiola3@umn.edu",
+  "password": "JaRWwMH0Y33",
+  "username": "spiola3",
+  "category": "Customer",
+  "profilePic": "5.jpg"
+ },
+ {
+  "id": 5,
+  "firstName": "Issiah",
+  "lastName": "Kyffin",
+  "email": "ikyffin4@about.com",
+  "password": "vQTQLTwphXh",
+  "username": "ikyffin4",
+  "category": "Admin",
+  "profilePic": "4.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Juli",
+  "lastName": "Bertolini",
+  "email": "bertolini@dh.com.ar",
+  "password": "$2a$10$amQo6SpXqSlry7Lukv5L5OTQvPjrYuz5paF2.7Dn1qJkD/ODe0Tke",
+  "username": "julibertolini",
+  "condiciones": "on",
+  "avatar": "1672611245195_img.jpeg"
+ }
 ]

@@ -19,7 +19,7 @@ router.get("/login", guestMiddleware, usersControllers.login); //direccionamient
 //Procesamiento del login
 router.post("/login'", usersControllers.procesoLogin);
 //Usuario logueado - eventualmente lleva a perfil
-router.get('/', authMiddleware, usersControllers.profile);
+router.get('/mi-garage', authMiddleware, usersControllers.profile);
 // Logout
 router.get("/logout/", usersControllers.logout);
 
