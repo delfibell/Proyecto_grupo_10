@@ -48,15 +48,5 @@
   "username": "ikyffin4",
   "category": "Admin",
   "profilePic": "4.jpg"
- },
- {
-  "id": 6,
-  "firstName": "Juli",
-  "lastName": "Bertolini",
-  "email": "bertolini@dh.com.ar",
-  "password": "$2a$10$amQo6SpXqSlry7Lukv5L5OTQvPjrYuz5paF2.7Dn1qJkD/ODe0Tke",
-  "username": "julibertolini",
-  "condiciones": "on",
-  "avatar": "1672611245195_img.jpeg"
  }
 ]
