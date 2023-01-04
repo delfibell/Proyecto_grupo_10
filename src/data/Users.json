@@ -48,5 +48,25 @@
   "username": "ikyffin4",
   "category": "Admin",
   "profilePic": "4.jpg"
+ },
+ {
+  "id": 6,
+  "firstName": "Juli",
+  "lastName": "Bertolini",
+  "email": "",
+  "password": "$2a$10$Ru56hZk.fxtloWdho82OMeV0Wyf711/YAF4H6egrMyMPKHVBk2aem",
+  "username": "julibertolini",
+  "condiciones": "on",
+  "profilePic": "1672795782028_img.jpeg"
+ },
+ {
+  "id": 7,
+  "firstName": "Juli",
+  "lastName": "Bertolini",
+  "email": "bertolini.julieta@gmail.com",
+  "password": "$2a$10$RLDifyAmZpXORf8FjVx.kOwE1yNTqpPg5aFl2y3HkTDnXBeOjLO/S",
+  "username": "juki",
+  "condiciones": "on",
+  "profilePic": "1672795801186_img.jpeg"
  }
 ]

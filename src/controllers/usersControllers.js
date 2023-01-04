@@ -12,10 +12,12 @@ const usersControllers = {
   },
 
   procesoRegistro: (req,res) => {
-    const resultValidation = validationResult(req)
-    if (resultValidation.errors.length > 0) {
+	let errors = validationResult (req)
+    // const resultValidation = validationResult(req)
+    if (errors.errors.length > 0) {
 			return res.render('users/formularioDeRegistro', {
-				errors: resultValidation.mapped(),
+				errors: errors.array(),
+				//resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
