@@ -23,7 +23,6 @@ const usersControllers = {
 		}
 
     let userInDB = User.findByField('email', req.body.email);
-console.log(userInDB)
 		if (userInDB) {
 			return res.render('users/formularioDeRegistro', {
 				errors: errors.array() 
@@ -85,28 +84,30 @@ console.log(userInDB)
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 
-				if(req.body.remember_user) {
+				if(req.body.recordar) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
 				return res.redirect('/user/profile');
-			} 
+			} else {
+				return res.render('users/formularioDeLogin', {
+					errors: {
+						email: {
+							msg: 'Las credenciales son inválidas'
+						}
+					}
+				});
+			}
+			
+		} else {
 			return res.render('users/formularioDeLogin', {
 				errors: {
 					email: {
-						msg: 'Las credenciales son inválidas'
+						msg: 'No se encuentra este email en nuestra base de datos'
 					}
 				}
 			});
 		}
-
-		return res.render('users/formularioDeLogin', {
-			errors: {
-				email: {
-					msg: 'No se encuentra este email en nuestra base de datos'
-				}
-			}
-		});
 	},
 
  

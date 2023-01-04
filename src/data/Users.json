@@ -78,5 +78,15 @@
   "username": "holahola",
   "condiciones": "on",
   "profilePic": "1672797761426_img.png"
+ },
+ {
+  "id": 9,
+  "firstName": "Juli",
+  "lastName": "Bertolini",
+  "email": "bertolini@ds.com",
+  "password": "$2a$10$uijrj2Fj4sPxi4Lo3dSkcufL7UiJyMCDH0O/sPTzvtYvz3QyYb9KS",
+  "username": "julibertolini",
+  "condiciones": "on",
+  "profilePic": "1672872608113_img.jpeg"
  }
 ]
