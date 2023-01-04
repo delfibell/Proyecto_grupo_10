@@ -77,6 +77,8 @@ const usersControllers = {
 
   procesoLogin: (req, res) => {
 		let userToLogin = User.findByField('email', req.body.email);
+
+		console.log(userToLogin)
 		
 		if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -88,7 +90,7 @@ const usersControllers = {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
-				return res.redirect('/user/profile');
+				return res.redirect('/users/mi-garage');
 			} else {
 				return res.render('users/formularioDeLogin', {
 					errors: {

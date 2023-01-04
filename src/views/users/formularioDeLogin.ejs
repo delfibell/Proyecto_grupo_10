@@ -15,7 +15,7 @@
                 <div class="login">
                     <p>LOGIN</p>
                 </div>
-                <form action="">
+                <form action="/users/login" method="POST">
                     <label for="email">Ingrese su e-mail</label>
                     <input type="email" name="email" class="input-box" placeholder="" required>
                     <% if (locals.errors && errors.email) { %>
