@@ -23,17 +23,20 @@ const usersControllers = {
 		}
 
     let userInDB = User.findByField('email', req.body.email);
-
+console.log(userInDB)
 		if (userInDB) {
 			return res.render('users/formularioDeRegistro', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				oldData: req.body
-			});
+				errors: errors.array() 
+			})
+				//{
+				//	email: {
+				//		msg: 'Este email ya está registrado'
+				//	}
+				//},
+				//oldData: req.body
+			//});
 		}
+		
 
     let userToCreate = {
 			...req.body,

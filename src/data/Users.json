@@ -68,5 +68,15 @@
   "username": "juki",
   "condiciones": "on",
   "profilePic": "1672795801186_img.jpeg"
+ },
+ {
+  "id": 8,
+  "firstName": "ssw",
+  "lastName": "ewewewew",
+  "email": "hola@gmail.com",
+  "password": "$2a$10$MuADTif.FWG2RjclvAnAeOL2y3J0wN/tZBBWwXLMI2Fybk6vqA3Sa",
+  "username": "holahola",
+  "condiciones": "on",
+  "profilePic": "1672797761426_img.png"
  }
 ]
