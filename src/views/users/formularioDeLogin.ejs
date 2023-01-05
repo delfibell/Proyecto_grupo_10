@@ -18,13 +18,13 @@
                 <form action="/users/login" method="POST">
                     <label for="email">Ingrese su e-mail</label>
                     <input type="email" name="email" class="input-box" placeholder="" required>
-                    <% if (locals.errors && errors.email) { %>
+                    <% if (locals.errors && errors.email) { %> 
                         <div class="error-text">
                             <%= errors.email.msg %>
                         </div>
-                    <% } %>
+                    <% } %> 
                     <label for="contraseña">Contraseña</label> 
-                    <input type="password" name="contraseña" class="input-box" placeholder="" required> 
+                    <input type="password" name="password" class="input-box" placeholder="" required> 
                     <p>Recordarme <a href="" target="" class=""></a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="recordar"/></p>
                     <button type="submit" value="Registrar">Ingresar</button>
                     <p class="CuentaOK">¿Primera vez en OFT?&nbsp;&nbsp;<a href="/users/register">Crear una cuenta</a></p>

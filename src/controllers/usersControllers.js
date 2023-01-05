@@ -1,7 +1,3 @@
-// const path = require("path");
-// const fs = require('fs')
-//const usersFilePath = path.join(__dirname,'../data/Users.json')
-// const users = JSON.parse(fs.readFileSync(usersFilePath, "UTF-8"))
 const bcryptjs = require("bcryptjs")
 const User = require('../models/User');
 const { validationResult } = require("express-validator");
@@ -13,11 +9,9 @@ const usersControllers = {
 
   procesoRegistro: (req,res) => {
 	let errors = validationResult (req)
-    // const resultValidation = validationResult(req)
     if (errors.errors.length > 0) {
 			return res.render('users/formularioDeRegistro', {
 				errors: errors.array(),
-				//resultValidation.mapped(),
 				oldData: req.body
 			});
 		}
@@ -25,18 +19,14 @@ const usersControllers = {
     let userInDB = User.findByField('email', req.body.email);
 		if (userInDB) {
 			return res.render('users/formularioDeRegistro', {
-				errors: errors.array() 
-			})
-				//{
-				//	email: {
-				//		msg: 'Este email ya está registrado'
-				//	}
-				//},
-				//oldData: req.body
-			//});
-		}
+				errorInEmail:  
+				{
+						msg: 'Este email ya está registrado'
+				}
+					//oldData: req.body --> ver cómo hacemos que esto funcione y recuerde los datos que ingresamos
+				})
+			}
 		
-
     let userToCreate = {
 			...req.body,
 			password: bcryptjs.hashSync(req.body.password, 10),
@@ -47,6 +37,7 @@ const usersControllers = {
 
 		return res.redirect('/users/login');
   },
+
  // versión previa - ya no es necesaria porque tenemos el modelo User para crear y guardar la información del usuario
   // store: (req,res) => {
   //   let errors = validationResult (req)
@@ -77,11 +68,10 @@ const usersControllers = {
 
   procesoLogin: (req, res) => {
 		let userToLogin = User.findByField('email', req.body.email);
-
-		console.log(userToLogin)
 		
 		if(userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;

@@ -27,6 +27,9 @@
                     <input type="text" name="lastName" class="input-box" placeholder="Ingrese su apellido" > 
                     <label for="email">E-mail</label>
                     <input type="email" name="email" class="input-box" placeholder="Ingrese su e-mail" >
+                    <% if (locals.errorInEmail) { %>
+                            <p> <%= errorInEmail.msg %> </p>
+                   <% } %>
                     <label for="password">Contraseña</label> 
                     <input type="password" name="password" class="input-box" placeholder="Ingrese una contraseña" > 
                     <label for="username">Nombre de usuario</label> 

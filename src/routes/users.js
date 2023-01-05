@@ -11,13 +11,13 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 //Formulario de registro
-router.get("/register", usersControllers.registro); //direccionamiento al archivo del controlador requerido segun la url del browser
+router.get("/register", guestMiddleware, usersControllers.registro); //direccionamiento al archivo del controlador requerido segun la url del browser
 //Procesamiento del registro
 router.post("/register", uploadFile.single("profilePic"), validateCreateForm, usersControllers.procesoRegistro); 
 //Formulario de login
 router.get("/login", guestMiddleware, usersControllers.login); //direccionamiento al archivo del controlador requerido segun la url del browser
 //Procesamiento del login
-router.post("/login'", usersControllers.procesoLogin);
+router.post("/login", usersControllers.procesoLogin);
 //Usuario logueado - eventualmente lleva a perfil
 router.get('/mi-garage', authMiddleware, usersControllers.profile);
 // Logout
