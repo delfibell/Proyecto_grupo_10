@@ -2,21 +2,15 @@
     <!-- Divido el header en dos sections, una para la parte de arriba y otra parte de abajo con el navbar-->
     <!--Section 1 del header -->
     <section class="headerSection1">
-      <div class="contenedorMiGarage">
-        <a href="/users/login"
-          ><p><i id="auto" class="fa-solid fa-car"></i>Mi Garage</p></a
-        >
-      </div>
-      <div class="contenedorFavoritos">
-        <a href=""
-          ><p><i id="corazon" class="fa-regular fa-heart"></i>Favoritos</p></a
-        >
-      </div>
       <i class="fa-solid fa-bars" id="burguer"></i>
       <a class="logo" href="/">
         <img id="logo" src="/img/logo1.png" />
       </a>
-      <div>
+      <!--
+        >div>
+            <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
+          </div>
+        <div>
         <input
           id="searchQueryInput"
           type="text"
@@ -24,14 +18,43 @@
           placeholder="¿Qué estás buscando?"
           value=""
         />
-        <!-- <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+         <button id="searchQuerySubmit" type="button" name="searchQuerySubmit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
-      <div class="carrito">
-        <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+      -->
+
+      <ul class="navbar-nav align-items-center">
+				<% if (locals.isLogged) { %>
+          <div class="carrito">
+            <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+          <div class="contenedorFavoritos">
+            <a href=""
+              ><p><i id="corazon" class="fa-regular fa-heart"></i>Favoritos</p></a>
+          </div>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+							Hola <%= locals.userLogged.firstName %> 
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/users/mi-garage">Mi Garage</a>
+							<li><hr class="dropdown-divider"></li>
+							<a class="dropdown-item" href="/users/logout">Logout</a>
+						</ul>
+					</li>
+				<% } else { %>
+					<li class="nav-item"><a class="nav-link" href="/users/register">Registro</a></li>
+					<li class="nav-item"><a class="nav-link" href="/users/login">Login</a></li>
+				<% } %>
+			</ul>
+      
+      <!--
+        <div class="contenedorMiGarage">
+        <a href="/users/login"
+          ><p><i id="auto" class="fa-solid fa-car"></i>Mi Garage</p></a
+        >
       </div>
-      <div>
-        <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
-      </div>
+      -->
     </section>
 
     <section class="headerSection2">
