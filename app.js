@@ -33,7 +33,7 @@ app.use(express.json()) //necesario para poder leer archivos JSON
 app.set("view engine", "ejs") //necesario para poder usar vistas .ejs
 app.set("views", path.join(__dirname, "src/views")) //definicion de carpetas donde estan todas las vistas
 
-app.listen(3000, () => {
+app.listen(3030, () => {
   console.log("Servidor funcionando"); //metodo listen para levantar el servidor en el localhost
 });
 
