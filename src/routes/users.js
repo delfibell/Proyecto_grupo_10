@@ -10,6 +10,7 @@ const uploadFile = require('../middlewares/multerMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
+
 //Formulario de registro
 router.get("/register", guestMiddleware, usersControllers.registro); //direccionamiento al archivo del controlador requerido segun la url del browser
 //Procesamiento del registro
