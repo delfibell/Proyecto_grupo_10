@@ -1,17 +1,22 @@
 const path = require("path");
 const fs = require('fs')
 let db = require("../database/models");
+const Op = Sequelize.Op;
 const { devNull } = require("os");
 
 let productsControllers = {
   listarProductos: (req,res) => {
-    db.Products.findAll()
+    db.Products.findAll({
+      include: [{association:"productCart"},{association:"productFragance"}, {association:"productSize"}, {association:"productType"}, {association:"productDiscount"}]
+    })
      .then(function(products) {
         res.render("products/listadoDeProductos",{products:products})
      })   
   },
   detalleProducto: (req, res) => {
-    db.Products.findByPk(req.params.id)
+    db.Products.findByPk(req.params.id, {
+      include: [{association:"productCart"},{association:"productFragance"}, {association:"productSize"}, {association:"productType"}, {association:"productDiscount"}]
+    })
     .then(function(product) {
       res.render("products/detalleDeProducto", {product:product})
     })
@@ -22,13 +27,14 @@ let productsControllers = {
   store: (req,res) => {
     db.Products.create({
       name: req.body.name,
+      description: req.body.description,
       image: req.body.image,
       category: req.body.category,
-      fragance: req.body.fragance,
-      size: req.body.size,
+      fragance: req.body.fragance, //no esta en la tabla de products se une por tabla pivot
+      size: req.body.size, // no esta en la tabla de prodcuts se une por tabla pivot
       price: Number(req.body.price),
-      discount: Number(req.body.discount),
-      Idtype: "", //req.body.type,
+      idType: "", //req.body.type?
+      idDiscount: "" //req.body.discount?
     })
     res.redirect("/products")
   },
@@ -41,15 +47,14 @@ let productsControllers = {
   modificarProducto: (req,res) =>{
     db.Products.update({
       name: req.body.name,
+      description: req.body.description,
       image: req.body.image,
       category: req.body.category,
-      fragance: req.body.fragance,
-      size: req.body.size,
+      fragance: req.body.fragance, //no esta en la tabla de products se une por tabla pivot
+      size: req.body.size, // no esta en la tabla de prodcuts se une por tabla pivot
       price: Number(req.body.price),
-      discount: Number(req.body.discount),
-      type: req.body.type,
-      description: req.body.description,
-
+      idType: "", //req.body.type?
+      idDiscount: "" //req.body.discount?
     }, {
       where: {id : req.params.id}
     })

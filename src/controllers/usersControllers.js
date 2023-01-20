@@ -1,6 +1,7 @@
 const bcryptjs = require("bcryptjs")
 const { validationResult } = require("express-validator");
 let db = require("../database/models");
+const Op = Sequelize.Op;
 
 const usersControllers = {
   registro: (req, res) => {
@@ -48,7 +49,7 @@ const usersControllers = {
 		password: bcryptjs.hashSync(req.body.password, 10),
 		username: req.body.username,
 		profilePic: req.file.name,
-       //idCategory???
+        idCategory: "", //siempre asignar categoria de user comun
 	}) 
 	
 //	userToCreate = {
