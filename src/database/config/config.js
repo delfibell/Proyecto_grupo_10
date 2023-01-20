@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "root",
-    "database": "OFT",
+    "database": "oft_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
