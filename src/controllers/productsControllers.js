@@ -1,22 +1,17 @@
 const path = require("path");
 const fs = require('fs')
 let db = require("../database/models");
-const Op = Sequelize.Op;
 const { devNull } = require("os");
 
 let productsControllers = {
   listarProductos: (req,res) => {
-    db.Products.findAll({
-      include: [{association:"productCart"},{association:"productFragance"}, {association:"productSize"}, {association:"productType"}, {association:"productDiscount"}]
-    })
+    db.Products.findAll()
      .then(function(products) {
         res.render("products/listadoDeProductos",{products:products})
      })   
   },
   detalleProducto: (req, res) => {
-    db.Products.findByPk(req.params.id, {
-      include: [{association:"productCart"},{association:"productFragance"}, {association:"productSize"}, {association:"productType"}, {association:"productDiscount"}]
-    })
+    db.Products.findByPk(req.params.id)
     .then(function(product) {
       res.render("products/detalleDeProducto", {product:product})
     })
