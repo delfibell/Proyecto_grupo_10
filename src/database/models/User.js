@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
         idCategory: {
             type: dataTypes.INTEGER,
             references: {
-                model: Category,
+             //   model: Category,
                 key: "id",
             }
         },
@@ -39,6 +39,19 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const User = sequelize.define(alias, cols, config);
+
+    User.associate = function(models){
+        User.hasMany(models.Carts, {
+            as: "userCart",
+            foreignKey: "idUser"
+        }) };
+
+    User.associate = function(models) {
+        User.belongsTo(models.Categories, {
+            as:"userCategory",
+            foreignKey: "idCategory"
+        })
+    }
 
     return User;
 }

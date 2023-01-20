@@ -18,5 +18,14 @@ module.exports = (sequelize, dataTypes) => {
 
     const Fragance = sequelize.define(alias, cols, config);
 
+    Fragance.associate = function(models){
+        Fragance.belongsToMany(models.Products, {
+            as: "fraganceProduct",
+            through: "products_fragances",
+            foreignKey: "idFragance",
+            otherKey: "idProduct",
+            timestamps: false,
+        }) };
+
     return Fragance;
 }

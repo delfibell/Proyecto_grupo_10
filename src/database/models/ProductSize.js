@@ -4,14 +4,14 @@ module.exports = (sequelize, dataTypes) => {
         idSize: {
             type: dataTypes.INTEGER,
             references: {
-                model: Size,
+              //  model: Size,
                 key: "id",
             }
         },
         idProduct: {
             type: dataTypes.INTEGER,
             references: {
-                model: Product,
+            //    model: Product,
                 key: "id",
             }
         },

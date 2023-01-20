@@ -10,14 +10,14 @@ module.exports = (sequelize, dataTypes) => {
         idCart: {
             type: dataTypes.INTEGER,
             references: {
-                model: Cart,
+               // model: Cart,
                 key: "id",
             }
         },
         idProduct: {
             type: dataTypes.INTEGER,
             references: {
-                model: Product,
+               // model: Product,
                 key: "id",
             }
         },
@@ -31,6 +31,7 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const CartProduct = sequelize.define(alias, cols, config);
+
 
     return CartProduct;
 }

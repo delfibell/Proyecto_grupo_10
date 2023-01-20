@@ -10,13 +10,6 @@ module.exports = (sequelize, dataTypes) => {
         discount: {
             type: dataTypes.INTEGER,
         },
-        idProduct: {
-            type: dataTypes.INTEGER,
-            references: {
-                model: Product,
-                key: "id",
-            }
-        },
         status: {
             type: dataTypes.STRING,
         },
@@ -27,6 +20,14 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const ProductDiscount = sequelize.define(alias, cols, config);
+
+    ProductDiscount.associate = function(models) {
+        ProductDiscount.hasMany(models.Products, {
+            as:"discountProduct",
+            foreignKey: "idDiscount"
+        })
+    }
+    
 
     return ProductDiscount;
 }
