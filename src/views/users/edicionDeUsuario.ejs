@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <%- include("../partials/head")%>
+        <link rel="stylesheet" href="/css/formularioDeRegistro.css">
+    </head>
+<body>
+    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
+
+    <main>
+        <div class="container">
+           <div class="crearCuentaForm">
+                <div class="login">
+                    <p>EDICION DE USUARIO</p>
+                </div>
+                <% if (locals.errors) { %>
+                    <% errors.forEach (error => { %>
+                        <p> <%= error.msg %> </p>
+                   <% }) %>
+               <% } %>
+                <form action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <label for="firstName">Nombre</label> <%=  %> 
+                    <input type="text" name="firstName" class="input-box" value = <%= user.firstName %>  >
+                    <label for="lastName">Apellido</label> 
+                    <input type="text" name="lastName" class="input-box" value = <%= user.lastName %> > 
+                    <label for="username">Nombre de usuario</label> 
+                    <input type="text" name="username" class="input-box" value = <%= user.username %> >
+                    <label for="profilePic">Foto de perfil</label>
+                    <input type="file" name ="profilePic" class="input-box" accept=".jpg, .png, .jpeg" > 
+                    <button type="submit" value="Editar">Editar</button>
+                </form>
+           </div>
+           <div class="left"><img src="" alt=""></div>
+       </div> 
+    
+    </main>
+
+    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+</body>
+</html>

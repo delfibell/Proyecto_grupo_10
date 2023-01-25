@@ -41,6 +41,13 @@
 							<li><hr class="dropdown-divider"></li>
 							<a class="dropdown-item" href="/users/logout">Logout</a>
 						</ul>
+            <% if(locals.adminLogin){ %>
+              <ul>
+                <li>
+                  <button><a href="/products/create">Crear Producto</a> </button>
+                </li>
+              </ul>
+          <% } %>  
 					</li>
 				<% } else { %>
 					<li class="nav-item"><a class="nav-link" href="/users/register">Registro</a></li>

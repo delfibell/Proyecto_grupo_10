@@ -5,22 +5,35 @@ const router = express.Router(); //necesario para poder usar los metodos GET, PO
 const usersControllers = require("../controllers/usersControllers.js"); //requerimiento del controlador
 
 //middlewares
-const validateCreateForm = require("../middlewares/validateRegisterMiddleware")
-const uploadFile = require('../middlewares/multerMiddleware');
-const guestMiddleware = require('../middlewares/guestMiddleware');
-const authMiddleware = require('../middlewares/authMiddleware');
+const validateCreateForm = require("../middlewares/validateRegisterMiddleware");
+const uploadFile = require("../middlewares/multerMiddleware");
+const guestMiddleware = require("../middlewares/guestMiddleware");
+const authMiddleware = require("../middlewares/authMiddleware");
 
-
+//Formulario de edicion
+router.get("/edit", usersControllers.userEdit);
+//Procesamiento de Edicion
+router.put(
+  "/edit",
+  uploadFile.single("profilePic"),
+  validateCreateForm,
+  usersControllers.editProcess
+);
 //Formulario de registro
 router.get("/register", guestMiddleware, usersControllers.registro); //direccionamiento al archivo del controlador requerido segun la url del browser
 //Procesamiento del registro
-router.post("/register", uploadFile.single("profilePic"), validateCreateForm, usersControllers.procesoRegistro); 
+router.post(
+  "/register",
+  uploadFile.single("profilePic"),
+  validateCreateForm,
+  usersControllers.procesoRegistro
+);
 //Formulario de login
 router.get("/login", guestMiddleware, usersControllers.login); //direccionamiento al archivo del controlador requerido segun la url del browser
 //Procesamiento del login
 router.post("/login", usersControllers.procesoLogin);
 //Usuario logueado - eventualmente lleva a perfil
-router.get('/mi-garage', authMiddleware, usersControllers.profile);
+router.get("/mi-garage", authMiddleware, usersControllers.profile);
 // Logout
 router.get("/logout/", usersControllers.logout);
 
