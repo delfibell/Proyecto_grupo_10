@@ -2,21 +2,38 @@
 <html lang="en">
     <head>
         <%- include("../partials/head")%>
+        <link rel="stylesheet" href="/css/perfil.css">
     </head>
 <body>
 
     <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
 
     <main>
-        <div class="container" style="margin-top: 40px;">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2>Hi <%= user.firstName %> </h2>
-                    <img src="/img/users/<%= user.profilePic %> ">
-                    <br>
-                    <br>
-                    <div class="alert alert-success"><%= user.email %> </div>
-                    <button><a href="/users/edit">Editar</a></button>
+        <div class="perfilOFT">
+            <div class="contenedorDatos">
+                <div class="datosOFT">
+                    <div>
+                        <h2>Bienvenido <%= user.firstName %> </h2>
+                    </div>
+                    <div class="imgDatos">
+                        <img class="imgUsuario" src="/img/users/<%= user.profilePic %> ">
+                        <div class="datos" >
+                            <h2>Datos</h2>
+                            <div class="contenedorTexto">
+                                <div class="nombresOFT">
+                                    <p>Nombre:<%= user.firstName %> <%= user.lastName %></p>
+                                    <p>Usuario:<%= user.username %></p>
+                                </div>
+                                <div class="descripcionOFT">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut natus architecto vitae laboriosam dolor quasi ut, cum facilis ipsa sint odio. Consequatur ad vero natus saepe est beatae ipsam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedorExtra">
+                        <div class="alert alert-success"><%= user.email %> </div>
+                        <button class="botonEdit"><a href="/users/edit">Editar perfil</a></button> 
+                    </div>
                 </div>
             </div>
         </div>

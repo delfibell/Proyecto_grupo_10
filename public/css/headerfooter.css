@@ -14,7 +14,7 @@ html body {
 
 /*---------------HEADER----------------------------------------------------*/
 
-header {
+/* header {
   height: fit-content;
   background-color: black;
   display: flex;
@@ -23,6 +23,30 @@ header {
   font-family: "Teko", sans-serif;
   text-decoration: none;
   padding-top: 10px;
+} */
+
+.contenedorHeader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+}
+
+.ubicacionBuguer {
+  border: 1px solid white;
+}
+
+.ubicacionLogo {
+  border: 1px solid white;
+}
+
+.ubicacionBusqueda {
+  border: 1px solid white;
+}
+
+.ubicacionUser {
+  border: 1px solid white;
+  display: flex;
 }
 
 header .headerSection1 {
@@ -42,7 +66,6 @@ header .headerSection1 {
 }
 
 header a {
-  font-size: 1.5em;
   color: white;
   text-decoration: none;
   font-family: "Teko", sans-serif;

@@ -1,0 +1,81 @@
+.perfilOFT{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(151, 235, 151);
+}
+.contenedorDatos{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: aliceblue;
+}
+.datosOFT h2{
+    text-align: center;
+    text-decoration: dashed;
+    border-bottom: 1.5px solid  rgb(151, 235, 151);
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.imgUsuario{
+    width: 300px;
+    object-fit: contain;
+    padding: 5px;
+    border:1.5px solid  rgb(151, 235, 151);
+}
+.datosOFT{
+    width: 100%;
+}
+.imgDatos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.datos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.alert-success{
+    width: 200px;
+    margin: 0;
+    margin-left: 20%;
+}
+.contenedorTexto{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.botonEdit{
+    margin: auto;
+    width: 30%;
+    background-color: rgb(151, 235, 151);
+}
+.botonEdit a{
+    text-decoration:none ;
+    color: black;
+}
+.contenedorExtra{
+    border-top: 1.5px solid  rgb(151, 235, 151);
+    border-bottom: 1.5px solid  rgb(151, 235, 151);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.nombresOFT{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+.descripcionOFT{
+    width: 100%;
+    text-align: center;
+}
