@@ -77,13 +77,13 @@
             <% products.filter(product => product.category != "Perfumes").forEach(product => { %>
             <article id="article">
                 <ul>
-                    <li class="imagen"><img class="imag" src="/img/users/<%= product.image %>" width="260px"></li>
+                    <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
                     <li class="corazon"><i class="fa-regular fa-heart"></i></li>
                     <li class="productoNombre"><p><%= product.name %></p></li> 
                     <h2><%= product.price %></h2>
                     <div class="cajaChica"> 
-                        <div   id="detalles"  class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
-                        <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                        <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
+                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
                     </div>
                     <li id="txt" class="texto"><%= product.description %></li> 
                 </ul>
@@ -101,8 +101,8 @@
                         <li class="productoNombre"><p><%= product.name %></p></li> 
                         <h2><%= product.price %></h2>
                         <div class="cajaChica"> 
-                            <div   id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                            <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                            <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
+                            <div class="comprar" onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
                         </div>
                         <li id="txt" class="texto"><%= product.description %></li> 
                     </ul>

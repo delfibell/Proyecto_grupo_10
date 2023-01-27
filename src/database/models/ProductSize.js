@@ -1,27 +1,29 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "ProductsSizes";
-    let cols = {
-        idSize: {
-            type: dataTypes.INTEGER,
-            references: {
-              //  model: Size,
-                key: "id",
-            }
-        },
-        idProduct: {
-            type: dataTypes.INTEGER,
-            references: {
-            //    model: Product,
-                key: "id",
-            }
-        },
-    };
-    let config = {
-        tablename: "products_sizes",
-        timestamps: false
-    };
+  let alias = "ProductsSizes";
+  let cols = {
+    id: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    size: {
+      type: dataTypes.STRING,
+    },
+  };
+  let config = {
+    tablename: "productsSizes",
+    timestamps: false,
+  };
 
-    const ProductSize = sequelize.define(alias, cols, config);
+  const ProductSize = sequelize.define(alias, cols, config);
 
-    return ProductSize;
-}
+  ProductSize.associate = function (models) {
+    ProductSize.hasMany(models.Products, {
+      as: "sizeProduct",
+      foreignKey: "idSize",
+    });
+  };
+
+  return ProductSize;
+};

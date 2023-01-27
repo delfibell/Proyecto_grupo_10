@@ -6,6 +6,10 @@
       <a class="logo" href="/">
         <img id="logo" src="/img/logo1.png" />
       </a>
+      <form action="/producto/busqueda" method="POST">
+        <input name="busqueda" type="text">
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
       <!--
         >div>
             <i class="fa-solid fa-magnifying-glass" id="lupa"></i>
@@ -33,7 +37,7 @@
           </div>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="/images/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+							<img src="/img/users/<%= locals.userLogged.profilePic %>" width="40" style="border-radius: 100%;">
 							Hola <%= locals.userLogged.firstName %> 
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">

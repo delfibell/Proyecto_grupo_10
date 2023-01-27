@@ -26,9 +26,9 @@ const usersControllers = {
         });
       }
     });
+    console.log(req.body);
     const isAdmin = req.body.email.endsWith("@oft.com");
-    const admin = isAdmin ? 1 : 2;
-
+    const admin = isAdmin ? "1" : "2";
     db.Users.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,

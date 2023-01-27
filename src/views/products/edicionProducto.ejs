@@ -22,10 +22,9 @@
                     <input type="text" name="name" class="input-box" required value="<%= product.name %>">
                     <label for="descripcion-producto">Descripción del producto*</label> 
                     <textarea name="description" class="input-box" required><%= product.description %></textarea>
-                    <label for="imagen">Imagen</label>
-                    <input type="file" name ="image" class="input-box" accept=".jpg, .png, .jpeg" value="<%= product.image %>">
                     <label for="categoria">Categoria*</label> 
                     <select name="category" class="input-box" required value="<%= product.category %>"> 
+                        <option value="<%= product.category %>"><%= product.category %></option>
                         <option value="exterior">Exterior</option>
                         <option value="interior">Interior</option>
                         <option value="neumaticos">Neumáticos</option>
@@ -34,31 +33,43 @@
                     </select>
                     <label for="aroma">Aroma</label> 
                     <select name="fragance" class="input-box" value="<%= product.fragance %>"> 
-                        <option value="uva">Uva</option>
-                        <option value="chicle">Chicle</option>
-                        <option value="fresa">Fresa</option>
-                        <option value="vainicoco">Vainicoco</option>
-                        <option value="autosport">Autosport</option>
-                        <option value="vainilla">Vainilla</option>
+                        <option value="<%= product.idFragance %>"><%= product.idFragance %></option>
+                        <option value="1">Uva</option>
+                        <option value="2">Chicle</option>
+                        <option value="3">Fresa</option>
+                        <option value="4">Vainicoco</option>
+                        <option value="4">Autosport</option>
+                        <option value="5">Vainilla</option>
                     </select>
                     <label for="tamaño">Tamaño</label> 
                     <select name="size" class="input-box" value="<%= product.size %>"> 
-                        <option value="120">120cc</option>
-                        <option value="500">500cc</option>
-                        <option value="1000">1l</option>
-                        <option value="500">5l</option>
+                        <option value="<%= product.idSize %>"><%= product.idSize %></option>
+                        <option value="1">120cc</option>
+                        <option value="2">500cc</option>
+                        <option value="3">1l</option>
+                        <option value="4">5l</option>
                     </select>
                     <label for="precio">Precio*</label> 
                     <input type="text" name="price" class="input-box" required value="<%= product.price %>">
                     <label for="descuento">Descuento</label> 
-                    <input type="text" name="discount" class="input-box" required value="<%= product.discount %>">
-                    <label for="tamaño">Tipo de producto</label> 
-                    <select name="type" class="input-box" value="<%= product.type %>"> 
-                        <option value="nuevo">Nuevo</option>
-                        <option value="mas-vendidos">Más vendidos</option>
-                        <option value="promocion">Promoción</option>
+                    <select name="discount" class="input-box"> 
+                        <option value="<%= product.idDiscount %>"><%= product.idDiscount%></option>
+                        <option value="5">0%</option>
+                        <option value="1">10%</option>
+                        <option value="2">15%</option>
+                        <option value="3">25%</option>
+                        <option value="4">50%</option>
                     </select>
-                    <button type="submit" value="cargar">Cargar</button>
+                    <label for="tamaño">Tipo de producto</label> 
+                    <select name="type" class="input-box" value="<%= product.type %>">
+                        <option value="<%= product.idType %>"><%= product.idType %></option> 
+                        <option value="1">Nuevo</option>
+                        <option value="2">Más vendidos</option>
+                        <option value="3">Promoción</option>
+                    </select>
+                    <label for="imagen">Imagen*</label>
+                    <input type="file" name ="image" class="input-box" required accept=".jpg, .png, .jpeg" value="<%= product.image %>">
+                    <button type="submit" value="cargar">Editar</button>
                 </form>
                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
                     <button type="submit" value="borrar">Borrar</button>

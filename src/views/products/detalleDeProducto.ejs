@@ -12,6 +12,12 @@
     <div class="desktop">
         <% if(locals.adminLogin){ %>
             <button><a href="/products/edit/<%= product.id %>">Editar Producto</a> </button>
+            <form
+                action="/products/<%= product.id %>?_method=DELETE"
+                method="POST"
+              >
+            <button>Eliminar Producto</button>
+        </form>
         <% } %>  
         <div class="product">
             <i class="fa-solid fa-chevron-left flecha"></i>

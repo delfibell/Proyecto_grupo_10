@@ -20,18 +20,19 @@ let productsControllers = {
     res.render("products/creacionProducto");
   },
   store: (req, res) => {
+    console.log(req.body, req.file);
     db.Products.create({
       name: req.body.name,
       description: req.body.description,
-      image: req.body.image,
+      image: req.file.filename,
       category: req.body.category,
-      fragance: req.body.fragance, //no esta en la tabla de products se une por tabla pivot
-      size: req.body.size, // no esta en la tabla de products se une por tabla pivot
       price: Number(req.body.price),
-      idType: "", //req.body.type?
-      idDiscount: "", //req.body.discount?
+      idType: req.body.type,
+      idDiscount: req.body.discount,
+      idFragance: req.body.fragance,
+      idSize: req.body.size,
     });
-    res.redirect("/products");
+    res.redirect("/");
   },
   editarProducto: (req, res) => {
     db.Products.findByPk(req.params.id).then(function (product) {
@@ -39,23 +40,24 @@ let productsControllers = {
     });
   },
   modificarProducto: (req, res) => {
+    console.log(req.body);
     db.Products.update(
       {
         name: req.body.name,
         description: req.body.description,
-        image: req.body.image,
+        image: req.file.filename,
         category: req.body.category,
-        fragance: req.body.fragance, //no esta en la tabla de products se une por tabla pivot
-        size: req.body.size, // no esta en la tabla de prodcuts se une por tabla pivot
         price: Number(req.body.price),
-        idType: "", //req.body.type?
-        idDiscount: "", //req.body.discount?
+        idType: req.body.type,
+        idDiscount: req.body.discount,
+        idFragance: req.body.fragance,
+        idSize: req.body.size,
       },
       {
         where: { id: req.params.id },
       }
     );
-    res.redirect("/products/" + idProducto);
+    res.redirect("/products");
 
     // asi teniamos lo de la imagen antes
     product.image = "";
@@ -75,6 +77,21 @@ let productsControllers = {
       where: { id: req.params.id },
     });
     res.redirect("/products");
+  },
+  busquedaProducto: async (req, res) => {
+    let data = req.body.busqueda;
+    const products = await db.Evento.findAll({
+      where: {
+        name: { [Op.like]: `%${data}%` },
+      },
+    });
+    console.log(products);
+    const dataArray = products.map((item) => item.dataValues);
+    console.log(dataArray);
+    return res.render("/", {
+      dataArray,
+      data,
+    });
   },
 };
 
