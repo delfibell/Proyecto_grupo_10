@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 let db = require("../database/models");
-const { devNull } = require("os");
+const { Op } = require("sequelize");
 
 let productsControllers = {
   listarProductos: (req, res) => {
@@ -58,14 +58,6 @@ let productsControllers = {
       }
     );
     res.redirect("/products");
-
-    // asi teniamos lo de la imagen antes
-    product.image = "";
-    if (req.files) {
-      if (req.files.image) {
-        product.image = req.file.image;
-      }
-    }
   },
   eliminarProducto: (req, res) => {
     db.Products.findByPk(req.params.id).then(function (product) {
@@ -80,19 +72,16 @@ let productsControllers = {
   },
   busquedaProducto: async (req, res) => {
     let data = req.body.busqueda;
-    const products = await db.Evento.findAll({
+
+    const products = await db.Products.findAll({
       where: {
         name: { [Op.like]: `%${data}%` },
       },
     });
-    console.log(products);
     const dataArray = products.map((item) => item.dataValues);
     console.log(dataArray);
-    return res.render("/", {
-      dataArray,
-      data,
-    });
+    return res.render("products/busquedaDeProducto", { dataArray });
   },
 };
-//test
+
 module.exports = productsControllers;

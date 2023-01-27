@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head")%>
+        <link rel="stylesheet" href="/css/listadoDeProductos.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/084c494fb3.js" crossorigin="anonymous"></script>
+    </head>
+<body>
+
+    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
+
+    <main> 
+        <section class="cards1"> 
+            <% dataArray.filter(product => product.category != "Perfumes").forEach(product => { %>
+            <article id="article">
+                <ul>
+                    <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
+                    <li class="productoNombre"><p><%= product.name %></p></li> 
+                    <h2><%= product.price %></h2>
+                    <div class="cajaChica"> 
+                        <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
+                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                    </div>
+                    <li id="txt" class="texto"><%= product.description %></li> 
+                </ul>
+            </article>
+            <% }) %> 
+        </section>
+    </main>
+    
+    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+
+</body>
+</html>
