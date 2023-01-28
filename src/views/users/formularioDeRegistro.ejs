@@ -14,28 +14,33 @@
                 <div class="login">
                     <p>CREAR UNA CUENTA</p>
                 </div>
-                <% if (locals.errors) { %>
-                    <% errors.forEach (error => { %>
-                        <p> <%= error.msg %> </p>
-                   <% }) %>
-               <% } %>
+
+                <!-- Mensajes de error desde el back - agregar tags de EJS si se vuelve a usar
+                    if (locals.errors) { 
+                    errors.forEach (error => { 
+                        <p>  error.msg  </p>
+                   }) 
+                }  -->
+                <div class="error-message" >
+                    <ul id="errores"></ul>
+                </div>   
                 
-                <form action="/users/register" method="POST" enctype="multipart/form-data">
+                <form action="/users/register" method="POST" enctype="multipart/form-data" class="register">
                     <label for="firstName">Nombre</label> 
-                    <input type="text" name="firstName" class="input-box" placeholder="Ingrese su nombre" >
+                    <input type="text" name="firstName" class="input-box" id="first-name" placeholder="Ingrese su nombre" >
                     <label for="lastName">Apellido</label> 
-                    <input type="text" name="lastName" class="input-box" placeholder="Ingrese su apellido" > 
+                    <input type="text" name="lastName" class="input-box" id="last-name" placeholder="Ingrese su apellido" > 
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" class="input-box" placeholder="Ingrese su e-mail" >
+                    <input type="email" name="email" class="input-box" id="email" placeholder="Ingrese su e-mail" >
                     <% if (locals.errorInEmail) { %>
                             <p> <%= errorInEmail.msg %> </p>
                    <% } %>
                     <label for="password">Contraseña</label> 
-                    <input type="password" name="password" class="input-box" placeholder="Ingrese una contraseña" > 
+                    <input type="password" name="password" class="input-box" id="password" placeholder="Ingrese una contraseña" > 
                     <label for="username">Nombre de usuario</label> 
-                    <input type="text" name="username" class="input-box" placeholder="Ingrese su nombre de usuario" >
+                    <input type="text" name="username" class="input-box" id="username" placeholder="Ingrese su nombre de usuario" >
                     <label for="profilePic">Foto de perfil</label>
-                    <input type="file" name ="profilePic" class="input-box" accept=".jpg, .png, .jpeg"> 
+                    <input type="file" name ="profilePic" class="input-box" id="profile-pic" accept=".jpg, .png, .jpeg"> 
                     <p>Estoy de acuerdo con los <a href="" target="" class="">términos y condiciones</a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="condiciones"/></p>
                     <button type="submit" value="Registrar">Registrarme</button>
                     <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/users/login">Ingresar</a></p>
@@ -47,5 +52,6 @@
     </main>
 
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+    <script src="js/userRegisterValidation.js"></script>
 </body>
 </html>

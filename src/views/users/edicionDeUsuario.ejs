@@ -14,11 +14,14 @@
                 <div class="login">
                     <p>EDICION DE USUARIO</p>
                 </div>
-                <% if (locals.errors) { %>
-                    <% errors.forEach (error => { %>
-                        <p> <%= error.msg %> </p>
-                   <% }) %>
-               <% } %>
+                <div class="errores">
+                    <% if (locals.errors) { %>
+                        <% errors.forEach (error => { %>
+                            <p> <%= error.msg %> </p>
+                       <% }) %>
+                   <% } %>
+                </div>
+               
                 <form action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data">
                     <label for="firstName">Nombre</label> <%=  %> 
                     <input type="text" name="firstName" class="input-box" value = <%= user.firstName %>  >
