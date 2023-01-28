@@ -5,53 +5,87 @@
         <%- include("../partials/head")%>
         <link rel="stylesheet" href="/css/formularioDeRegistro.css">
     </head>
+
 <body>
     <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
 
-    <main>
-        <div class="container">
-           <div class="crearCuentaForm">
-                <div class="login">
-                    <p>CREAR UNA CUENTA</p>
-                </div>
-
-                <!-- Mensajes de error desde el back - agregar tags de EJS si se vuelve a usar
-                    if (locals.errors) { 
-                    errors.forEach (error => { 
-                        <p>  error.msg  </p>
-                   }) 
-                }  -->
-                <div class="error-message" >
-                    <ul id="errores"></ul>
-                </div>   
-                
-                <form action="/users/register" method="POST" enctype="multipart/form-data" class="register">
-                    <label for="firstName">Nombre</label> 
-                    <input type="text" name="firstName" class="input-box" id="first-name" placeholder="Ingrese su nombre" >
-                    <label for="lastName">Apellido</label> 
-                    <input type="text" name="lastName" class="input-box" id="last-name" placeholder="Ingrese su apellido" > 
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" class="input-box" id="email" placeholder="Ingrese su e-mail" >
-                    <% if (locals.errorInEmail) { %>
-                            <p> <%= errorInEmail.msg %> </p>
-                   <% } %>
-                    <label for="password">Contraseña</label> 
-                    <input type="password" name="password" class="input-box" id="password" placeholder="Ingrese una contraseña" > 
-                    <label for="username">Nombre de usuario</label> 
-                    <input type="text" name="username" class="input-box" id="username" placeholder="Ingrese su nombre de usuario" >
-                    <label for="profilePic">Foto de perfil</label>
-                    <input type="file" name ="profilePic" class="input-box" id="profile-pic" accept=".jpg, .png, .jpeg"> 
-                    <p>Estoy de acuerdo con los <a href="" target="" class="">términos y condiciones</a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="condiciones"/></p>
-                    <button type="submit" value="Registrar">Registrarme</button>
-                    <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/users/login">Ingresar</a></p>
-                </form>
-           </div>
-           <div class="left"><img src="" alt=""></div>
-       </div> 
+            <main>
+                <div class="container">
+                    <div class="crearCuentaForm">
+                        <div class="login">
+                            <p>CREÁ TU CUENTA</p>
+                        </div>
+                        <div class="error-message" >
+                            <ul id="errores"></ul>
+                        </div>
+                        <form class="register" action="/users/register" method="POST" enctype="multipart/form-data">
+                                <label for="firstName">Nombre</label> 
+                                <input type="text" name="firstName" placeholder="Ingresá tu nombre" class="input-box" id="first-name"
+                                value="<% locals.oldData ? oldData.firstName : null %>">
     
-    </main>
+                                <% if(locals.errors && errors.firstName){ %>
+                                    <p class="error-message">
+                                        <%= errors.firstName.msg%>
+                                    </p>
+                                    <% } %>
+                                <label for="lastName">Apellido</label> 
+                                <input type="text" name="lastName" placeholder="Ingresá tu apellido" class="input-box" id="last-name"
+                                    value="<% locals.oldData ? oldData.lastName : null %>">
+    
+                                    <% if(locals.errors && errors.lastName){ %>
+                                        <p class="error-message">
+                                            <%= errors.lastName.msg%>
+                                        </p>
+                                        <% } %>
+
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" placeholder="Ingresá tu email" class="input-box" id="email" 
+                                value="<% locals.oldData ? oldData.email : null %>">
+            
+                                        <% if(locals.errors && errors.email){ %>
+                                            <p class="error-message">
+                                                <%= errors.email.msg%>
+                                            </p>
+                                        <% } %>
+
+                                <label for="password">Contraseña</label> 
+                                <input type="password" name="password" placeholder="Ingresá una contraseña" class="input-box" id="password">
+        
+                                        <% if(locals.errors && errors.password){ %>
+                                            <p class="error-message">
+                                                <%= errors.password.msg%>
+                                            </p>
+                                            <% } %>   
+
+                                <label for="username">Nombre de usuario</label> 
+                                <input type="text" name="username" placeholder="Ingresá un nombre de usuario"
+                                    class="input-box" id="username" value="<% locals.oldData ? oldData.username : null %>">
+    
+                                    <% if(locals.errors && errors.username){ %>
+                                        <p class="error-message">
+                                            <%= errors.username.msg%>
+                                        </p>
+                                        <% } %>
+    
+                                <label for="profilePic">Foto de perfil</label>
+                                <input type="file" name="profilePic" placeholder="Seleccioná una foto de perfil" class="input-box" id = "profile-pic">
+                                    
+                                    <% if(locals.errors && errors.profilePic){ %>
+                                        <p class="error-message">
+                                            <%= errors.profilePic.msg%>
+                                        </p>
+                                        <% } %>
+    
+                                <button type="submit" value="Registrar">Registrarme</button>
+                        </form>
+                        <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/users/login">Ingresar</a></p>
+                    </div>
+                    <div class="left"><img src="" alt=""></div>
+                </div>
+                    
+            </main>
 
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
-    <script src="js/userRegisterValidation.js"></script>
+    <script src="/js/userRegisterValidation.js"></script>
 </body>
 </html>
