@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <%- include("../partials/head")%>
+        <link rel="stylesheet" href="/css/formularioDeRegistro.css">
+    </head>
+
+<body>
+    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
+
+            <main>
+                <div class="container">
+                    <div class="crearCuentaForm">
+                        <div class="login">
+                            <p>CREÁ TU CUENTA</p>
+                        </div>
+                        <div class="error-message" >
+                            <ul id="errores"></ul>
+                        </div>
+                        <form class="register" action="/users/register" method="POST" enctype="multipart/form-data">
+                                <label for="firstName">Nombre</label> 
+                                <input type="text" name="firstName" placeholder="Ingresá tu nombre" class="input-box" id="first-name"
+                                value="<% locals.oldData ? oldData.firstName : null %>">
+    
+                                <% if(locals.errors && errors.firstName){ %>
+                                    <p class="error-message">
+                                        <%= errors.firstName.msg%>
+                                    </p>
+                                    <% } %>
+                                <label for="lastName">Apellido</label> 
+                                <input type="text" name="lastName" placeholder="Ingresá tu apellido" class="input-box" id="last-name"
+                                    value="<% locals.oldData ? oldData.lastName : null %>">
+    
+                                    <% if(locals.errors && errors.lastName){ %>
+                                        <p class="error-message">
+                                            <%= errors.lastName.msg%>
+                                        </p>
+                                        <% } %>
+    
+    
+                                <input type="text" name="Telefono" placeholder="Teléfono de Contacto"
+                                    class="enter-credentials" id="Telefono" value="<% locals.oldData ? oldData.Telefono : null %>">
+    
+                                    <% if(locals.errors && errors.Telefono){ %>
+                                        <p class="error-message">
+                                            <%= errors.Telefono.msg%>
+                                        </p>
+                                        <% } %>
+    
+    
+                                <input type="file" name="userImage" placeholder="cargar imagen" class="enter-credentials" >
+                                    
+                                    <% if(locals.errors && errors.userImage){ %>
+                                        <p class="error-message">
+                                            <%= errors.userImage.msg%>
+                                        </p>
+                                        <% } %>
+    
+    
+    
+    
+                            
+                                <input type="mail" name="email" placeholder="Correo" class="enter-credentials" id="mail" 
+                                value="<% locals.oldData ? oldData.mail : null %>">
+    
+                                <% if(locals.errors && errors.email){ %>
+                                    <p class="error-message">
+                                        <%= errors.email.msg%>
+                                    </p>
+                                    <% } %>
+    
+    
+                                <input type="mail" name="confirmEmail" placeholder="Confirmar Correo" class="enter-credentials" id="confirmEmail" 
+                                value="<% locals.oldData ? oldData.confirmEmail : null %>">
+    
+                                    <% if(locals.errors && errors.confirmEmail){ %>
+                                        <p class="error-message">
+                                            <%= errors.confirmEmail.msg%>
+                                        </p>
+                                        <% } %>
+    
+    
+                                <input type="password" name="password" placeholder="Contraseña" class="enter-credentials" id="password"
+                                    >
+    
+                                    <% if(locals.errors && errors.password){ %>
+                                        <p class="error-message">
+                                            <%= errors.password.msg%>
+                                        </p>
+                                        <% } %>
+    
+                                <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña"
+                                    class="enter-credentials" id="confirmPassword">
+    
+                                    <% if(locals.errors && errors.confirmPassword){ %>
+                                        <p class="error-message">
+                                            <%= errors.confirmPassword.msg%>
+                                        </p>
+                                        <% } %>
+
+                                <button type="reset" class="reset-button">Reestablecer</button>
+                                <button type="submit" class="submit-button">Registrarse</button>
+                       
+                        </form>
+                        <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/users/login">Ingresar</a></p>
+                    </div>
+                    <div class="left"><img src="" alt=""></div>
+                </div>
+                    
+            </main>
+
+    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+    <script src="js/userRegisterValidation.js"></script>
+</body>
+</html>

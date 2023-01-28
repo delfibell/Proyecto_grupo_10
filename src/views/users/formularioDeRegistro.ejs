@@ -5,110 +5,51 @@
         <%- include("../partials/head")%>
         <link rel="stylesheet" href="/css/formularioDeRegistro.css">
     </head>
-
 <body>
     <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
 
-            <main>
-                <div class="container">
-                    <div class="crearCuentaForm">
-                        <div class="login">
-                            <p>CREÁ TU CUENTA</p>
-                        </div>
-                        <div class="error-message" >
-                            <ul id="errores"></ul>
-                        </div>
-                        <form class="register" action="/users/register" method="POST" enctype="multipart/form-data">
-                                <label for="firstName">Nombre</label> 
-                                <input type="text" name="firstName" placeholder="Ingresá tu nombre" class="input-box" id="first-name"
-                                value="<% locals.oldData ? oldData.firstName : null %>">
-    
-                                <% if(locals.errors && errors.firstName){ %>
-                                    <p class="error-message">
-                                        <%= errors.firstName.msg%>
-                                    </p>
-                                    <% } %>
-                                <label for="lastName">Apellido</label> 
-                                <input type="text" name="lastName" placeholder="Ingresá tu apellido" class="input-box" id="last-name"
-                                    value="<% locals.oldData ? oldData.lastName : null %>">
-    
-                                    <% if(locals.errors && errors.lastName){ %>
-                                        <p class="error-message">
-                                            <%= errors.lastName.msg%>
-                                        </p>
-                                        <% } %>
-    
-    
-                                <input type="text" name="Telefono" placeholder="Teléfono de Contacto"
-                                    class="enter-credentials" id="Telefono" value="<% locals.oldData ? oldData.Telefono : null %>">
-    
-                                    <% if(locals.errors && errors.Telefono){ %>
-                                        <p class="error-message">
-                                            <%= errors.Telefono.msg%>
-                                        </p>
-                                        <% } %>
-    
-    
-                                <input type="file" name="userImage" placeholder="cargar imagen" class="enter-credentials" >
-                                    
-                                    <% if(locals.errors && errors.userImage){ %>
-                                        <p class="error-message">
-                                            <%= errors.userImage.msg%>
-                                        </p>
-                                        <% } %>
-    
-    
-    
-    
-                            
-                                <input type="mail" name="email" placeholder="Correo" class="enter-credentials" id="mail" 
-                                value="<% locals.oldData ? oldData.mail : null %>">
-    
-                                <% if(locals.errors && errors.email){ %>
-                                    <p class="error-message">
-                                        <%= errors.email.msg%>
-                                    </p>
-                                    <% } %>
-    
-    
-                                <input type="mail" name="confirmEmail" placeholder="Confirmar Correo" class="enter-credentials" id="confirmEmail" 
-                                value="<% locals.oldData ? oldData.confirmEmail : null %>">
-    
-                                    <% if(locals.errors && errors.confirmEmail){ %>
-                                        <p class="error-message">
-                                            <%= errors.confirmEmail.msg%>
-                                        </p>
-                                        <% } %>
-    
-    
-                                <input type="password" name="password" placeholder="Contraseña" class="enter-credentials" id="password"
-                                    >
-    
-                                    <% if(locals.errors && errors.password){ %>
-                                        <p class="error-message">
-                                            <%= errors.password.msg%>
-                                        </p>
-                                        <% } %>
-    
-                                <input type="password" name="confirmPassword" placeholder="Confirmar Contraseña"
-                                    class="enter-credentials" id="confirmPassword">
-    
-                                    <% if(locals.errors && errors.confirmPassword){ %>
-                                        <p class="error-message">
-                                            <%= errors.confirmPassword.msg%>
-                                        </p>
-                                        <% } %>
-
-                                <button type="reset" class="reset-button">Reestablecer</button>
-                                <button type="submit" class="submit-button">Registrarse</button>
-                       
-                        </form>
-                        <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/users/login">Ingresar</a></p>
-                    </div>
-                    <div class="left"><img src="" alt=""></div>
+    <main>
+        <div class="container">
+           <div class="crearCuentaForm">
+                <div class="login">
+                    <p>CREAR UNA CUENTA</p>
                 </div>
-                    
-            </main>
+
+                <!-- Mensajes de error desde el back - agregar tags de EJS si se vuelve a usar
+                    if (locals.errors) { 
+                    errors.forEach (error => { 
+                        <p>  error.msg  </p>
+                   }) 
+                }  -->
+                <div class="error-message" >
+                    <ul id="errores"></ul>
+                </div>   
+                
+                <form action="/users/register" method="POST" enctype="multipart/form-data" class="register">
+                    <label for="firstName">Nombre</label> 
+                    <input type="text" name="firstName" class="input-box" id="first-name" placeholder="Ingrese su nombre" >
+                    <label for="lastName">Apellido</label> 
+                    <input type="text" name="lastName" class="input-box" id="last-name" placeholder="Ingrese su apellido" > 
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" class="input-box" id="email" placeholder="Ingrese su e-mail" >
+                    <% if (locals.errorInEmail) { %>
+                            <p> <%= errorInEmail.msg %> </p>
+                   <% } %>
+                    <label for="password">Contraseña</label> 
+                    <input type="password" name="password" class="input-box" id="password" placeholder="Ingrese una contraseña" > 
+                    <label for="username">Nombre de usuario</label> 
+                    <input type="text" name="username" class="input-box" id="username" placeholder="Ingrese su nombre de usuario" >
+                    <label for="profilePic">Foto de perfil</label>
+                    <input type="file" name ="profilePic" class="input-box" id="profile-pic" accept=".jpg, .png, .jpeg"> 
+                    <p>Estoy de acuerdo con los <a href="" target="" class="">términos y condiciones</a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="condiciones"/></p>
+                    <button type="submit" value="Registrar">Registrarme</button>
+                    <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/users/login">Ingresar</a></p>
+                </form>
+           </div>
+           <div class="left"><img src="" alt=""></div>
+       </div> 
+    
+    </main>
 
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
     <script src="js/userRegisterValidation.js"></script>
