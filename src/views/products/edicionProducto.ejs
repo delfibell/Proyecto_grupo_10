@@ -4,6 +4,7 @@
     <head>
         <%- include("../partials/head")%>
         <link rel="stylesheet" href="/css/edicionProducto.css">
+        <link rel="stylesheet" href="/css/validacionProducto.css">
     </head>
 <body>
     <%- include("../partials/header")%> <!-- Importacion del header desde los archivos parciales (views/partials) -->
@@ -17,11 +18,16 @@
                 <!-- el action lleva javascript adentro para ir al producto con el id especifico segun la url -->
                 <!-- para usar PUT el method sigue siendo POST pero se debe agregar ?_method=PUT luego de la url -->
                 <!-- el enctype="multipart/form-data" es necesario para poder procesar el archivo (en este caso la imagen), sino el formulario solo es capaz de procesar archivos de texto -->
-                <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST"> 
+                <form action="/products/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST" id="edit-product" onsubmit='return validateForm()'> 
+                   
                     <label for="nombre-producto">Nombre del producto*</label> 
-                    <input type="text" name="name" class="input-box" required value="<%= product.name %>">
+                    <input type="text" name="name" class="input-box" id="product-name"required value="<%= product.name %>">
+                    <div class="errorProductName"></div>
+
                     <label for="descripcion-producto">Descripción del producto*</label> 
-                    <textarea name="description" class="input-box" required><%= product.description %></textarea>
+                    <textarea name="description" class="input-box" id="product-description" required><%= product.description %></textarea>
+                    <div class="errorProductDescription"></div>
+
                     <label for="categoria">Categoria*</label> 
                     <select name="category" class="input-box" required value="<%= product.category %>"> 
                         <option value="<%= product.category %>"><%= product.category %></option>
@@ -31,6 +37,7 @@
                         <option value="vidrios">Vidrios</option>
                         <option value="accesorios">Accesorios</option>
                     </select>
+
                     <label for="aroma">Aroma</label> 
                     <select name="fragance" class="input-box" value="<%= product.fragance %>"> 
                         <option value="<%= product.idFragance %>"><%= product.idFragance %></option>
@@ -41,6 +48,7 @@
                         <option value="4">Autosport</option>
                         <option value="5">Vainilla</option>
                     </select>
+
                     <label for="tamaño">Tamaño</label> 
                     <select name="size" class="input-box" value="<%= product.size %>"> 
                         <option value="<%= product.idSize %>"><%= product.idSize %></option>
@@ -49,6 +57,7 @@
                         <option value="3">1l</option>
                         <option value="4">5l</option>
                     </select>
+
                     <label for="precio">Precio*</label> 
                     <input type="text" name="price" class="input-box" required value="<%= product.price %>">
                     <label for="descuento">Descuento</label> 
@@ -60,6 +69,7 @@
                         <option value="3">25%</option>
                         <option value="4">50%</option>
                     </select>
+
                     <label for="tamaño">Tipo de producto</label> 
                     <select name="type" class="input-box" value="<%= product.type %>">
                         <option value="<%= product.idType %>"><%= product.idType %></option> 
@@ -67,12 +77,17 @@
                         <option value="2">Más vendidos</option>
                         <option value="3">Promoción</option>
                     </select>
+
                     <label for="imagen">Imagen*</label>
-                    <input type="file" name ="image" class="input-box" required accept=".jpg, .png, .jpeg" value="<%= product.image %>">
+                    <input type="file" name ="image" class="input-box" id="image" required accept=".jpg, .png, .jpeg" value="<%= product.image %>">
+                    <div class="errorImage"></div>
+
+                    <div class="errores-front"></div> <!-- ponerle display none -->
+
                     <button type="submit" value="cargar">Editar</button>
                 </form>
                 <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                    <button type="submit" value="borrar">Borrar</button>
+                    <button type="submit" value="borrar">Eliminar</button>
                 </form>
            </div>
        </div> 
@@ -80,5 +95,7 @@
     </main>
 
     <%- include("../partials/footer")%> <!-- Importacion del footer desde los archivos parciales (views/partials) -->
+
+    <script src="/js/editProductValidation.js"></script>
 </body>
 </html>

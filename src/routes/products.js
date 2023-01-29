@@ -42,6 +42,7 @@ router.put(
   "/edit/:id",
   uploadFile.single("image"),
   adminLoggedMiddleware,
+  validateCreateProduct,
   productsControllers.modificarProducto
 );
 

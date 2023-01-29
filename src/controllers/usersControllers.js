@@ -63,7 +63,7 @@ const usersControllers = {
           req.session.userLogged = user;
 
           if (req.body.recordar) {
-            res.cookie("userEmail", req.body.email, {
+            res.cookie("email", req.body.email, {
               maxAge: 1000 * 60 * 60,
             });
           }
