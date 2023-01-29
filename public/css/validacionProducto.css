@@ -1,0 +1,25 @@
+.encontreErrores {
+    border: 2px red;
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+.errorProductName{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+
+.errorProductDescription{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+.errorImage{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}

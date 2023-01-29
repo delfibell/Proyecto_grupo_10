@@ -2,8 +2,6 @@ window.addEventListener("load", function () {
     let formulario = document.getElementById("register"); 
     
     formulario.addEventListener("submit", function (event) {
-    
-    function validateForm() {
 
       let errores = [];
 
@@ -58,7 +56,6 @@ window.addEventListener("load", function () {
         errores.forEach(error => {
             ulErrores.innerHTML += `<li>${error}</li>`
         })
-      }
     
     });
   });

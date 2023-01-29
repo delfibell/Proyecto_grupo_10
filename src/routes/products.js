@@ -5,8 +5,8 @@ const router = express.Router(); //necesario para poder usar los metodos GET, PO
 //diskStorage sirve para definir donde vamos a almacenar los archivos que vamos a procesar y que nombre le vamos a dar a los mismos, es necesario almacenarla en una variable para luego poder usarla
 const uploadFile = require("../middlewares/multerProductmiddleware");
 
-const authMiddleware = require("../middlewares/authMiddleware");
-const adminMiddleware = require("../middlewares/adminMiddleware");
+const adminLoggedMiddleware = require("../middlewares/adminLoggedMiddleware");
+const validateCreateProduct = require("../middlewares/productMiddleware")
 
 // ruta: /products (GET) - Listado de productos
 router.get("/", productsControllers.listarProductos);
@@ -14,8 +14,7 @@ router.get("/", productsControllers.listarProductos);
 // ruta: /products/create (GET) - Formulario de creación de productos
 router.get(
   "/create",
-  authMiddleware,
-  adminMiddleware,
+  adminLoggedMiddleware,
   productsControllers.crearProducto
 ); //cambiar ruta en los href
 
@@ -23,8 +22,8 @@ router.get(
 router.post(
   "/",
   uploadFile.single("image"),
-  adminMiddleware,
-  authMiddleware,
+  adminLoggedMiddleware,
+  validateCreateProduct,
   productsControllers.store
 );
 
@@ -34,8 +33,7 @@ router.get("/:id", productsControllers.detalleProducto);
 // ruta: /products/:id/edit (GET) - Formulario de edición de productos
 router.get(
   "/edit/:id",
-  authMiddleware,
-  adminMiddleware,
+  adminLoggedMiddleware,
   productsControllers.editarProducto
 );
 
@@ -43,24 +41,21 @@ router.get(
 router.put(
   "/edit/:id",
   uploadFile.single("image"),
-  authMiddleware,
-  adminMiddleware,
+  adminLoggedMiddleware,
   productsControllers.modificarProducto
 );
 
 //ruta para eliminar producto
 router.get(
   "/:id/delete",
-  authMiddleware,
-  adminMiddleware,
+  adminLoggedMiddleware,
   productsControllers.eliminarProducto
 );
 
 //ruta: /products/:id (DELETE) - Acción de borrado
 router.delete(
   "/:id",
-  authMiddleware,
-  adminMiddleware,
+  adminLoggedMiddleware,
   productsControllers.destruirProducto
 );
 //ruta para buscar un producto

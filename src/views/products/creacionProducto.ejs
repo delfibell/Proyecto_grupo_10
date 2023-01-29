@@ -4,6 +4,7 @@
     <head>
         <%- include("../partials/head")%>
         <link rel="stylesheet" href="/css/creacionProducto.css">
+        <link rel="stylesheet" href="/css/validacionProducto.css">
     </head>
 <body>
     <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
@@ -12,15 +13,26 @@
         <div class="container">
            <div class="crearProductoForm">
                 <div class="crear">
-                    <p>CREAR UN NUEVO PRODUCTO</p>
+                    <p>CREÁ UN NUEVO PRODUCTO</p>
                 </div>
-                <form action="/products" method="POST" enctype="multipart/form-data">
-                    <label for="nombre-producto">Nombre del producto*</label> 
-                    <input type="text" name="name" class="input-box" required>
-                    <label for="descripcion-producto">Descripción del producto*</label> 
-                    <textarea name="description" class="input-box" required placeholder="Ingresá la descripción del producto"></textarea>
-                    <label for="categoria">Categoria*</label> 
-                    <select name="category" class="input-box" required> 
+                <div class="errores-back">
+                    <% if (locals.errors) { %>
+                     <%    errors.forEach (error => { %>
+                             <p> <%=  error.msg %> </p>
+                     <%   }) %>
+                    <% } %>
+                 </div>
+                <form class="create-product" id="create-product" onsubmit='return validateForm()'  action="/products" method="POST" enctype="multipart/form-data">
+                    <label for="name">Nombre del producto</label> 
+                    <input type="text" name="name" class="input-box" id="product-name" required  value="<% locals.oldData ? oldData.name : null %>" >
+                    <div class="errorProductName"></div>
+
+                    <label for="description">Descripción del producto</label> 
+                    <textarea name="description" class="input-box" id="product-description" required placeholder="Ingresá la descripción del producto"></textarea>
+                    <div class="errorProductDescription"></div>
+
+                    <label for="category">Categoria</label> 
+                    <select name="category" class="input-box" id="product-category" required> 
                         <option >Seleccione</option>
                         <option value="exterior">Exterior</option>
                         <option value="interior">Interior</option>
@@ -28,8 +40,9 @@
                         <option value="vidrios">Vidrios</option>
                         <option value="accesorios">Accesorios</option>
                     </select>
-                    <label for="aroma">Aroma</label> 
-                    <select name="fragance" class="input-box"> 
+                    
+                    <label for="fragance">Aroma</label> 
+                    <select name="fragance" class="input-box" id="product-fragance"> 
                         <option >Seleccione</option>
                         <option value="1">Uva</option>
                         <option value="2">Chicle</option>
@@ -38,25 +51,31 @@
                         <option value="5">Autosport</option>
                         <option value="6">Vainilla</option>
                     </select>
-                    <label for="tamaño">Tamaño</label> 
-                    <select name="size" class="input-box"> 
+                    <!-- no tiene error porque no es obligatorio -->
+                    
+                    <label for="size">Tamaño</label> 
+                    <select name="size" class="input-box" id="product-size"> 
                         <option >Seleccione</option>
                         <option value="1">120cc</option>
                         <option value="2">500cc</option>
                         <option value="3">1l</option>
                         <option value="4">5l</option>
                     </select>
+                      <!-- no tiene error porque no es obligatorio -->
+
                     <label for="precio">Precio</label> 
                     <input type="text" name="price" class="input-box" required>
-                    <label for="tamaño">Tipo de producto</label> 
-                    <select name="type" class="input-box"> 
+                    
+                    <label for="type">Tipo de producto</label> 
+                    <select name="type" class="input-box" id="product-type"> 
                         <option >Seleccione</option>
                         <option value="1">Nuevo</option>
                         <option value="2">Más vendidos</option>
                         <option value="3">Promoción</option>
                     </select>
-                    <label for="descuento">Descuento</label> 
-                    <select name="discount" class="input-box"> 
+                   
+                    <label for="discount">Descuento</label> 
+                    <select name="discount" class="input-box" id="product-discount"> 
                         <option >Seleccione</option>
                         <option value="5">0%</option>
                         <option value="1">10%</option>
@@ -64,8 +83,13 @@
                         <option value="3">25%</option>
                         <option value="4">50%</option>
                     </select>
-                    <label for="imagen">Imagen*</label>
-                    <input type="file" name ="image" class="input-box" accept=".jpg, .png, .jpeg" required>
+                   
+                    <label for="imagen">Imagen</label>
+                    <input type="file" name ="image" class="input-box" accept=".jpg, .png, .jpeg, .gif" required>
+                    <div class="errorImage"></div>
+                    
+                    <div class="errores-front"></div> <!-- ponerle display none -->
+                    
                     <button type="submit" value="cargar">Cargar</button>
                     <button type="reset" value="borrar">Borrar</button>
                 </form>
@@ -74,6 +98,10 @@
     
     </main>
 
-    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+    <!-- Se importa el footer desde los archivos parciales -->
+    <%- include("../partials/footer")%> 
+
+    <!-- JS validación -->
+    <script src="/js/newProductValidation.js"></script>
 </body>
 </html>
