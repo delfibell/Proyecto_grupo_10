@@ -126,13 +126,10 @@ form button:hover {
 
 
 .crearCuentaForm form .CuentaOK {
-  
   font-size: 1em;
   justify-content: center;
   display: flex;
   justify-content: center;
-  
-  
 }
 
 
@@ -141,4 +138,9 @@ form button:hover {
   font-size: 0.8em;
   
 }
- 
+.errorBorder{
+  border: 1px solid #c5000a; 
+}
+.goodBorder{
+  border: 1px solid #89ff7a; 
+}

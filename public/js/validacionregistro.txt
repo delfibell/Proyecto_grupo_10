@@ -1,0 +1,66 @@
+window.addEventListener("load", function () {
+    let formulario = document.getElementById("register"); 
+    
+    formulario.addEventListener("submit", function (event) {
+    
+    function validateForm() {
+
+      let errores = [];
+
+      let nombre = document.querySelector("#first-name");
+      if (inputNombre.value == "") {
+        errores.push("Tenés que escribir un nombre");
+      }
+      if (nombre.value.length < 2) {
+        errores.push("El nombre tiene que tener más de 2 caracteres");
+      }
+  
+      let apellido = document.querySelector("#last-name");
+      if (apellido.value == "") {
+        errores.push("Tenés que escribir un apellido");
+      }
+      if (apellido.value.length < 2) {
+        errores.push("El apellido tiene que tener más de 2 caracteres");
+      }
+  
+      let email = document.querySelector("#email");
+      let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if (email.value == "") {
+        errores.push("Tenés que escribir un mail");
+      } else if (!(email.value.match(validRegex))) {
+        errores.push("Tenés que ingresar un email válido")
+        }
+
+      let password = document.querySelector("#password");
+      if (password.value == "") {
+        errores.push("Tenés que escribir una contraseña");
+      }
+
+      let nombreUsuario = document.querySelector("#username");
+      if (nombreUsuario.value == "") {
+        errores.push("Tenés que escribir un nombre de usuario"); 
+      }
+      if (nombre.value.length < 2) {
+        errores.push("El nombre de usuario tiene que tener más de 2 caracteres");
+      }
+  
+      let profilePic = document.querySelector("#profile-pic")
+      let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+      let filePath = profilePic.value
+      if (!allowedExtensions.exec(filePath)){
+         errores.push("Tu imagen de perfil debe ser un archivo JPEG, JPG, PNG o GIF")
+        }
+
+      if (errores.length > 0) {
+        event.preventDefault();
+        let ulErrores = document.querySelector("#errores");
+        ulErrores.innerHTML = "";
+        errores.forEach(error => {
+            ulErrores.innerHTML += `<li>${error}</li>`
+        })
+      }
+    
+    });
+  });
+ 
+

@@ -1,66 +1,149 @@
+
+
 window.addEventListener("load", function () {
-    let formulario = document.querySelector("form"); 
-  
-    formulario.addEventListener("submit", function (e) {
-      let errores = [];
-      let ulerrores = document.querySelector("#errores");
-      ulerrores.innerHTML = "";
-  
-      let nombre = document.querySelector("#first-name");
-      if (nombre.value == "") {
-        errores.push("Debes escribir un nombre");
+  let formulario = document.getElementById("register"); 
+  formulario.addEventListener("submit", function (event) {
+    function validateForm() {
+      let encontreErrores = document.querySelector(".encontreErrores")
+      
+      let errorFirstName = document.querySelector(".errorFirstName")
+      let errorLastName = document.querySelector(".errorLastName")
+      let errorEmail = document.querySelector(".errorEmail")
+      let errorPassword = document.querySelector(".errorPassword")
+      let errorUsername = document.querySelector(".errorUsername")
+      let errorProfilePic = document.querySelector(".errorProfilePic")
+     
+    ///
+      let inputNombre = formulario.elements.firstName;
+      // Campo vacío 
+      if(inputNombre.value === ""){
+        inputNombre.classList.remove("goodBorder");
+        inputNombre.classList.add("errorBorder");
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorFirstName.innerHTML = "Debes completar un nombre";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorFirstName.innerHTML = "";
       }
-      if (nombre.value.length < 2) {
-        errores.push("Debes escribir más de 2 caracteres");
+      // Más de 2 caracteres
+      if(inputNombre.value.length < 2){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorFirstName.innerHTML = "El nombre debe tener al menos 2 caracteres";
+        return false
+      }else{
+        inputNombre.classList.remove("errorBorder");
+        inputNombre.classList.add("goodBorder")
+        encontreErrores.innerHTML = "";
+        errorFirstName.innerHTML = "";
       }
-  
-      let apellido = document.querySelector("#last-name");
-      if (apellido.value == "") {
-        errores.push("Debes escribir un apellido");
+    ///
+      let inputApellido = formulario.elements.lastName;
+      if(inputApellido.value === ""){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorLastName.innerHTML = "El apellido debe tener al menos 2 caracteres";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorLastName.innerHTML = "";
       }
-      if (apellido.value.length < 2) {
-        errores.push("Debes escribir más de 2 caracteres");
+      if(inputApellido.value.length < 2){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorLastName.innerHTML = "El apellido debe tener al menos 2 caracteres";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorLastName.innerHTML = "";
       }
-  
-      let email = document.querySelector("#email");
-      if (email.value == "") {
-        errores.push("Debes escribir un mail");
+      let inputEmail = formulario.elements.email;
+      // campo vacío 
+      if(inputEmail.value === ""){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorEmail.innerHTML = "Debes ingresar un email";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorEmail.innerHTML = "";
       }
-
-      let password = document.querySelector("#password");
-      if (password.value == "") {
-        errores.push("Debes escribir una contraseña");
+      // formato válido email
+      let checkEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      
+      if(!checkEmail.test(inputEmail.value)){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorEmail.innerHTML = "El mail tiene que tener un formato válido";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorEmail.innerHTML = "";
       }
-
-      let nombreUsuario = document.querySelector("#username");
-      if (nombreUsuario.value == "") {
-        errores.push("Debes escribir un nombre de usuario");
+      let inputPassword = formulario.elements.password;
+      // campo vacío 
+      if(inputEmail.value === ""){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorEmail.innerHTML = "Debes ingresar una contraseña";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorEmail.innerHTML = "";
       }
-      if (nombre.value.length < 2) {
-        errores.push("Debes escribir más de 2 caracteres");
+      // contraseña con min, may, caracter especial y num 
+      let checkContrasenia = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if(!checkContrasenia.test(inputPassword.value)){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorPassword.innerHTML = "La contraseña debe contener minúsculas, mayúsculas, un caracter especial y al menos un número";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorPassword.innerHTML = "";
       }
-  
-      if (errores.length > 0) {
-        e.preventDefault();
-  
-        for (let i = 0; i < errores.length; i++) {
-          ulerrores.innerHTML += "<li>" + errores[i] + "</li>";
-        }
+      let inputUsername = formulario.elements.username;
+      // Campo vacío 
+      if(inputUsername.value === ""){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorUsername.innerHTML = "Debes completar un nombre de usuario";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorUsername.innerHTML = "";
       }
-    });
-  });
- 
- 
- 
- //   let profilePic = document.querySelector("#profile-pic")
-
-   // let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  //  let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-   // let filePath = profilePic.value
-//else if (!(email.value.match(validRegex))) {
-           // errores.push("Tenés que ingresar un email válido")
-       // }
-        //if (!allowedExtensions.exec(filePath)){
-          //  errores.push("Tu imagen de perfil debe ser un archivo JPEG, JPG, PNG o GIF")
-      //  }
+      // Más de 2 caracteres
+      if(inputUsername.value.length < 2){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorUsername.innerHTML = "El nombre de usuario debe tener al menos 2 caracteres";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorUsername.innerHTML = "";
+      }
+      let inputProfilePic = formulario.elements.profilePic;
+      // campo vacío 
+      if(inputProfilePic.value === ""){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorProfilePic.innerHTML = "Debes subir una imagen";
+        return false
+      }else{
+        encontreErrores.innerHTML = "";
+        errorProfilePic.innerHTML = "";
+      }
+      // extensiones archivos 
+      let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+      let filePath = profilePic.value
+      if (!allowedExtensions.exec(filePath)){
+        encontreErrores.innerHTML = "¡Se encontraron errores!";
+        errorProfilePic.innerHTML = "La imagen debe tener formato JPG, JPEG, GIF o PNG";
+        return false
+      } else {
+        encontreErrores.innerHTML = "";
+        errorProfilePic.innerHTML = "";
+      }
+      ///
+      return true
+    }
+    if (validateForm()) {
+      formulario.submit();
+  } else {
+      event.preventDefault();
+  }
+  })
+})
 

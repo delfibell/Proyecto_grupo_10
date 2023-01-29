@@ -1,0 +1,49 @@
+.encontreErrores {
+    border: 2px red;
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+.errorFirstName{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+
+.errorLastName{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+.errorEmail{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+.errorPassword{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+.errorUsername{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+.errorProfilePic{
+    width: 100%;
+    border: 2px red;
+    color: red;
+    text-align: center;
+}
+.errorBorder{
+    border: 1px solid #c5000a; 
+}
+.goodBorder{
+    border: 1px solid #89ff7a; 
+}

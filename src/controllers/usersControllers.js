@@ -22,7 +22,7 @@ const usersControllers = {
           errorInEmail: {
             msg: "Este email ya está registrado",
           },
-          //oldData: req.body --> ver cómo hacemos que esto funcione y recuerde los datos que ingresamos
+          oldData: req.body 
         });
       }
     });

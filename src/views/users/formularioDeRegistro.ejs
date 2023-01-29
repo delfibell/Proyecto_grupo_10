@@ -4,6 +4,7 @@
     <head>
         <%- include("../partials/head")%>
         <link rel="stylesheet" href="/css/formularioDeRegistro.css">
+        <link rel="stylesheet" href="/css/validacionRegistro.css">
     </head>
 
 <body>
@@ -15,23 +16,28 @@
                         <div class="login">
                             <p>CREÁ TU CUENTA</p>
                         </div>
-                        <div class="error-message" >
-                            <ul id="errores"></ul>
+                        <div class="errores-back">
+                           <% if (locals.errors) { %>
+                            <%    errors.forEach (error => { %>
+                                    <p> <%=  error.msg %> </p>
+                            <%   }) %>
+                           <% } %>
                         </div>
-                        <form class="register" action="/users/register" method="POST" enctype="multipart/form-data">
+                        <form class="register" id="register" onsubmit='return validateForm()'  action="/users/register" method="POST" enctype="multipart/form-data">
                                 <label for="firstName">Nombre</label> 
                                 <input type="text" name="firstName" placeholder="Ingresá tu nombre" class="input-box" id="first-name"
                                 value="<% locals.oldData ? oldData.firstName : null %>">
-    
+                                    <div class="errorFirstName"></div>
                                 <% if(locals.errors && errors.firstName){ %>
                                     <p class="error-message">
                                         <%= errors.firstName.msg%>
                                     </p>
                                     <% } %>
+
                                 <label for="lastName">Apellido</label> 
                                 <input type="text" name="lastName" placeholder="Ingresá tu apellido" class="input-box" id="last-name"
                                     value="<% locals.oldData ? oldData.lastName : null %>">
-    
+                                    <div class="errorLastName"></div>
                                     <% if(locals.errors && errors.lastName){ %>
                                         <p class="error-message">
                                             <%= errors.lastName.msg%>
@@ -41,16 +47,16 @@
                                 <label for="email">E-mail</label>
                                 <input type="email" name="email" placeholder="Ingresá tu email" class="input-box" id="email" 
                                 value="<% locals.oldData ? oldData.email : null %>">
-            
-                                        <% if(locals.errors && errors.email){ %>
+                                <div class="errorEmail"></div>
+                                        <% if(locals.errorInEmail){ %>
                                             <p class="error-message">
-                                                <%= errors.email.msg%>
+                                                <%= errorinEmail.msg%>
                                             </p>
                                         <% } %>
 
                                 <label for="password">Contraseña</label> 
                                 <input type="password" name="password" placeholder="Ingresá una contraseña" class="input-box" id="password">
-        
+                                <div class="errorPassword"></div>
                                         <% if(locals.errors && errors.password){ %>
                                             <p class="error-message">
                                                 <%= errors.password.msg%>
@@ -60,7 +66,7 @@
                                 <label for="username">Nombre de usuario</label> 
                                 <input type="text" name="username" placeholder="Ingresá un nombre de usuario"
                                     class="input-box" id="username" value="<% locals.oldData ? oldData.username : null %>">
-    
+                                    <div class="errorUsername"></div>
                                     <% if(locals.errors && errors.username){ %>
                                         <p class="error-message">
                                             <%= errors.username.msg%>
@@ -69,13 +75,13 @@
     
                                 <label for="profilePic">Foto de perfil</label>
                                 <input type="file" name="profilePic" placeholder="Seleccioná una foto de perfil" class="input-box" id = "profile-pic">
-                                    
+                                <div class="errorProfilePic"></div>
                                     <% if(locals.errors && errors.profilePic){ %>
                                         <p class="error-message">
                                             <%= errors.profilePic.msg%>
                                         </p>
                                         <% } %>
-    
+                                <div class="encontreErrores"></div>
                                 <button type="submit" value="Registrar">Registrarme</button>
                         </form>
                         <p class="CuentaOK">¿Ya tenés una cuenta?&nbsp;&nbsp;<a href="/users/login">Ingresar</a></p>
@@ -83,9 +89,9 @@
                     <div class="left"><img src="" alt=""></div>
                 </div>
                     
+                <script src="/js/userRegisterValidation.js"></script>
             </main>
 
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
-    <script src="/js/userRegisterValidation.js"></script>
 </body>
 </html>

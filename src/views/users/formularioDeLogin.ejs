@@ -13,17 +13,17 @@
         <div class="container">
            <div class="crearCuentaForm">
                 <div class="login">
-                    <p>LOGIN</p>
+                    <p>INGRESÁ A TU CUENTA</p>
                 </div>
                 <form action="/users/login" method="POST">
-                    <label for="email">Ingrese su e-mail</label>
+                    <label for="email">Ingresá tu e-mail</label>
                     <input type="email" name="email" class="input-box" placeholder="" required>
                     <% if (locals.errors && errors.email) { %> 
                         <div class="error-text">
                             <%= errors.email.msg %>
                         </div>
                     <% } %> 
-                    <label for="contraseña">Contraseña</label> 
+                    <label for="contraseña">Ingresá tu contraseña</label> 
                     <input type="password" name="password" class="input-box" placeholder="" required> 
                     <p>Recordarme <a href="" target="" class=""></a> &nbsp;&nbsp;<input type="checkbox" onclick="" name="recordar"/></p>
                     <button type="submit" value="Registrar">Ingresar</button>
