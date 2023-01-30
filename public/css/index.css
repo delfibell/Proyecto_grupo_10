@@ -6,229 +6,40 @@
   box-sizing: border-box;
 }
 
-main {
-  color: rgb(0, 0, 0);
-  font-family: "Teko", sans-serif;
-  background-color: #ebebeb;
-  padding: 0px;
+body {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+.cover-container {
+max-width: 60vw;
 }
 
-main h2 {
-  text-align: center;
-  /* margin: 15px; */
+.nav-link {
+  padding: 0.25rem 0;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  margin-left: 1rem;
+  border-bottom: 0.25rem solid transparent;
 }
 
-.cards {
-  width: 100%;
-  padding: 5vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.nav-link:hover{
+  color: rgba(255,255,255,0.5);
+  border-bottom-color:rgba(255,255,255,0.5);
 }
 
-.article {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  /* padding-bottom: 10px; */
+.nav-link.active {
+  color: white;
+  border-bottom-color:white;
+
 }
 
-.imag {
-  width: 70vw;
-  border-radius: 20px;
-}
-
-.product-description {
-  width: 80vw;
-  text-align: center;
-}
-
-.article:hover .product-description {
-  color: #ff9900;
-}
-
-@media (max-width: 480px) {
-  #offers h2 {
-    border: solid black 2px;
-    border-radius: 5px;
-    width: 90vw;
-    margin: auto;
-  }
-
-  .cards {
-    width: 100vw;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .imag {
-    width: 60%;
-    border-radius: 20px;
-    margin-bottom: 0%;
-  }
-
-  .class-description {
-    margin: 0;
-  }
-
-  .article {
-    width: 30%;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* align-self: auto; */
-    /* justify-content: space-between; */
-    padding: 0%;
-    margin-bottom: 30px;
-  }
-
-  .slider {
-    display: none;
-  }
-
-  .dropdown {
-    display: none;
-  }
-
-  /*.carousel-list {
-    display: flex;
-    animation: cambio 10s infinite normal linear;
-  }
-
-  .moving-image {
-    max-width: 100vw;
-    list-style: none;
-    display: flex;
-  }
-
-  .moving-image img {
-    width: 100vw;
-  }
-
-  @keyframes cambio {
-    0% {
-      margin-left: 0;
-    }
-    31.3% {
-      margin-left: 0;
-    }
-    33.3% {
-      margin-left: -100.7%;
-    }
-    64.6% {
-      margin-left: -100.7%;
-    }
-    66.6% {
-      margin-left: -200.5%;
-    }
-    100% {
-      margin-left: -200.5%;
-    }
-  } */
-}
-
-
-@media (max-width: 1440px) {
-  #offers h2 {
-    border: solid black 2px;
-    border-radius: 5px;
-    width: 90vw;
-    margin: auto;
-  }
-
-  nav {
-    width: 25vw;
-    text-align: center;
-    margin-left: 5px;
-  }
-
-  nav.dropdown a {
-    text-decoration: none;
-    color: black;
-  }
-
-  nav.dropdown ul {
-    list-style: none;
-  }
-
-  nav.dropdown li {
-    border: black solid 2px;
-    border-radius: 5px;
-    margin-bottom: 2px;
-  }
-
-  .cards {
-    width: 100vw;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .imag {
-    width: 60%;
-    border-radius: 20px;
-    margin-bottom: 0%;
-  }
-
-  .class-description {
-    margin: 0;
-  }
-
-  .article {
-    width: 30%;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    /* align-self: auto; */
-    /* justify-content: space-between; */
-    padding: 0%;
-    margin-bottom: 30px;
-  }
-
-  .slider {
-    width: 100vw;
-    height: 25vw;
-    border: solid 2px #ebebeb;
-    overflow: hidden;
-    left: 0%;
-    top: 0%;
-  }
-
-  .carousel-list {
-    display: flex;
-    animation: cambio 10s infinite normal linear;
-  }
-
-  .moving-image {
-    max-width: 100vw;
-    list-style: none;
-    display: flex;
-  }
-
-  .moving-image img {
-    width: 100vw;
-  }
-
-  @keyframes cambio {
-    0% {
-      margin-left: 0;
-    }
-    31.3% {
-      margin-left: 0;
-    }
-    33.3% {
-      margin-left: -100.7%;
-    }
-    64.6% {
-      margin-left: -100.7%;
-    }
-    66.6% {
-      margin-left: -200.5%;
-    }
-    100% {
-      margin-left: -200.5%;
-    }
-  }
+.btn-secondary, .btn-secondary:hover{
+  color: white;
+  text-shadow: none;
 }
