@@ -16,8 +16,33 @@ body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
-.cover-container {
-max-width: 60vw;
+
+header input {
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 8px;
+  border-radius: 100px;
+  border: 2px solid;
+  font-size: 1em;
+  font-weight: bolder;
+  width: 300px;
+  font-family: "Teko", sans-serif;
+}
+
+.main-container {
+width: 100%;
+text-align: center;
+}
+
+#brand {
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.lead {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .nav-link {
@@ -42,4 +67,19 @@ max-width: 60vw;
 .btn-secondary, .btn-secondary:hover{
   color: white;
   text-shadow: none;
+  text-align: center;
+}
+
+#logo {
+  width: 20%;
+  position: center;
+  transition: 0.5s;
+  margin-right: 120px;
+  margin-left: 160px;
+}
+
+
+#logo:hover {
+  transform: rotate(360deg);
+  transition: 1s;
 }

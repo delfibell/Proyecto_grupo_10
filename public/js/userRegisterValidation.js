@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
       }
       // Más de 2 caracteres
       if(inputNombre.value.length < 2){
-        eerroresFront.innerHTML = "¡Se encontraron errores!";
+        erroresFront.innerHTML = "¡Se encontraron errores!";
         errorFirstName.innerHTML = "El nombre debe tener al menos 2 caracteres";
         return false
       }else{

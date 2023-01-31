@@ -62,4 +62,6 @@ router.delete(
 //ruta para buscar un producto
 router.post("/busqueda", productsControllers.busquedaProducto);
 
+router.get('/aa', productsControllers.allProducts)
+
 module.exports = router;

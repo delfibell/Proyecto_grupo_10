@@ -9,11 +9,12 @@ const productsRoutes = require("./src/routes/products");
 const usersRoutes = require("./src/routes/users");
 const cartRoutes = require("./src/routes/cart");
 const notFoundRoutes = require("./src/routes/notFound");
+const apiRoutes = require("./src/routes/api");
 
 const methodOverride = require("method-override"); //requerimiento del metodo override para poder utilizar PUT
 const app = express(); //necesario para poder usar todos los metodos de express que aparecen abajo
 
-const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
+// const loggedMiddleware = require("./src/middlewares/loggedMiddleware");
 const adminLoggedMiddleware = require("./src/middlewares/adminLoggedMiddleware");
 
 app.use(
@@ -26,7 +27,7 @@ app.use(
 
 app.use(cookies());
 
-app.use(loggedMiddleware);
+// app.use(loggedMiddleware);
 app.use(adminLoggedMiddleware);
 
 app.use(express.urlencoded({ extended: true })); //es lo que nos permite procesar los formularios
@@ -45,4 +46,5 @@ app.use("/", mainRoutes);
 app.use("/products", productsRoutes);
 app.use("/users", usersRoutes);
 app.use("/carrito", cartRoutes);
+app.use("/api", apiRoutes);
 app.use("/*", notFoundRoutes);

@@ -7,6 +7,7 @@
   </head>
   <body>
   <!-- HEADER INDEX -->
+  <div class="cover-container">
     <div class="contenedorHeader">
       <div class="ubicacionBurguer">
         <i class="fa-solid fa-bars" id="burguer"></i>
@@ -46,21 +47,27 @@
           <% } %>  
 					</li>
 				<% } else { %>
-          <a href="/" class=""><p>Inicio</p></a>
-          <a href="/products" class=""><p></p>Productos</a>
-          <a href="/about" class=""><p></p>Nosotrxs</a>
-					<a class="" href="/users/register">Registro</a>
-					<a class="" href="/users/login">Login</a>
+          <a href="/" class="nav-link"><p>Inicio</p></a>
+          <a href="/products" class="nav-link"><p></p>Productos</a>
+          <a href="/about" class="nav-link"><p></p>Nosotrxs</a>
+					<a class="nav-link" href="/users/register">Registro</a>
+					<a class="nav-link" href="/users/login">Login</a>
 				<% } %>
         </div>
     </div>
 
     <main>
-      <main class="px-3">
-        <p>ONLY FOR TRACK</p>
-        <p class="lead"> DETAILING PRODUCTS <br> Elaboramos lo mejor para tu vehículo. <br></p>
-        <a href="/products" class="btn btn-lg btn-secondary font-weight-bold border-white bg-black">Ver todos los productos</a>
-    </main>
+      <div class="main-container">
+        <p id="brand">ONLY FOR TRACK</p>
+        <p class="lead"> DETAILING PRODUCTS <br> ¡Bienvenidx a OFT! <br> Elaboramos lo mejor para tu vehículo. <br> Girá el volante para descubrir nuestros productos <br></p>
+        <div class="ubicacionLogo"> 
+          <a class="" href="/products">
+            <img id="logo" src="/img/logo1.png" />
+          </a>
+      </div>
+
+    </div>
+        <a href="/users/login" class="btn btn-lg btn-secondary font-weight-bold">Abrí tu cuenta</a>
     </main>
 
     <%- include("./partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
