@@ -6,17 +6,13 @@ const router = express.Router(); //necesario para poder usar los metodos GET, PO
 const uploadFile = require("../middlewares/multerProductmiddleware");
 
 const adminLoggedMiddleware = require("../middlewares/adminLoggedMiddleware");
-const validateCreateProduct = require("../middlewares/productMiddleware")
+const validateCreateProduct = require("../middlewares/productMiddleware");
 
 // ruta: /products (GET) - Listado de productos
 router.get("/", productsControllers.listarProductos);
 
 // ruta: /products/create (GET) - Formulario de creación de productos
-router.get(
-  "/create",
-  adminLoggedMiddleware,
-  productsControllers.crearProducto
-); //cambiar ruta en los href
+router.get("/create", adminLoggedMiddleware, productsControllers.crearProducto); //cambiar ruta en los href
 
 //ruta: /products (POST) - Acción de creación (a donde se envía el formulario)
 router.post(
@@ -61,7 +57,5 @@ router.delete(
 );
 //ruta para buscar un producto
 router.post("/busqueda", productsControllers.busquedaProducto);
-
-router.get('/aa', productsControllers.allProducts)
 
 module.exports = router;

@@ -82,13 +82,6 @@ let productsControllers = {
     console.log(dataArray);
     return res.render("products/busquedaDeProducto", { dataArray });
   },
-  allProducts: async (req, res) => {
-    console.log("Hola");
-    const count = await db.Products.findAll();
-    res.status(200).json({
-        count
-    });
-}
 };
 
 module.exports = productsControllers;
