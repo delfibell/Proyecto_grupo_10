@@ -6,18 +6,20 @@ const router = express.Router(); //necesario para poder usar los metodos GET, PO
 const uploadFile = require("../middlewares/multerProductmiddleware");
 
 const adminLoggedMiddleware = require("../middlewares/adminLoggedMiddleware");
+const adminMiddleware = require("../middlewares/adminMiddleware");
 const validateCreateProduct = require("../middlewares/productMiddleware");
 
 // ruta: /products (GET) - Listado de productos
 router.get("/", productsControllers.listarProductos);
 
 // ruta: /products/create (GET) - Formulario de creación de productos
-router.get("/create", adminLoggedMiddleware, productsControllers.crearProducto); //cambiar ruta en los href
+router.get("/create", adminMiddleware, adminLoggedMiddleware, productsControllers.crearProducto); //cambiar ruta en los href
 
 //ruta: /products (POST) - Acción de creación (a donde se envía el formulario)
 router.post(
   "/",
   uploadFile.single("image"),
+  adminMiddleware,
   adminLoggedMiddleware,
   validateCreateProduct,
   productsControllers.store
@@ -29,6 +31,7 @@ router.get("/:id", productsControllers.detalleProducto);
 // ruta: /products/:id/edit (GET) - Formulario de edición de productos
 router.get(
   "/edit/:id",
+  adminMiddleware,
   adminLoggedMiddleware,
   productsControllers.editarProducto
 );
@@ -37,6 +40,7 @@ router.get(
 router.put(
   "/edit/:id",
   uploadFile.single("image"),
+  adminMiddleware, 
   adminLoggedMiddleware,
   validateCreateProduct,
   productsControllers.modificarProducto
@@ -45,6 +49,7 @@ router.put(
 //ruta para eliminar producto
 router.get(
   "/:id/delete",
+  adminMiddleware, 
   adminLoggedMiddleware,
   productsControllers.eliminarProducto
 );
@@ -52,6 +57,7 @@ router.get(
 //ruta: /products/:id (DELETE) - Acción de borrado
 router.delete(
   "/:id",
+  adminMiddleware,
   adminLoggedMiddleware,
   productsControllers.destruirProducto
 );
