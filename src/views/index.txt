@@ -1,150 +1,159 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
-  <%- include("./partials/head")%>
-  <link rel="stylesheet" href="/css/index.css">
-  
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>OFT</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Libre+Baskerville&family=Teko&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+          <link rel="stylesheet" href="/css/index.css">
   </head>
+
   <body>
-  <%- include("./partials/header")%> <!-- Se importa el header desde los archivos parciales --> 
-    <main>
-      <div class="slider">
-        <!--
-        <ul class="carousel-list">
-            <li class="moving-image">
-                <img src="/img/track_the_tram_street_city_transport-783828.jpg">
-            </li>
-            <li class="moving-image">            
-                <img src="/img/asphalt-black-top-close-up-texture-free-3348.jpg">
-            </li>
-            <li class="moving-image">
-                <img src="/img/henry-co-486978-unsplash.jpg">
-            </li>
-        </ul>
-        -->
-      
+  <!-- HEADER INDEX -->
+  <div class="cover-container">
+    <header class="contenedorHeader">
+      <div class="float-md-left mb-0">
+        <a class="" href="/">
+          <img id="logo" src="/img/logo1.png" />
+        </a>
       </div>
-      
-      <section id="featured-products">
-        <!--
-        <nav class="dropdown">
-          <ul>
-            <li><a href = "#">INTERIOR</a></li>
-            <li><a href = "#">EXTERIOR</a></li>
-            <li><a href = "#">RUEDAS Y LLANTAS</a></li>
-            <li><a href = "#">ACCESORIOS</a></li>
-            <li><a href = "#">KITS</a></li>
-            <li><a href = "#">GIT CARDS</a></li>
-         </ul>
-        </nav>
-        -->
-        
-      
-        <h2>PRODUCTOS DESTACADOS</h2>
+      <div class="ubicacionBurguer">
+        <i class="fa-solid fa-bars" id="burguer"></i>
+      </div>
+      <div class="ubicacionBusqueda">
+        <form action="/products/busqueda" method="POST">
+          <input name="busqueda" type="text">
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+                <nav class="nav nav-masthead justify-content-center float-md-right">
+                  <% if (locals.userLogged) { %>
+                    <div class="">
+                      <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <li class="">
+                      <a class="" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/img/users/<%= locals.userLogged.profilePic %>" width="40" style="border-radius: 100%;">
+                        Hola <%= locals.userLogged.firstName %> 
+                      </a>
+                      <ul class="" aria-labelledby="navbarDropdown">
+                        <a class="" href="/users/mi-garage">Mi Garage</a>
+                        <li><hr class=""></li>
+                        <a class="" href="/users/logout">Logout</a>
+                      </ul>
+                      <% if(locals.adminLogin){ %>
+                        <ul>
+                          <li>
+                            <button><a href="/products/create">Crear Producto</a> </button>
+                          </li>
+                        </ul>
+                    <% } %>  
+                    </li>
+                  <% } else { %>
+                    <a href="/" class="nav-link">Inicio</a>
+                    <a href="/products" class="nav-link">Productos</a>
+                    <a href="/about" class="nav-link">Nosotrxs</a>
+                    <a class="nav-link" href="/users/register">Registro</a>
+                    <a class="nav-link" href="/users/login">Login</a>
+                  <% } %>
+                </nav>
+        </div>
+      </header>
 
-        <section class="cards">
-          <article id="first-product" class="article">
-            <img class="imag" src="/img/IMG_0175.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-              <div class="contenedorFavoritos">
-                  <a href=""><i id="corazon" class="fa-regular fa-heart"></i></a>
-              </div> 
-            </div>
-          </article>
-          <article id="second-product" class="article">
-            <img class="imag" src="/img/IMG_4335.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="third-product" class="article">
-            <img class="imag" src="/img/IMG_0140.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="fourth-product" class="article">
-            <img class="imag" src="/img/IMG_0149.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="fifth-product" class="article">
-            <img class="imag" src="/img/IMG_0158.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="sixth-product" class="article">
-            <img class="imag" src="/img/IMG_0161.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-        </section>
-      </section>
+    <main>
+      <div class="main-container">
+        <p id="brand">ONLY FOR TRACK</p>
+        <p class="lead"> DETAILING PRODUCTS <br> ¡Bienvenidx a OFT! <br> Elaboramos lo mejor para tu vehículo. <br> Girá el volante para descubrir nuestros productos <br></p>
+        <div class="ubicacionLogo"> 
+          <a class="" href="/products">
+            <img id="logo" src="/img/logo1.png" />
+          </a>
+      </div>
 
-      <section id="offers">
-        <h2>OFERTAS</h2>
-
-        <section class="cards">
-          <article id="first-product" class="article">
-            <img class="imag" src="/img/IMG_0175.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-              <div class="contenedorFavoritos">
-                  <a href=""><i id="corazon" class="fa-regular fa-heart"></i></a>
-              </div> 
-            </div>
-          </article>
-          <article id="second-product" class="article">
-            <img class="imag" src="/img/IMG_4335.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="third-product" class="article">
-            <img class="imag" src="/img/IMG_0140.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="fourth-product" class="article">
-            <img class="imag" src="/img/IMG_0149.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="fifth-product" class="article">
-            <img class="imag" src="/img/IMG_0158.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="sixth-product" class="article">
-            <img class="imag" src="/img/IMG_0161.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-        </section>
-      </section>
+    </div>
+        <a href="/users/login" class="btn btn-lg btn-secondary font-weight-bold">Abrí tu cuenta</a>
     </main>
 
     <%- include("./partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>OFT</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Libre+Baskerville&family=Teko&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+          <link rel="stylesheet" href="/css/index.css">
+  </head>
+
+  <body>
+  <!-- HEADER INDEX -->
+  <body class="d-flex text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-left mb-0">YelpCamp</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-right">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" href="/products">Productos</a>
+                    <% if(!locals.userLogged) { %>
+                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/register">Register</a>
+                    <% } else { %>
+                    <a class="nav-link" href="/logout">Logout</a>
+                    <% } %>
+                </nav>
+            </div>
+        </header>
+        <main class="px-3">
+            <h1>YelpCamp</h1>
+            <p class="lead"> Welcome to YelpCamp! <br> Jump right in and explore our many campgrounds. <br>
+                Feel free to share some of your own and comment on others!</p>
+            <a href="/productos" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">View
+                Campgrounds</a>
+        </main>
+      <footer class="mt-auto text-white-50">
+        <section class="callUs">  
+          <a href=""><img src="" alt=""><i class="fa-brands fa-whatsapp"  style="color: rgb(255, 255, 255)" ></i></a></div>
+          <a href="https://www.instagram.com/oft.detailingproducts/"><i class="fa-brands fa-instagram" style="color: rgb(255, 255, 255)"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100080626577480"><i class= "fa-brands fa-facebook" style="color: rgb(255, 255, 255)"></i></a>
+          <p><i class="fa-solid fa-phone"></i>+54&nbsp;&nbsp;&nbsp;11&nbsp;&nbsp;&nbsp;24523606</p>
+          <p>Lunes a Viernes de 10 a 16:30hs</p>
+      </section>
+      <div class="copyright">
+        <p>© 2022 Only For Track</p>
+        </div>
+        </footer>
+
+
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
 
   </body>
 </html>

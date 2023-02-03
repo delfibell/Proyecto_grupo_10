@@ -6,68 +6,67 @@
   
   </head>
   <body>
-  <!-- HEADER INDEX -->
-  <div class="cover-container">
-    <div class="contenedorHeader">
-      <div class="ubicacionBurguer">
-        <i class="fa-solid fa-bars" id="burguer"></i>
-      </div>
-      <div class="ubicacionLogo"> 
-        <a class="" href="/">
-          <img id="logo" src="/img/logo1.png" />
-        </a>
-      </div>
-      <div class="ubicacionBusqueda">
-        <form action="/products/busqueda" method="POST">
-          <input name="busqueda" type="text">
-          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-      </div>
-      <div class="ubicacionUser">
-				<% if (locals.isLogged) { %>
-          <div class="">
-            <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
-					<li class="">
-						<a class="" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="/img/users/<%= locals.userLogged.profilePic %>" width="40" style="border-radius: 100%;">
-							Hola <%= locals.userLogged.firstName %> 
-						</a>
-						<ul class="" aria-labelledby="navbarDropdown">
-							<a class="" href="/users/mi-garage">Mi Garage</a>
-							<li><hr class=""></li>
-							<a class="" href="/users/logout">Logout</a>
-						</ul>
-            <% if(locals.adminLogin){ %>
-              <ul>
-                <li>
-                  <button><a href="/products/create">Crear Producto</a> </button>
-                </li>
-              </ul>
-          <% } %>  
-					</li>
-				<% } else { %>
-          <a href="/" class="nav-link"><p>Inicio</p></a>
-          <a href="/products" class="nav-link"><p></p>Productos</a>
-          <a href="/about" class="nav-link"><p></p>Nosotrxs</a>
-					<a class="nav-link" href="/users/register">Registro</a>
-					<a class="nav-link" href="/users/login">Login</a>
-				<% } %>
-        </div>
-    </div>
-
+  <%- include("./partials/header")%> <!-- Se importa el header desde los archivos parciales --> 
     <main>
-      <div class="main-container">
-        <p id="brand">ONLY FOR TRACK</p>
-        <p class="lead"> DETAILING PRODUCTS <br> ¡Bienvenidx a OFT! <br> Elaboramos lo mejor para tu vehículo. <br> Girá el volante para descubrir nuestros productos <br></p>
-        <div class="ubicacionLogo"> 
-          <a class="" href="/products">
-            <img id="logo" src="/img/logo1.png" />
-          </a>
-      </div>
+     
+      
+      <section id="featured-products">
 
-    </div>
-        <a href="/users/login" class="btn btn-lg btn-secondary font-weight-bold">Abrí tu cuenta</a>
+        <h2>PRODUCTOS DESTACADOS</h2>
+
+       
+
+      <section id="offers">
+        <h2>OFERTAS</h2>
+
+        <section class="cards">
+          <article id="first-product" class="article">
+            <img class="imag" src="/img/IMG_0175.jpeg" />
+            <div class="product-description">
+              <p>ombu-shampoo</p>
+              <h3>$ 1500</h3>
+              <div class="contenedorFavoritos">
+                  <a href=""><i id="corazon" class="fa-regular fa-heart"></i></a>
+              </div> 
+            </div>
+          </article>
+          <article id="second-product" class="article">
+            <img class="imag" src="/img/IMG_4335.jpeg" />
+            <div class="product-description">
+              <p>ombu-shampoo</p>
+              <h3>$ 1500</h3>
+            </div>
+          </article>
+          <article id="third-product" class="article">
+            <img class="imag" src="/img/IMG_0140.jpeg" />
+            <div class="product-description">
+              <p>ombu-shampoo</p>
+              <h3>$ 1500</h3>
+            </div>
+          </article>
+          <article id="fourth-product" class="article">
+            <img class="imag" src="/img/IMG_0149.jpeg" />
+            <div class="product-description">
+              <p>ombu-shampoo</p>
+              <h3>$ 1500</h3>
+            </div>
+          </article>
+          <article id="fifth-product" class="article">
+            <img class="imag" src="/img/IMG_0158.jpeg" />
+            <div class="product-description">
+              <p>ombu-shampoo</p>
+              <h3>$ 1500</h3>
+            </div>
+          </article>
+          <article id="sixth-product" class="article">
+            <img class="imag" src="/img/IMG_0161.jpeg" />
+            <div class="product-description">
+              <p>ombu-shampoo</p>
+              <h3>$ 1500</h3>
+            </div>
+          </article>
+        </section>
+      </section>
     </main>
 
     <%- include("./partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
