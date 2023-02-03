@@ -20,7 +20,6 @@ const apiControllers = {
   },
 
   usersDetails: async (req, res) => {
-    const count = await db.Users.count();
     const allUsers = await db.Users.findAll();
     const usersDetails = allUsers.map((user) => {
       return {
@@ -33,7 +32,6 @@ const apiControllers = {
       };
     });
     res.status(200).json({
-      count,
       usersDetails,
     });
   },
@@ -50,45 +48,39 @@ const apiControllers = {
         detail: `http://localhost:3030/api/products/${product.id}`,
       };
     });
-    const exteriorProducts = await db.Products.count({
-      where: { category: "exterior" },
-    });
-    const interiorProducts = await db.Products.findAndCountAll({
-      where: { category: "interior" },
-    });
-    const neumaticosProducts = await db.Products.findAndCountAll({
-      where: { category: "neumaticos" },
-    });
-    const vidriosProducts = await db.Products.findAndCountAll({
-      where: { category: "vidrios" },
-    });
-    const accesoriosProducts = await db.Products.findAndCountAll({
-      where: { category: "accesorios" },
-    });
+
+    const categories = [
+      "exterior",
+      "interior",
+      "neumaticos",
+      "vidrios",
+      "accesorios",
+    ];
+    let productsCategories = {};
+
+    for (const category of categories) {
+      const products = await db.Products.findAndCountAll({
+        where: { category: category },
+      });
+      productsCategories[category] = products.count;
+    }
 
     res.status(200).json({
       count,
-      exteriorProducts,
-      interiorProducts,
-      neumaticosProducts,
-      vidriosProducts,
-      accesoriosProducts,
+      productsCategories,
       products,
     });
   },
 
   productsDetails: async (req, res) => {
-    const count = await db.Products.count();
-    const allProducts = await db.Products.findAll();
-    const productsDetails = allProducts.map((product) => {
-      return {
-        image: `http://localhost:3030/img/catalogo/${product.image}`,
-      };
+    const productDetail = await db.Products.findOne({
+      where: { id: req.params.id },
+      raw: true,
+      include: [{ model: db.ProductFragance }],
     });
 
     res.status(200).json({
-      count,
-      productsDetails,
+      productDetail,
     });
   },
 };
