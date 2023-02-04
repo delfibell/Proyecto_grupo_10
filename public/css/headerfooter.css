@@ -7,8 +7,6 @@
 }
 
 html body {
-  width: 100vw;
-  height: 100vh;
   font-family: "Teko", sans-serif;
 }
 
@@ -55,6 +53,7 @@ header a {
 }
 
 .navegador{
+  padding-top: 12px;
   display: flex;
   flex-direction: row;
 }
@@ -62,8 +61,8 @@ header a {
 .nav-link {
   padding: 0.25rem 0;
   font-weight: 700;
+  font-size: 1.2rem;
   color: white;
-  margin-left: 1rem;
   border-bottom: 0.25rem solid transparent;
 }
 
@@ -127,10 +126,19 @@ header button {
 }
 
 .carrito {
-  font-size: 0.7em;
+  font-size: 1.5rem;
 }
 
+.carrito:hover{
+  color: rgba(255,255,255,0.5);
+  border-bottom-color:rgba(255,255,255,0.5);
+}
 
+.carrito.active {
+  color: white;
+  border-bottom-color:white;
+
+}
 
 .headerSection2 {
   width: 100%;
@@ -148,6 +156,7 @@ header button {
 }
 
 .headerSection2 a {
+  padding-bottom: 10px;
   color: black;
   font-size: 1.5rem;
 }
