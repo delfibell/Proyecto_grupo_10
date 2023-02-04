@@ -18,34 +18,28 @@
           <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
-      <div class="ubicacionUser">
-				<% if (locals.isLogged) { %>
-          <div class="">
-            <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
-          </div>
-					<li class="">
-						<a class="" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<img src="/img/users/<%= locals.userLogged.profilePic %>" width="40" style="border-radius: 100%;">
-							Hola <%= locals.userLogged.firstName %> 
-						</a>
-						<ul class="" aria-labelledby="navbarDropdown">
-							<a class="" href="/users/mi-garage">Mi Garage</a>
-							<li><hr class=""></li>
-							<a class="" href="/users/logout">Logout</a>
-						</ul>
-            <% if(locals.adminLogin){ %>
-              <ul>
-                <li>
-                  <button><a href="/products/create">Crear Producto</a> </button>
-                </li>
-              </ul>
-          <% } %>  
-					</li>
-				<% } else { %>
-					<li class=""><a class="" href="/users/register">Registro</a></li>
-					<li class=""><a class="" href="/users/login">Login</a></li>
-				<% } %>
-        </div>
+      <div class="ubicacionNavegador mb-auto">
+        <nav class="navegador">
+          <% if (locals.isLogged) { %>
+              <a class="" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="/img/users/<%= locals.userLogged.profilePic %>" width="40" style="border-radius: 100%;">
+                Hola <%= locals.userLogged.firstName %> 
+              </a>
+              <a class="" href="/users/mi-garage">Mi Garage</a>
+              <a class="" href="/users/logout">Logout</a>
+              <% if(locals.adminLogin){ %>
+                <a href="/products/create">Crear Producto</a>
+            <% } %>  
+          <% } else { %>
+            <a class="nav-link" href="/">Inicio</a>
+				    <a class="nav-link" href="/products">Productos</a>
+            <a class="nav-link" href="/users/register">Registro</a>
+            <a class="nav-link" href="/users/login">Login</a>
+          <% } %>
+          <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
+          </nav>
+      </div>
+
       
       <!--
         <div class="contenedorMiGarage">
@@ -57,10 +51,6 @@
     </div>
 
     <section class="headerSection2">
-      <nav class="navegador">
-        <a href="/" class="nav_link"><p>INICIO</p></a>
-        <a href="/products" class="nav_link"><p></p>PRODUCTOS</a>
-        <a href="/about" class="nav_link"><p></p>NOSOTRXS</a>
-      </nav>
+        <a href="/products" class="nav_link"><p></p>Conocé todos nuestros productos</a>
     </section>
 </header>

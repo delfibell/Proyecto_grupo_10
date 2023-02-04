@@ -54,6 +54,30 @@ header a {
   font-family: "Teko", sans-serif;
 }
 
+.navegador{
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-link {
+  padding: 0.25rem 0;
+  font-weight: 700;
+  color: white;
+  margin-left: 1rem;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover{
+  color: rgba(255,255,255,0.5);
+  border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+  color: white;
+  border-bottom-color:white;
+
+}
+
 #corazon {
   padding-right: 15px;
   
@@ -109,22 +133,23 @@ header button {
 
 
 .headerSection2 {
-  border-top: 1px solid rgba(255, 255, 255, 0.342);
-  box-sizing: border-box;
-  background: linear-gradient(
-    to right,
-    rgb(173, 173, 255),
-    #d8ffd2,
-    rgb(203, 203, 255)
-  );
-  font-size: 1em;
-  padding-left:70px ;
-  padding-right: 10px;
-
+  width: 100%;
+  background: #adadff;
+  z-index: 99;
+  background: linear-gradient(-45deg, #adadff 0%, #d8ffd2 52%, rgb(203, 203, 255) 100%);
+  background-size: 400vw 400vw;
+  animation: waveColors 8s ease infinite;
+  height: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 80px;
+  margin-bottom: 20px;
 }
 
 .headerSection2 a {
   color: black;
+  font-size: 1.5rem;
 }
 .headerSection2 a:hover {
   color: rgb(255, 255, 255);
@@ -143,18 +168,6 @@ header button {
   color: red;
 }
 
-
-
-
-
-
-.navegador {
-  height: 3em;
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  padding-right: 80px; }
 
   #burguer {
     display: none;
@@ -272,7 +285,17 @@ header button {
       }
     }
 
-  
+    @keyframes waveColors {
+      0% {
+        background-position: 0% 7%;
+      }
+      50% {
+        background-position: 100% 94%;
+      }
+      100% {
+        background-position: 0% 7%;
+      }
+    }
   
   
   /*  --------------main--------------------------------------------*/
