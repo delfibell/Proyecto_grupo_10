@@ -1,4 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
+html body {
+  font-family: "Teko", sans-serif;
+}
 
 /*-------COPIAR Y PEGAR EN EL CSS DE CADA PAGINA Y LLENAR EL MAIN (html y css)-------------*/
 
@@ -12,6 +20,38 @@ main {
 main h2 {
   text-align: center;
   /* margin: 15px; */
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.float:hover{
+  animation: bounce 0.75s infinite;
+  color: white;
+}
+
+@keyframes bounce {
+    0% {transform: scale(1,1) translate(0px, 0px)}
+    30%{transform: scale(1,0.8) translate(0px, 10px)}
+    75%{transform: scale(1,1.1) translate(0px, -25px)}
+    100% {transform: scale(1,1) translate(0px, 0px)}
+}
+
+
+.my-float{
+	margin-top:16px;
 }
 
 .cards {
@@ -38,7 +78,7 @@ main h2 {
 }
 
 .product-description {
-  width: 80vw;
+  width: 30%;
   text-align: center;
 }
 

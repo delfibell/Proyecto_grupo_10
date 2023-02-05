@@ -14,43 +14,16 @@
         <h2 id="productos">NUESTROS PRODUCTOS</h2>
              <ul class="nav">
                 <li>
-                    <a href="#cera">CERA INTERIOR</a>
+                    <a href="#interior">INTERIOR</a>
                 </li>
                 <li>
-                    <a href="#cera" >CERA EXTERIOR</a>
-                </li>
-                <li>
-                    <a href="#shampoo">SHAMPOO</a>
-                </li>
-                <li>
-                    <a href="#shampoo">LIMPIA VIDRIOS</a>
-                </li>
-                <li>
-                    <a href="#shampoo">ESPUMA</a>
-                </li>
-                <li>
-                    <a href="#perfumes">DESENGRASANTE</a>
-                </li>
-                <li>
-                    <a href="#perfumes">BUG REMOVER</a>
-                </li>
-                <li>
-                    <a href="#perfumes">SILICONA</a>
-                </li>
-                <li>
-                    <a href="#perfumes">APC</a>
-                </li>
-                <li>
-                    <a href="#perfumes">DESENGRASANTE</a>
-                </li>
-                <li>
-                    <a href="#perfumes">ACONDICIONADOR</a>
+                    <a href="#exterior" >EXTERIOR</a>
                 </li>
                 <li>
                     <a href="#perfumes">PERFUMES</a>
                 </li>
                 <li>
-                    <a href="#productos3">ACCESORIOS</a>
+                    <a href="#accesorios">ACCESORIOS</a>
                 </li>
             </ul> 
         <section class="cards1"> 
@@ -70,6 +43,45 @@
             </article>
             <% }) %> 
         </section>
+
+        <h2 id="interior">INTERIOR</h2>
+        <section class="cards2">
+            <% products.filter(product => product.category == "Interior").forEach(product => { %>
+                <article id="article">
+                    <ul>
+                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
+                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
+                        <li class="productoNombre"><p><%= product.name %></p></li> 
+                        <h2><%= product.price %></h2>
+                        <div class="cajaChica"> 
+                            <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
+                            <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                        </div>
+                        <li id="txt" class="texto"><%= product.description %></li> 
+                    </ul>
+                </article>
+                <% }) %>
+        </section>  
+
+        <h2 id="exterior">EXTERIOR</h2>
+        <section class="cards2">
+            <% products.filter(product => product.category == "Exterior").forEach(product => { %>
+                <article id="article">
+                    <ul>
+                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
+                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
+                        <li class="productoNombre"><p><%= product.name %></p></li> 
+                        <h2><%= product.price %></h2>
+                        <div class="cajaChica"> 
+                            <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
+                            <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                        </div>
+                        <li id="txt" class="texto"><%= product.description %></li> 
+                    </ul>
+                </article>
+                <% }) %>
+        </section>  
+
         <h2 id="perfumes">PERFUMES</h2>
         <section class="cards2">
             <% products.filter(product => product.category == "Perfumes").forEach(product => { %>
@@ -89,7 +101,7 @@
                 <% }) %>
         </section>  
 
-        <h2 id="productos3" >ACCESORIOS</h2>
+        <h2 id="accesorios" >ACCESORIOS</h2>
         <section id="cards3"  class="cards1"> 
             <% products.filter(product => product.category == "Accesorios").forEach(product => { %>
                 <article id="article">

@@ -17,49 +17,35 @@
     margin: 0;
     box-sizing: border-box;
     height: fit-content;
-    
-    
+    backdrop-filter: blur(1px);
+    background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
+    background-size: contain;
+    background-position: center;
   }
 
   main .container{
-  flex-wrap: wrap; 
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
-  padding: 4em;
-  width: 100vw;
-  backdrop-filter: blur(1px);
-  background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
-  background-size: contain;
-  background-position: center;
+    flex-wrap: wrap; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(1px);
+    margin:0px;
 }
 
 .crearCuentaForm {
-    background-color: rgb(255, 255, 255);
-    width: 500px;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.412);
-    height: 500px; 
-    margin-right: 20px;
-    padding: 40px;
-    height: fit-content;
-    font-family: "Teko", sans-serif;
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.412);
+  margin: 50px;
+  padding: 40px;
+  height: fit-content;
+  align-items: center;
+  align-self: center;
 }
-
-.left{
-    width: 480px;
-    /* height: 50%; */
-    flex-direction: row;
-    /* flex-wrap: wrap; */
-    background: url('/img/image.jpg');
-    background-size: cover;
-    height: 500px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.102);
-    
-
-} 
 
 @media (max-width: 1067px) {
     .left {
@@ -96,7 +82,7 @@
     border-radius: 100px;
     border: 1px solid;
     font-size: 0.8em;
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Teko", sans-serif;
   }
 
   .crearCuentaForm form button{
@@ -125,19 +111,19 @@ form button:hover {
 }
 
 
-.crearCuentaForm form .CuentaOK {
-  font-size: 1em;
+.CuentaOK {
+  font-size: 1.5rem;
   justify-content: center;
   display: flex;
-  justify-content: center;
+  padding-top: 20px;
 }
 
 
 .crearCuentaForm form p {
   margin-top: 10px;
   font-size: 0.8em;
-  
 }
+
 .errorBorder{
   border: 1px solid #c5000a; 
 }
