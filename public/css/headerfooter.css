@@ -377,7 +377,7 @@ footer .callUs i {
   padding-right: 10px;
 }
 
-i:hover{
+footer .callUs i:hover{
   color: #d8ffd2;
   font-size: 2em;
 }
