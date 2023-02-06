@@ -75,23 +75,14 @@ module.exports = (sequelize, dataTypes) => {
       as: "productType",
       foreignKey: "idType",
     });
-  };
-
-  Product.associate = function (models) {
     Product.belongsTo(models.ProductsDiscounts, {
       as: "productDiscount",
       foreignKey: "idDiscount",
     });
-  };
-
-  Product.associate = function (models) {
     Product.belongsTo(models.ProductsFragances, {
       as: "productFragance",
       foreignKey: "idFragance",
     });
-  };
-
-  Product.associate = function (models) {
     Product.belongsTo(models.ProductsSizes, {
       as: "productSize",
       foreignKey: "idSize",

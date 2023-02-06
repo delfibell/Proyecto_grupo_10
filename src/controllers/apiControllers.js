@@ -7,8 +7,8 @@ const apiControllers = {
     const users = allUsers.map((user) => {
       return {
         id: user.id,
-        name: user.firstName,
-        surname: user.lastName,
+        firstName: user.firstName,
+        lastName: user.lastName,
         email: user.email,
         detail: `http://localhost:3030/api/users/${user.id}`,
       };
@@ -20,19 +20,18 @@ const apiControllers = {
   },
 
   usersDetails: async (req, res) => {
-    const allUsers = await db.Users.findAll();
-    const usersDetails = allUsers.map((user) => {
-      return {
-        id: user.id,
-        name: user.firstName,
-        surname: user.lastName,
-        email: user.email,
-        username: user.username,
-        img: `http://localhost:3030/img/users/${user.profilePic}`,
-      };
+    const userDetail = await db.Users.findOne({
+      where: { id: req.params.id },
+      raw: true,
     });
+
     res.status(200).json({
-      usersDetails,
+      id: userDetail.id,
+      firstName: userDetail.firstName,
+      lastName: userDetail.lastName,
+      email: userDetail.email,
+      username: userDetail.username,
+      img: `http://localhost:3030/img/users/${userDetail.profilePic}`,
     });
   },
 
@@ -76,11 +75,26 @@ const apiControllers = {
     const productDetail = await db.Products.findOne({
       where: { id: req.params.id },
       raw: true,
-      include: [{ model: db.ProductFragance }],
+      include: [
+        { association: "productFragance" },
+        { association: "productType" },
+        { association: "productDiscount" },
+        { association: "productSize" },
+      ],
     });
-
+    console.log(productDetail);
+    console.log(productDetail["productFragance.id"]);
     res.status(200).json({
-      productDetail,
+      id: productDetail.id,
+      name: productDetail.name,
+      description: productDetail.description,
+      category: productDetail.category,
+      price: productDetail.price,
+      type: productDetail["productType.type"],
+      discount: productDetail["productDiscount.discount"] + " %",
+      fragance: productDetail["productFragance.fragance"],
+      size: productDetail["productSize.size"],
+      image: `http://localhost:3030/img/users/${productDetail.image}`,
     });
   },
 };

@@ -42,14 +42,14 @@ module.exports = (sequelize, dataTypes) => {
 
   User.associate = function (models) {
     User.hasMany(models.Carts, {
-      as: "userCart",
+      as: "cartUser",
       foreignKey: "idUser",
     });
   };
 
   User.associate = function (models) {
     User.belongsTo(models.Categories, {
-      as: "userCategory",
+      as: "categoryUser",
       foreignKey: "idCategory",
     });
   };

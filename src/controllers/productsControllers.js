@@ -35,7 +35,11 @@ let productsControllers = {
     res.redirect("/");
   },
   editarProducto: (req, res) => {
-    db.Products.findByPk(req.params.id).then(function (product) {
+    db.Products.findByPk(req.params.id, {
+      raw: true,
+      include: [{ association: "productFragance" }],
+    }).then(function (product) {
+      console.log(product);
       res.render("products/edicionProducto", { product: product });
     });
   },

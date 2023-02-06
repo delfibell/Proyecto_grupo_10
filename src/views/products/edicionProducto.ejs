@@ -40,13 +40,13 @@
 
                     <label for="aroma">Aroma</label> 
                     <select name="fragance" class="input-box" value="<%= product.fragance %>"> 
-                        <option value="<%= product.idFragance %>"><%= product.idFragance %></option>
+                        <option value="<%= product['productFragance.id']%>"><%= product['productFragance.fragance'] %></option>
                         <option value="1">Uva</option>
                         <option value="2">Chicle</option>
                         <option value="3">Fresa</option>
                         <option value="4">Vainicoco</option>
-                        <option value="4">Autosport</option>
-                        <option value="5">Vainilla</option>
+                        <option value="5">Autosport</option>
+                        <option value="6">Vainilla</option>
                     </select>
 
                     <label for="tamaño">Tamaño</label> 
