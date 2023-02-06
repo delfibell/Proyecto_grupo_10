@@ -21,15 +21,20 @@
       <div class="ubicacionNavegador mb-auto">
         <nav class="navegador">
           <% if (locals.isLogged) { %>
-              <a class="" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="/img/users/<%= locals.userLogged.profilePic %>" width="40" style="border-radius: 100%;">
                 Hola <%= locals.userLogged.firstName %> 
-              </a>
-              <a class="" href="/users/mi-garage">Mi Garage</a>
-              <a class="" href="/users/logout">Logout</a>
-              <% if(locals.adminLogin){ %>
-                <a href="/products/create">Crear Producto</a>
-            <% } %>  
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-link" href="/users/mi-garage">Mi Garage</a></li>
+                <% if(locals.adminLogin){ %>
+                 <li><a class="dropdown-link" href="/products/admin">Administración</a></li>
+              <% } %> 
+                <li><a class="dropdown-link" href="/users/logout">Cerrar sesión</a></li>
+              </ul>
+            </div>
+              
           <% } else { %>
             <a class="nav-link" href="/">Inicio</a>
 				    <a class="nav-link" href="/products">Productos</a>

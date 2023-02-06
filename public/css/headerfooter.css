@@ -72,6 +72,31 @@ header a {
 
 }
 
+#dropdownMenuButton1 {
+  color: white;
+  border-color: black;
+  font-size: 1.2rem;
+}
+
+.dropdown-link {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: black;
+  border-bottom: 0.25rem solid transparent;
+  transition: 250ms;
+}
+
+.dropdown-link:hover{
+  color: #adadff;
+  border-bottom-color: #adadff;
+}
+
+.dropdown.active {
+  color: #adadff;
+  border-bottom-color: #adadff;
+
+}
+
 #logo {
   width: 4rem;
   transition: 0.5s;
