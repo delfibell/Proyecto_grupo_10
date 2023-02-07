@@ -8,14 +8,43 @@
   <body>
   <%- include("./partials/header")%> <!-- Se importa el header desde los archivos parciales --> 
     <main>
-      <section id="featured-products">
+      <div id="offers">
+        <h2>NUEVOS PRODUCTOS</h2>
+      </div>
+      <div>
+        <% products.filter(product => product.idType == 1).forEach(product => { %>
+          <article id="article">
+              <ul>
+                  <li class="imagen"> <img class="imag" src="/img/catalogo/<%= product.image %>"></li>
+                  <li class="productoNombre"><p><%= product.name %></p></li> 
+                  <h2><%= product.price %></h2>
+                  <div class="cajaChica"> 
+                      <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
+                      <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                  </div>
+                  <li id="txt" class="texto"><%= product.description %></li> 
+              </ul>
+          </article>
+          <% }) %> 
+      </div>
 
-        <h2>PRODUCTOS DESTACADOS</h2>
-
-       
-
-      <section id="offers">
+      <div id="offers">
         <h2>OFERTAS</h2>
+      </div>
+      <div id="offers">
+        <h2>MÁS VENDIDOS</h2>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
 
         <section class="cards">
           <article id="first-product" class="article">
@@ -68,8 +97,7 @@
               </a>
             
           </article>
-        </section>
-      </section>
+    
     </main>
 
     <%- include("./partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->

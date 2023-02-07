@@ -83,7 +83,6 @@ let productsControllers = {
       },
     });
     const dataArray = products.map((item) => item.dataValues);
-    console.log(dataArray);
     return res.render("products/busquedaDeProducto", { dataArray });
   },
 };

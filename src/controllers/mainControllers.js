@@ -1,12 +1,15 @@
 const path = require("path");
+let db = require("../database/models");
 
 let mainControllers = {
   index: (req, res) => {
-    res.render("index");
+    db.Products.findAll().then(function (products) {
+      res.render("index", { products });
+    });
   },
-  about:(req, res) => {
+  about: (req, res) => {
     res.render("about");
-  }
+  },
 };
 
 module.exports = mainControllers;

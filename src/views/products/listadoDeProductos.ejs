@@ -31,7 +31,6 @@
             <article id="article">
                 <ul>
                     <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
-                    <li class="corazon"><i class="fa-regular fa-heart"></i></li>
                     <li class="productoNombre"><p><%= product.name %></p></li> 
                     <h2><%= product.price %></h2>
                     <div class="cajaChica"> 
@@ -107,7 +106,6 @@
                 <article id="article">
                     <ul>
                         <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
-                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
                         <li class="productoNombre"><p><%= product.name %></p></li> 
                         <h2><%= product.price %></h2>
                         <div class="cajaChica"> 
@@ -119,10 +117,11 @@
                 </article>
                 <% }) %>
         </section>
-
+        <% if(locals.adminLogin){ %>
         <form class="nuevoProducto" action="/products/create" method="GET">
             <button type="submit" class="redirec-login">Creá un nuevo producto</button>
         </form>
+        <% } %> 
     </main>
     
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
