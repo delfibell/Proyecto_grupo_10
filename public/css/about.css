@@ -1,10 +1,31 @@
 main {
-padding-left: 20px;
-padding-top: 50px;
-padding-bottom: 250 px;
+    /* top  left-right  bottom */
+    padding: 5% 15% 5%;
 }
 
-h2 {
-margin-bottom: 0;
-color: grey
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #adadff;
+    padding-bottom: 2%;
+}
+
+.descripcion-negocio {
+    text-align: center;
+    font-size: 2rem;
+    margin: 40px;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.equipo {
+    display: flex;
+}
+
+.card-text {
+    font-size: 1.5rem;
+}
+
+.linkedin {
+    font-size: 2.5rem;
 }
