@@ -84,6 +84,7 @@ header a {
   color: black;
   border-bottom: 0.25rem solid transparent;
   transition: 250ms;
+  padding-left: 10px;
 }
 
 .dropdown-link:hover{
@@ -180,7 +181,6 @@ header a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-right: 80px;
 }
 
 .headerSection2 a {

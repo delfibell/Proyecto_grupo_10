@@ -150,3 +150,12 @@ font-size: 0.8em;
 
 }
 
+.rememberMe {
+  display: flex;
+}
+
+.checkbox {
+  margin-left:8px;
+  margin-top: 12px;
+}
+
