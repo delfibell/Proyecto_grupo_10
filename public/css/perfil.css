@@ -20,13 +20,14 @@
     border-bottom: 1.5px solid  rgb(151, 235, 151);
     width: 100%;
     margin-bottom: 0;
+    padding-top: 15px;
 }
 
 .imgUsuario{
     width: 300px;
     object-fit: contain;
     padding: 5px;
-    border:1.5px solid  rgb(151, 235, 151);
+    border-radius: 20px;
 }
 .datosOFT{
     width: 100%;
@@ -42,7 +43,7 @@
     flex-direction: column;
 }
 .alert-success{
-    width: 200px;
+    width: 115px;
     margin: 0;
     margin-left: 20%;
 }
@@ -53,12 +54,14 @@
 }
 .botonEdit{
     margin: auto;
-    width: 30%;
-    background-color: rgb(151, 235, 151);
+    width: 15%;
+    background-color: #D2AFFF;
+    border-radius: 20px;
+    border: none;
 }
 .botonEdit a{
     text-decoration:none ;
-    color: black;
+    color: white;
 }
 .contenedorExtra{
     border-top: 1.5px solid  rgb(151, 235, 151);
@@ -74,8 +77,10 @@
     justify-content: space-around;
     width: 100%;
     margin-top: 20px;
+    padding-top: 15px;
 }
 .descripcionOFT{
     width: 100%;
     text-align: center;
+    padding-top: 40px;
 }
