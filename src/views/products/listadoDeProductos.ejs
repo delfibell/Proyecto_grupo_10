@@ -13,110 +13,152 @@
     <main>
         <h2 id="productos">NUESTROS PRODUCTOS</h2>
              <ul class="nav">
+                 <li>
+                     <a href="#exterior" >EXTERIOR</a>
+                 </li>
                 <li>
                     <a href="#interior">INTERIOR</a>
                 </li>
                 <li>
-                    <a href="#exterior" >EXTERIOR</a>
+                    <a href="#neumaticos">NEUMATICOS</a>
                 </li>
                 <li>
-                    <a href="#perfumes">PERFUMES</a>
+                    <a href="#vidrios">VIDRIOS</a>
                 </li>
                 <li>
                     <a href="#accesorios">ACCESORIOS</a>
                 </li>
             </ul> 
+        
+        <h2>EXTERIOR</h2>
         <section class="cards1"> 
-            <% products.filter(product => product.category != "Perfumes").forEach(product => { %>
+            <% products.filter(product => product.category == "exterior").forEach(product => { %>
             <article id="article">
                 <ul>
+                  <div>
                     <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                  </div>
+                  <div>
                     <li class="productoNombre"><p><%= product.name %></p></li> 
-                    <h2><%= product.price %></h2>
+                    <li class= "productoAroma"><p><%= "Aroma: " + product['productFragance.fragance'] %></p></li>
+                    <li class= "productoTamanio"><p><%= "Tamaño: " + product['productSize.size'] %></p></li>
+                  </div>
+                  <div class="precioYDescuento">
+                    <h2><%= "$" + product.price %> </h2>
+                    <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
+                  </div>
                     <div class="cajaChica"> 
-                        <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
+                        <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>" style="color: white"> Detalles </a></p></div>
                         <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
                     </div>
-                    <li id="txt" class="texto"><%= product.description %></li> 
                 </ul>
             </article>
             <% }) %> 
-        </section>
+          </section>
 
-        <h2 id="interior">INTERIOR</h2>
-        <section class="cards2">
-            <% products.filter(product => product.category == "Interior").forEach(product => { %>
+          <h2>INTERIOR</h2>
+          <section class="cards1"> 
+              <% products.filter(product => product.category == "interior").forEach(product => { %>
+              <article id="article">
+                  <ul>
+                    <div>
+                      <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                    </div>
+                    <div>
+                      <li class="productoNombre"><p><%= product.name %></p></li> 
+                      <li class= "productoAroma"><p><%= "Aroma: " + product['productFragance.fragance'] %></p></li>
+                      <li class= "productoTamanio"><p><%= "Tamaño: " + product['productSize.size'] %></p></li>
+                    </div>
+                    <div class="precioYDescuento">
+                      <h2><%= "$" + product.price %> </h2>
+                      <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
+                    </div>
+                      <div class="cajaChica"> 
+                          <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>" style="color: white"> Detalles </a></p></div>
+                          <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                      </div>
+                  </ul>
+              </article>
+              <% }) %> 
+            </section>
+
+            <h2>NEUMATICOS</h2>
+            <section class="cards1"> 
+                <% products.filter(product => product.category == "neumaticos").forEach(product => { %>
                 <article id="article">
                     <ul>
-                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
-                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
+                      <div>
+                        <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                      </div>
+                      <div>
                         <li class="productoNombre"><p><%= product.name %></p></li> 
-                        <h2><%= product.price %></h2>
+                        <li class= "productoAroma"><p><%= "Aroma: " + product['productFragance.fragance'] %></p></li>
+                        <li class= "productoTamanio"><p><%= "Tamaño: " + product['productSize.size'] %></p></li>
+                      </div>
+                      <div class="precioYDescuento">
+                        <h2><%= "$" + product.price %> </h2>
+                        <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
+                      </div>
                         <div class="cajaChica"> 
-                            <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                            <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                            <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>" style="color: white"> Detalles </a></p></div>
+                            <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
                         </div>
-                        <li id="txt" class="texto"><%= product.description %></li> 
                     </ul>
                 </article>
-                <% }) %>
-        </section>  
-
-        <h2 id="exterior">EXTERIOR</h2>
-        <section class="cards2">
-            <% products.filter(product => product.category == "Exterior").forEach(product => { %>
-                <article id="article">
-                    <ul>
-                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
-                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                        <li class="productoNombre"><p><%= product.name %></p></li> 
-                        <h2><%= product.price %></h2>
-                        <div class="cajaChica"> 
-                            <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                            <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                        </div>
-                        <li id="txt" class="texto"><%= product.description %></li> 
-                    </ul>
-                </article>
-                <% }) %>
-        </section>  
-
-        <h2 id="perfumes">PERFUMES</h2>
-        <section class="cards2">
-            <% products.filter(product => product.category == "Perfumes").forEach(product => { %>
-                <article id="article">
-                    <ul>
-                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
-                        <li class="corazon"><i class="fa-regular fa-heart"></i></li>
-                        <li class="productoNombre"><p><%= product.name %></p></li> 
-                        <h2><%= product.price %></h2>
-                        <div class="cajaChica"> 
-                            <div  id="detalles"  class="detalles"><p>+ Detalles </p></div>
-                            <div class="comprar"   onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                        </div>
-                        <li id="txt" class="texto"><%= product.description %></li> 
-                    </ul>
-                </article>
-                <% }) %>
-        </section>  
-
-        <h2 id="accesorios" >ACCESORIOS</h2>
-        <section id="cards3"  class="cards1"> 
-            <% products.filter(product => product.category == "Accesorios").forEach(product => { %>
-                <article id="article">
-                    <ul>
-                        <li class="imagen"><img class="imag" src="/img/<%= product.image %>" width="260px"></li>
-                        <li class="productoNombre"><p><%= product.name %></p></li> 
-                        <h2><%= product.price %></h2>
-                        <div class="cajaChica"> 
-                            <div id="detalles" class="detalles"><p>+ Detalles </p></div>
-                            <div class="comprar" onclick="window.open('carrito.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                        </div>
-                        <li id="txt" class="texto"><%= product.description %></li> 
-                    </ul>
-                </article>
-                <% }) %>
-        </section>
+                <% }) %> 
+              </section>
+            
+              <h2>VIDRIOS</h2>
+        <section class="cards1"> 
+            <% products.filter(product => product.category == "vidrios").forEach(product => { %>
+            <article id="article">
+                <ul>
+                  <div>
+                    <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                  </div>
+                  <div>
+                    <li class="productoNombre"><p><%= product.name %></p></li> 
+                    <li class= "productoAroma"><p><%= "Aroma: " + product['productFragance.fragance'] %></p></li>
+                    <li class= "productoTamanio"><p><%= "Tamaño: " + product['productSize.size'] %></p></li>
+                  </div>
+                  <div class="precioYDescuento">
+                    <h2><%= "$" + product.price %> </h2>
+                    <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
+                  </div>
+                    <div class="cajaChica"> 
+                        <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>" style="color: white"> Detalles </a></p></div>
+                        <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                    </div>
+                </ul>
+            </article>
+            <% }) %> 
+          </section>
+        
+          <h2>ACCESORIOS</h2>
+          <section class="cards1"> 
+              <% products.filter(product => product.category == "accesorios").forEach(product => { %>
+              <article id="article">
+                  <ul>
+                    <div>
+                      <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                    </div>
+                    <div>
+                      <li class="productoNombre"><p><%= product.name %></p></li> 
+                      <li class= "productoAroma"><p><%= "Aroma: " + product['productFragance.fragance'] %></p></li>
+                      <li class= "productoTamanio"><p><%= "Tamaño: " + product['productSize.size'] %></p></li>
+                    </div>
+                    <div class="precioYDescuento">
+                      <h2><%= "$" + product.price %> </h2>
+                      <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
+                    </div>
+                      <div class="cajaChica"> 
+                          <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>" style="color: white"> Detalles </a></p></div>
+                          <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                      </div>
+                  </ul>
+              </article>
+              <% }) %> 
+            </section>
     </main>
     
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->

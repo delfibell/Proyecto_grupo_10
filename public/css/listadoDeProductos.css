@@ -6,6 +6,10 @@ main {
     font-family:  "Teko", sans-serif;
 }
 
+h2 {
+    margin-left:90px;
+}
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -358,3 +362,89 @@ form button {
     left: 170px;
     font-size: 1.2em;
 }
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: rgb(246, 246, 246);
+    list-style: none;
+    position: relative;
+    border: none;
+    padding: 10px;
+    border-radius: 5%;
+    margin-right: 30px;
+  }
+
+article ul {
+    padding-left:0;
+}
+
+.imag {
+    position: relative;
+    border-radius: 5%;
+  }
+
+article .productoNombre {
+    margin-top: 10px;
+    font-size: 1.2em;
+    
+  }
+  .cajaChica {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cajaChica div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  #detalles {
+    width: 45%; 
+    background-color: #D2AFFF;
+    border-radius: 5%;
+  }
+  
+  #detalles p {
+  margin-bottom: 0;
+  text-decoration: none;
+  color: white;
+  }
+  
+  .comprar{
+    width: 45%; 
+    background-color: black;
+    border-radius: 5%;
+    cursor: pointer;
+  }
+  
+  .comprar p {
+    margin-bottom: 0;
+    }
+
+.cajaChica p {
+        display: flex;
+        padding: 10px;
+        color: white;
+      }
+      
+.precioYDescuento {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+      
+.descuento {
+        color:#1e960b;
+      }
+
+a {
+        text-decoration: none;
+      }
