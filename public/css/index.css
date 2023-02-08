@@ -17,6 +17,10 @@ main {
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+}
+
 main h2 {
   text-align: center;
   /* margin: 15px; */
@@ -32,6 +36,8 @@ main h2 {
 
 h1{
   color: black;
+  padding-left: 3%;
+  padding-top: 30px;
 }
 
 /* icono whatsapp flotante */
@@ -113,15 +119,16 @@ article {
   align-items: baseline;
   background-color: rgb(246, 246, 246);
   list-style: none;
-  padding: 8px;
-  margin: 8px;
-  margin-right: 40px;
-  margin-top: 30px;
   position: relative;
-  border: 1px rgb(0, 0, 0) solid;
-  
+  border: none;
+  padding: 10px;
+  border-radius: 5%;
+  margin-right: 30px;
 }
 
+ul {
+  padding-left: 0;
+}
 
 
 article:hover {
@@ -133,14 +140,24 @@ ul {
 }
 
 article .productoNombre {
-  margin: 5px;
-  padding-left: 5px;
+  margin-top: 10px;
   font-size: 1.2em;
   
 }
 
 .imag {
   position: relative;
+  border-radius: 5%;
+}
+
+.precioYDescuento {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.descuento {
+  color:#1e960b;
 }
 
 .corazon{
@@ -173,19 +190,28 @@ article .productoNombre {
   
 }
 
-
-
 #detalles {
-  width: 50%; 
+  width: 45%; 
   background-color: #D2AFFF;
-  margin-right: 5px;
+  border-radius: 5%;
+}
+
+#detalles p {
+margin-bottom: 0;
+text-decoration: none;
+color: white;
 }
 
 .comprar{
-  width: 50%; 
+  width: 45%; 
   background-color: black;
+  border-radius: 5%;
   cursor: pointer;
 }
+
+.comprar p {
+  margin-bottom: 0;
+  }
 
 .comprar:hover {
   background-color: rgb(171, 171, 171);
@@ -203,7 +229,8 @@ article .productoNombre {
   display: none;
   padding: 15px;
   margin-top: 5px;
-  width: 260px
+  width: 260px;
+  word-wrap: break-word;
 }
 
 #txt1 {
