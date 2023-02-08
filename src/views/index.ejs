@@ -8,96 +8,67 @@
   <body>
   <%- include("./partials/header")%> <!-- Se importa el header desde los archivos parciales --> 
     <main>
-      <div id="offers">
-        <h2>NUEVOS PRODUCTOS</h2>
-      </div>
-      <div>
+      <section class="index-banner">
+        <div class="banner">
+         </div>
+      </section>
+     
+      <section class="products-section">
+      <h2 class="products">NUEVOS PRODUCTOS</h2>
+      <section class="cards1"> 
         <% products.filter(product => product.idType == 1).forEach(product => { %>
-          <article id="article">
-              <ul>
-                  <li class="imagen"> <img class="imag" src="/img/catalogo/<%= product.image %>"></li>
-                  <li class="productoNombre"><p><%= product.name %></p></li> 
-                  <h2><%= product.price %></h2>
-                  <div class="cajaChica"> 
-                      <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
-                      <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
-                  </div>
-                  <li id="txt" class="texto"><%= product.description %></li> 
-              </ul>
-          </article>
-          <% }) %> 
-      </div>
+        <article id="article">
+            <ul>
+                <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                <li class="productoNombre"><p><%= product.name %></p></li> 
+                <h2><%= product.price %></h2>
+                <div class="cajaChica"> 
+                    <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
+                    <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                </div>
+                <li id="txt" class="texto"><%= product.description %></li> 
+            </ul>
+        </article>
+        <% }) %> 
+    </section>
 
-      <div id="offers">
-        <h2>OFERTAS</h2>
-      </div>
-      <div id="offers">
-        <h2>MÁS VENDIDOS</h2>
-      </div>
+    <h2 class="products">OFERTAS</h2>
+      <section class="cards1"> 
+        <% products.filter(product => product.idType == 2).forEach(product => { %>
+        <article id="article">
+            <ul>
+                <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                <li class="productoNombre"><p><%= product.name %></p></li> 
+                <h2><%= product.price %></h2>
+                <div class="cajaChica"> 
+                    <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
+                    <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                </div>
+                <li id="txt" class="texto"><%= product.description %></li> 
+            </ul>
+        </article>
+        <% }) %> 
+    </section>
 
-
-
-
-
-
-
-
-
-
-
-
-        <section class="cards">
-          <article id="first-product" class="article">
-            <img class="imag" src="/img/IMG_0175.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-              <div class="contenedorFavoritos">
-                  <a href=""><i id="corazon" class="fa-regular fa-heart"></i></a>
-              </div> 
-            </div>
-          </article>
-          <article id="second-product" class="article">
-            <img class="imag" src="/img/IMG_4335.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="third-product" class="article">
-            <img class="imag" src="/img/IMG_0140.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="fourth-product" class="article">
-            <img class="imag" src="/img/IMG_0149.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="fifth-product" class="article">
-            <img class="imag" src="/img/IMG_0158.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-          </article>
-          <article id="sixth-product" class="article">
-            <img class="imag" src="/img/IMG_0161.jpeg" />
-            <div class="product-description">
-              <p>ombu-shampoo</p>
-              <h3>$ 1500</h3>
-            </div>
-
-            <a href="https://wa.me/1156679986" class="float" target="_blank">
-              <i class="fa-brands fa-whatsapp my-float"></i>
-              </a>
-            
-          </article>
-    
+    <h2 class="products">MÁS VENDIDOS</h2>
+      <section class="cards1"> 
+        <% products.filter(product => product.idType == 3).forEach(product => { %>
+        <article id="article">
+            <ul>
+                <li class="imagen"><img class="imag" src="/img/catalogo/<%= product.image %>" width="260px"></li>
+                <li class="productoNombre"><p><%= product.name %></p></li> 
+                <h2><%= product.price %></h2>
+                <div class="cajaChica"> 
+                    <div id="detalles" class="detalles"><p>+ <a href="products/<%= product.id %>"> Detalles </a></p></div>
+                    <div class="comprar"  onclick="window.open('newurl.html','mywindow');"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i><p>Comprar</p></div> 
+                </div>
+                <li id="txt" class="texto"><%= product.description %></li> 
+            </ul>
+        </article>
+        <% }) %> 
+    </section>
+  </section>
+      
     </main>
 
     <%- include("./partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->

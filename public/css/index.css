@@ -22,6 +22,19 @@ main h2 {
   /* margin: 15px; */
 }
 
+.banner {
+  display: flex;
+  background-image: url("../img/banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+}
+
+h1{
+  color: black;
+}
+
+/* icono whatsapp flotante */
 .float{
 	position:fixed;
 	width:60px;
@@ -54,39 +67,206 @@ main h2 {
 	margin-top:16px;
 }
 
-.cards {
-  width: 100%;
-  padding: 5vw;
+.products-section {
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
 }
 
-.article {
-  width: 100%;
+.cards1 {
   display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  /* padding-bottom: 10px; */
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 70px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 40px;
+  margin: 15px;
+}
+
+.cards2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 50px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  background-color: #beffb4;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 0px;
+
+
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  background-color: rgb(246, 246, 246);
+  list-style: none;
+  padding: 8px;
+  margin: 8px;
+  margin-right: 40px;
+  margin-top: 30px;
+  position: relative;
+  border: 1px rgb(0, 0, 0) solid;
+  
+}
+
+
+
+article:hover {
+  box-shadow: 0px 0px 15px rgb(133, 255, 127); 
+}
+
+ul {
+  list-style: none;
+}
+
+article .productoNombre {
+  margin: 5px;
+  padding-left: 5px;
+  font-size: 1.2em;
+  
 }
 
 .imag {
-  width: 70vw;
-  border-radius: 20px;
+  position: relative;
 }
 
-.product-description {
-  width: 30%;
-  text-align: center;
+.corazon{
+  position: absolute;
+  top: 20px;
+  left: 230px;
+  font-size: 1.2em;
+  color: rgb(255, 255, 255);
 }
 
-.article:hover .product-description {
-  color: #ff9900;
+
+#carrito {
+  color: white;
+  font-size: 0.7em;
+  padding-left: 10px;
 }
 
-@media (max-width: 480px) {
+.cajaChica {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cajaChica div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+#detalles {
+  width: 50%; 
+  background-color: #D2AFFF;
+  margin-right: 5px;
+}
+
+.comprar{
+  width: 50%; 
+  background-color: black;
+  cursor: pointer;
+}
+
+.comprar:hover {
+  background-color: rgb(171, 171, 171);
+}
+
+
+#txt {
+  background-color: rgb(219, 219, 219);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6em;
+  font-family: "Barlow Condensed", sans-serif;
+  display: none;
+  padding: 15px;
+  margin-top: 5px;
+  width: 260px
+}
+
+#txt1 {
+  background-color: rgb(182, 182, 182);
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6em;
+  font-family: "Barlow Condensed", sans-serif;
+  display: none;
+  padding: 15px;
+  margin-top: 5px;
+  width: 200px
+}
+
+
+article:hover #txt {
+  background-color: #cbcbcb;
+  display: block;
+  
+}
+
+
+article:hover #txt1 {
+  background-color: #cbcbcb;
+  display: block;
+}
+
+.cajaChica p {
+  display: flex;
+  padding: 10px;
+  color: white;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1em;
+}
+
+form button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: none;
+border: none;
+font: inherit;
+  font-size: 0.9em;
+  height: 40px;
+  
+}
+
+
+
+
+  /*
+  @media (max-width: 480px) {
   #offers h2 {
     border: solid black 2px;
     border-radius: 5px;
@@ -95,7 +275,6 @@ main h2 {
   }
 
   .cards {
-    width: 100vw;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -116,7 +295,7 @@ main h2 {
     flex-direction: column;
     flex-wrap: nowrap;
     /* align-self: auto; */
-    /* justify-content: space-between; */
+    /* justify-content: space-between; 
     padding: 0%;
     margin-bottom: 30px;
   }
@@ -129,7 +308,7 @@ main h2 {
     display: none;
   }
 
-  /*.carousel-list {
+  .carousel-list {
     display: flex;
     animation: cambio 10s infinite normal linear;
   }
@@ -164,9 +343,8 @@ main h2 {
       margin-left: -200.5%;
     }
   } */
-}
 
-
+/*
 @media (max-width: 1440px) {
   #offers h2 {
     border: solid black 2px;
@@ -197,7 +375,6 @@ main h2 {
   }
 
   .cards {
-    width: 100vw;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -218,7 +395,7 @@ main h2 {
     flex-direction: column;
     flex-wrap: nowrap;
     /* align-self: auto; */
-    /* justify-content: space-between; */
+    /* justify-content: space-between;
     padding: 0%;
     margin-bottom: 30px;
   }
@@ -269,3 +446,6 @@ main h2 {
   }
 }
 
+
+}
+*/
