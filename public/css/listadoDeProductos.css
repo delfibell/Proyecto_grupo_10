@@ -25,7 +25,6 @@ h2 {
 }   
 
 .nav li {
-    border-right: 1px black solid;
     height: 30px;
     text-decoration: none;
     align-items: center;
@@ -37,12 +36,12 @@ h2 {
 .nav a{
     text-decoration: none;
     color: black;
+    transition: 250ms;
 }
 
 .nav a:hover{
-    color: #87FF74;
-    
-    transition-duration: 100ms;
+    color: #adadff;
+  border-bottom: 3px #adadff solid;
 }
 
 #productos{
