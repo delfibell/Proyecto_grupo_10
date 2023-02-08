@@ -375,6 +375,9 @@ article {
     padding: 10px;
     border-radius: 5%;
     margin-right: 30px;
+    padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
   }
 
 article ul {
@@ -448,3 +451,6 @@ article .productoNombre {
 a {
         text-decoration: none;
       }
+.precio {
+    margin-left:0px;
+}

@@ -124,6 +124,9 @@ article {
   padding: 10px;
   border-radius: 5%;
   margin-right: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
 }
 
 ul {
