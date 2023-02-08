@@ -5,7 +5,15 @@ const { Op } = require("sequelize");
 
 let productsControllers = {
   listarProductos: (req, res) => {
-    db.Products.findAll().then(function (products) {
+    db.Products.findAll({
+      raw: true,
+      include: [
+        { association: "productFragance" },
+        { association: "productSize" },
+        { association: "productType" },
+        { association: "productDiscount" },
+      ],
+    }).then(function (products) {
       res.render("products/listadoDeProductos", {
         products,
       });
@@ -44,7 +52,6 @@ let productsControllers = {
         { association: "productDiscount" },
       ],
     }).then(function (product) {
-      console.log(product);
       res.render("products/edicionProducto", { product: product });
     });
   },
@@ -86,9 +93,20 @@ let productsControllers = {
       where: {
         name: { [Op.like]: `%${data}%` },
       },
+      raw: true,
+      include: [
+        { association: "productFragance" },
+        { association: "productSize" },
+        { association: "productType" },
+        { association: "productDiscount" },
+      ],
+    }).then(function (products) {
+      res.render("products/busquedaDeProducto", {
+        products,
+      });
     });
-    const dataArray = products.map((item) => item.dataValues);
-    return res.render("products/busquedaDeProducto", { dataArray });
+    //const dataArray = products.map((item) => item.dataValues);
+    //return res.render("products/busquedaDeProducto", { dataArray });
   },
 };
 
