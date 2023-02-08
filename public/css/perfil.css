@@ -1,23 +1,27 @@
+
+
 .perfilOFT{
     border: 1px solid black;
     display: flex;
     justify-content: center;
-    background-color: rgb(151, 235, 151);
+    background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
+    background-color: #acacac;
+    background-size: contain;
+    background-position: center;
 }
 .contenedorDatos{
     display: flex;
     justify-content:center ;
     align-items: center;
-    width: 80%;
+    width: 50%;
     margin: auto;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    background-color: aliceblue;
+    background-color: white;
 }
 .datosOFT h2{
     text-align: center;
     text-decoration: dashed;
-    border-bottom: 1.5px solid  rgb(151, 235, 151);
+    color:#D2AFFF;
+    font-size: 3rem;
     width: 100%;
     margin-bottom: 0;
     padding-top: 15px;
@@ -26,8 +30,8 @@
 .imgUsuario{
     width: 300px;
     object-fit: contain;
-    padding: 5px;
-    border-radius: 20px;
+    padding: 20px;
+    border-radius: 15%;
 }
 .datosOFT{
     width: 100%;
@@ -54,7 +58,9 @@
 }
 .botonEdit{
     margin: auto;
-    width: 15%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 30%;
     background-color: #D2AFFF;
     border-radius: 20px;
     border: none;
@@ -62,10 +68,9 @@
 .botonEdit a{
     text-decoration:none ;
     color: white;
+    font-size: 1.5rem;
 }
 .contenedorExtra{
-    border-top: 1.5px solid  rgb(151, 235, 151);
-    border-bottom: 1.5px solid  rgb(151, 235, 151);
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -74,13 +79,11 @@
 
 .nombresOFT{
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 15px;
-}
-.descripcionOFT{
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px; 
     padding-top: 40px;
 }

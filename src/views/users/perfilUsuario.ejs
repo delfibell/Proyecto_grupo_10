@@ -13,7 +13,7 @@
             <div class="contenedorDatos">
                 <div class="datosOFT">
                     <div>
-                        <h2>Bienvenido <%= user.firstName %> </h2>
+                        <h2><i class="fa-solid fa-car"></i><br>¡Bienvenidx a tu garage, <%= user.firstName %>!</h2>
                     </div>
                     <div class="imgDatos">
                         <img class="imgUsuario" src="/img/users/<%= user.profilePic %> ">
@@ -22,17 +22,15 @@
                                 <div class="nombresOFT">
                                     <h3>Nombre: <%= " " + user.firstName %> <%= user.lastName %></h3>
                                     <h3>Usuario:<%= " " + user.username %></h3>
+                                    <h3>Email:<%= " " + user.email %></h3>
                                 </div>
-                                <div class="descripcionOFT">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aut natus architecto vitae laboriosam dolor quasi ut, cum facilis ipsa sint odio. Consequatur ad vero natus saepe est beatae ipsam.</p>
-                                </div>
+                            </div>
+                            <div class="contenedorExtra">
+                                <button class="botonEdit"><a href="/users/edit">Editar perfil</a></button> 
                             </div>
                         </div>
                     </div>
-                    <div class="contenedorExtra">
-                        <div class="alert alert-success"><%= user.email %> </div>
-                        <button class="botonEdit"><a href="/users/edit">Editar perfil</a></button> 
-                    </div>
+                    
                 </div>
             </div>
         </div>
