@@ -117,11 +117,6 @@
                 </article>
                 <% }) %>
         </section>
-        <% if(locals.adminLogin){ %>
-        <form class="nuevoProducto" action="/products/create" method="GET">
-            <button type="submit" class="redirec-login">Creá un nuevo producto</button>
-        </form>
-        <% } %> 
     </main>
     
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
