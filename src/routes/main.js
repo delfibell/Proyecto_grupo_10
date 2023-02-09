@@ -4,6 +4,7 @@ const router = express.Router(); //necesario para poder usar los metodos GET, PO
 
 router.get("/", mainControllers.index); //direccionamiento al archivo del controlador requerido segun la url del browser
 router.get("/about", mainControllers.about); //direccionamiento al archivo del controlador requerido segun la url del browser
+router.get("/contact", mainControllers.contact); //direccionamiento al archivo del controlador requerido segun la url del browser
  
 module.exports = router; //necesario para poder requerirlo desde app.js
 
