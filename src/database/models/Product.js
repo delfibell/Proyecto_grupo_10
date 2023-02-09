@@ -52,6 +52,9 @@ module.exports = (sequelize, dataTypes) => {
         key: "id",
       },
     },
+    rating: {
+      type: dataTypes.STRING,
+    },
   };
   let config = {
     tablename: "products",
