@@ -1,0 +1,29 @@
+main {
+    /* top  left-right  bottom */
+    padding: 5% 15% 5%;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #adadff;
+    padding-bottom: 2%;
+}
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-table{
+    max-width: 70%;
+    border-radius: 5%;
+}
+
+.contacto {
+    font-size: 1.2rem;
+}
+
+.fa-solid {
+    color: #adadff
+}
