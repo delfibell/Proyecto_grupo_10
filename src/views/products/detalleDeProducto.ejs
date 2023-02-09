@@ -10,16 +10,7 @@
 
     <main>
     <div class="desktop">
-        <% if(locals.adminLogin){ %>
-            <button><a href="/products/edit/<%= product.id %>">Editar Producto</a> </button>
-            <form
-                action="/products/<%= product.id %>?_method=DELETE"
-                method="POST"
-              >
-            <button>Eliminar Producto</button>
-        </form>
-        <% } %>  
-        <% console.log(product) %> 
+         
         <div class="product">
             <img src="/img/catalogo/<%= product.image %>"  class="main-image">
         </div>
@@ -37,11 +28,35 @@
         </div>
        
         <div class="product-description">
-              <h2><%= product.price %></h2>
-              <p><%= product.description %></p>
+            <div class="precioYDescuento">
+              <h2><%= "$" + product.price %></h2>
+              <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
+            </div>
+            <p><%= product.description %></p>
+            <p><%= "Aroma: " + product['productFragance.fragance'] %></p>
+            <p><%= "Tamaño: " + product['productSize.size'] %></p>
+        </div>
+        <div class="editDelete">
+            <div>
+                <% if(locals.adminLogin){ %>
+                    <button class="editButton"><a href="/products/edit/<%= product.id %>" style="color:black">Editar Producto</a> </button>
+            </div>
+            <div>
+            <form
+            action="/products/<%= product.id %>?_method=DELETE"
+            method="POST"
+                      >
+                    <button class="deleteButton">Eliminar Producto</button>
+                </form>
+                <% } %>
+            </div> 
         </div>
         <div class="product-details">
-              <button class="qty-button">- 1 +</button>
+            <div class="cantidadProducto">
+              <button class="qty-button">-</button>
+              <p>1</p>
+              <button class="qty-button">+</button>
+            </div>
               <button class="add-to-cart-button">Agregar al carrito</button>
         </div>
     </div>
@@ -49,52 +64,17 @@
         <div class="linea-divisora">
             <!-- aca va la linea divisora-->
         </div>
-        <div>
-            <h3>USAR CON</h3>
-            <article>
-                <div class="add-also">
-                  <div>
-                      <img src="/img/cera-int-uva.jpg" class="add-also-images">
-                      <button class="add-also-button" >Agregar al carrito</button>
-                  </div>
-                  <div class="add-also-details">
-                      <h4>Grape wax</h4>
-                      <h4>$ 2000</h4>
-                      <p>Cera de interior con olor a uva. Apta para plásticos y cueros. No se puede utilizar en tela.</p>
-                  </div>
-                      <i class="fa-regular fa-heart"></i>
-                </div>     
-            </article>
-            <article>
-                <div class="add-also">
-                  <div>
-                      <img src="/img/bug-remover.jpeg" class="add-also-images">
-                      <button class="add-also-button" >Agregar al carrito</button>
-                  </div>
-                  <div class="add-also-details">
-                      <h4>Bug remover Leca</h4>
-                      <h4>$ 3500</h4>
-                      <p>Productos especial para sacar bichos de la carrocería de tu vehículo sin dañar la laca ni tratamiento de pintura. 
-                    </p>
-                  </div>
-                      <i class="fa-regular fa-heart"></i>
-                </div>    
-            </article>
-        </div>
-        <div class="linea-divisora">
-            <!-- aca va una linea divisora-->
-        </div>
             <h3>RESEÑAS</h3>
+            <div class="review-punctuation">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p class="buttons">3.2</p>    
+        </div>
             <div class="reviews">
                 <div>
-                    <div class="review-punctuation">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <p class="buttons">5.0</p> 
-                    </div>
                     <p class="review-detail"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, error similique. Animi dignissimos dolorem sit doloribus aspernatur accusantium inventore veritatis alias, amet, adipisci quasi sunt quas voluptatem beatae, nostrum deserunt?</p>
                 </div>
                 <div class="review-arrow">

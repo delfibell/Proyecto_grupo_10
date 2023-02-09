@@ -20,7 +20,15 @@ let productsControllers = {
     });
   },
   detalleProducto: (req, res) => {
-    db.Products.findByPk(req.params.id).then(function (product) {
+    db.Products.findByPk(req.params.id, {
+      raw: true,
+      include: [
+        { association: "productFragance" },
+        { association: "productSize" },
+        { association: "productType" },
+        { association: "productDiscount" },
+      ],
+    }).then(function (product) {
       res.render("products/detalleDeProducto", { product: product });
     });
   },

@@ -26,6 +26,10 @@ img {
     border-radius: 20px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .buttons {
     border: solid 1px #000;
     border-radius: 3px;
@@ -42,7 +46,7 @@ img {
 
 .review {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-top: 20px;
     margin-bottom: 15px;
 }
@@ -63,6 +67,7 @@ img {
 .product {
     display: flex;
     align-items: center;
+    max-width: 500px;
 }
 
 .main-image {
@@ -87,6 +92,19 @@ img {
     
     font-size: 25px;
     bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.precioYDescuento {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+.descuento {
+    color:#1e960b;
 }
 
 .desktop {
@@ -96,13 +114,20 @@ img {
 }
 
 .qty-button {
-    border: solid 2px #000;
+    border: none;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: 18px;
+    font-size: 25px;
+}
+
+.cantidadProducto {
+    display: flex;
+    align-items: baseline;
+    border: solid 1px;
+    border-radius: 10px;
 }
 
 .add-to-cart-button {
@@ -117,6 +142,39 @@ img {
     color: white;
     font-family: teko;
     transition-duration: 450ms;
+}
+
+.deleteButton {
+    border: solid 0px #000;
+    border-radius: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    background-color: #b32525;
+    color: white;
+    font-family: teko;
+    transition-duration: 450ms;
+}
+
+.editButton {
+    border: solid 0px #000;
+    border-radius: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    background-color: #9fe994;
+    color: white;
+    font-family: teko;
+    transition-duration: 450ms;
+    margin-right: 10px;
+}
+
+.editButton p {
+    color:black;
 }
 
 .add-also {
@@ -159,11 +217,15 @@ img {
 
 .review-punctuation {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .review-punctuation i {
     color:#FF9900
+
 }
 
 .review-punctuation p {
@@ -176,12 +238,13 @@ img {
     margin-bottom: 20px;
 }
 
-.corazon {
-    transition-duration: 450ms;
-}
-
 .review-arrow {
     width:10%;
+}
+
+.editDelete {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* A parti de aca estan los hovers */
@@ -278,7 +341,7 @@ article:hover .add-also-details {
     }
     .review {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         margin-top: 20px;
         margin-bottom: 15px;
     }
@@ -287,11 +350,9 @@ article:hover .add-also-details {
     }
     .product-details {
         font-size: 25px;
-        position: absolute;
         bottom: 5px;
     }
     .main-image {
         width: 50vw;
     }
 }
-
