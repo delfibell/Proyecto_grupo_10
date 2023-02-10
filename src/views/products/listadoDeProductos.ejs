@@ -30,6 +30,7 @@
                 </li>
             </ul> 
         
+
         <h2 id="exterior">EXTERIOR</h2>
         <section class="cards1"> 
             <% products.filter(product => product.category == "exterior").forEach(product => { %>
@@ -159,9 +160,14 @@
               </article>
               <% }) %> 
             </section>
+
+            <button class="btn-scrolltop" id="btn_scrolltop">
+              <i class="fas fa-chevron-up"></i>
+            </button>
+
     </main>
     
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
-
+    <script src="js/upButton.js"></script>
 </body>
 </html>
