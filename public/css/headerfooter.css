@@ -181,6 +181,7 @@ header a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  border-bottom-color: white;
 }
 
 .headerSection2 a {

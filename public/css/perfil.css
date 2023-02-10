@@ -1,7 +1,7 @@
 
 
 .perfilOFT{
-    border: 1px solid black;
+    border-top: 1px solid white;
     display: flex;
     justify-content: center;
     background: url('/img/alex-woods-ee5Pqx_OTlQ-unsplash.jpg');
