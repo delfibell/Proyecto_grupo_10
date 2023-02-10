@@ -10,7 +10,7 @@ main {
     
   }
   
-  main .container{
+  .editarProducto{
     flex-wrap: wrap; 
     display: flex;
     justify-content: center;
