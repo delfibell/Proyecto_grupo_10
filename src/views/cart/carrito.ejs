@@ -6,87 +6,48 @@
     </head>
 <body>
 
-    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
-
-    <main>
-        <section class="page-header-sec">
-            <div class="page-header">
-                <div class="titulo">
-                    <h2>TU CARRITO</h2>
-                </div>
-            </div>
-        </section>
-
-        <div class="items">
-            <div class="items-cant">
-                <div class="p-items"><p>ITEMS</p></div>
-                <div class="p-cant"><p>1 item</p></div>
-            </div>
-            <div class="p-precio"><p >$0.00</p></div>
-        </div>
-
-        <section class="principal">
-            <div class="productos">
-                <div class="producto">
-                    <div class="foto-producto">
-                        <img src="/img/ombu-shampoo.jpeg" class="img-principal">
-                    </div>
-                    <div class="datos-producto">
-                        <div class="nombre-producto">
-                            <p>Shampoo Ombu</p>
-                        </div>
-                        <div class="precio-unitario">
-                            <p>$700</p>
-                            <p class="descripcion-prod">500cc</p>
-                        </div>
-                        <div class="agregar-total">
-                            <div class="cantidad-unidades">
-                                <!--este boton tiene que hacer que se sume o se reste una cantidad de producto, lo dejo estático hasta que hagamos ABM-->
-                                <button class="editar-cantidades">- 1 +</button>
-                            </div>
-                            <div class="detalle-total">
-                                <p class="precio-total">$700</p>
+    <body>
+        <%- include("../partials/header")%> 
+            <main id="carrito">
+                <div class="container wow fadeIn animated">
+                    <h2 class="mt-5 mb-3 h2 text-center">TU CARRITO</h2>
+                    <div id="principal" class="card my-5">
+                        <div class="card-body">
+                            <table class="table table-responsive-md mb-0">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 50px;">
+                                            <strong>#</strong>
+                                        </th>
+                                        <th class="th-lg">
+                                            <strong>Producto</strong>
+                                        </th>
+                                        <th class="th-lg ">
+                                            <strong>Precio</strong>
+                                        </th>
+                                        <th class="text-center">
+                                            <strong>Cantidad</strong>
+                                        </th>
+                                        <th class="text-center">
+                                            <strong>Subtotal</strong>
+                                        </th>
+                                        <th style="width: 50px;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="cartRows">
+                                </tbody>
+                            </table>
+                            <div class="card-footer text-right">
+                                <h2>Total: <span class="totalAmount">$ 0</span></h2>
                             </div>
                         </div>
-                        <div class="acciones">
-                            <button class="eliminar">Eliminar</button>
-                        </div>
                     </div>
+                  
+                            <button id="comprar" class="btn btn-primary btn-lg btn-block waves-effect waves-light"
+                                type="submit">Comprar</button>
+                  
                 </div>
-            </div>
-            <div class="resumen-compra">
-                <div class="titulo-resumen"><p>Resumen de compra</p></div>
-                <div class="datos">
-                    <div class="subtotal">
-                        <p>Subtotal</p>
-                        <p>$</p>
-                    </div>
-                    <div class="costo-envio">
-                        <p>Envío</p>
-                        <p>$</p>
-                    </div>
-                    <div class="descuento">
-                        <p>Descuento</p>
-                        <p>$</p>
-                    </div>
-                    <div class="checkout-total">
-                        <p>Total</p>
-                        <p>$</p>
-                    </div>
-                    <div class="checkout">
-                        <!--esto deberiamos verlo pero supongo que redirecciona a Mercado Pago o algo así-->
-                        <form></form>
-                            <button type="submit" class="aplicar-codigo" id="checkout-btn">Checkout</button> 
-                        </form>
-                    </div>
-                    
-                    <div class="bases">
-                        <p>Por favor, chequeá que tu orden sea correcta antes de proceder al checkout. No se permiten cambios por equivocaciones al momento de la compra.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+            </main>
 
     <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
 
