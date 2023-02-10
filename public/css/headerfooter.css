@@ -146,7 +146,7 @@ header a {
 .search-submit:hover{
   color: #D2AFFF;
   border-color:#D2AFFF;
-  
+  transform: scale(1.2);
 }
 
 
