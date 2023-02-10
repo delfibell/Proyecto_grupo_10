@@ -139,13 +139,14 @@ header a {
   transition: 250ms;
 }
 
-.search:hover{
-  border-color:#D2AFFF
+.search:hover, .search:focus{
+  border-color:#D2AFFF;
 }
 
 .search-submit:hover{
   color: #D2AFFF;
-  border-color:#D2AFFF
+  border-color:#D2AFFF;
+  
 }
 
 
