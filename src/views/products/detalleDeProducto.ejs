@@ -10,11 +10,10 @@
 
     <main>
     <div class="desktop">
-         
-        <div class="product">
-            <img src="/img/catalogo/<%= product.image %>"  class="main-image">
-        </div>
         <div class="position">
+            <div class="product">
+                <img src="/img/catalogo/<%= product.image %>"  class="main-image">
+            </div>
 
         <h1><%= product.name %></h1>
         <div class="review">
@@ -57,7 +56,7 @@
               <p>1</p>
               <button class="qty-button">+</button>
             </div>
-              <button class="add-to-cart-button">Agregar al carrito</button>
+              <button class="add-to-cart-button"><a href="/carrito">Agregar al carrito</a></button>
         </div>
     </div>
     </div>
@@ -72,7 +71,7 @@
                 <i class="fa-regular fa-star"></i>
                 <i class="fa-regular fa-star"></i>
                 <p class="buttons">3.2</p>    
-        </div>
+            </div>
             <div class="reviews">
                 <div>
                     <p class="review-detail"> <%= product.rating %></p>

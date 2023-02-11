@@ -139,12 +139,9 @@ a {
     padding-bottom: 5px;
     font-size: 20px;
     background-color: #D2AFFF;
+    color: white;
     font-family: teko;
     transition-duration: 450ms;
-}
-
-.add-to-cart-button a {
-    color: white;
 }
 
 .deleteButton {
