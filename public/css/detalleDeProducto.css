@@ -115,20 +115,13 @@ a {
 }
 
 #quantity {
-    border: none;
+    border: 3px solid #D2AFFF;
     border-radius: 10px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 25px;
-}
-
-.cantidadProducto {
-    display: flex;
-    align-items: baseline;
-    border: solid 1px;
-    border-radius: 10px;
 }
 
 .add-to-cart-button {
