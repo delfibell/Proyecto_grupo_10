@@ -56,6 +56,7 @@ header a {
   font-weight: 700;
   font-size: 1.2rem;
   color: white;
+  margin-top: 15px;
   border-bottom: 0.25rem solid transparent;
   transition: 250ms;
 }
@@ -165,6 +166,7 @@ header a {
 
 .carrito i:hover{
   color: #d8ffd2;
+  transform: scale(1.2);
 }
 
 .carrito i.active {
