@@ -48,7 +48,6 @@ header a {
 }
 
 .navegador{
-  margin-top: 25px;
   display: flex;
   flex-direction: row;
 }
@@ -159,6 +158,7 @@ header a {
   font-size: 1.5rem;
   padding-top: 10px;
   padding-bottom: 15px;
+  margin-top: 15px;
   margin-left: 25px;
   transition: 1000ms;
 }
