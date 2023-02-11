@@ -273,10 +273,6 @@ article:hover .add-also-details {
     color:#FF9900
 }
 
-.corazon:hover {
-    transform: scale(1.2);
-}
-
 @media (max-width: 768px){
     .more-reviews {
         display: none;
