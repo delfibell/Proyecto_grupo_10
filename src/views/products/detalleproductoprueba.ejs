@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("../partials/head")%>
+        <link rel="stylesheet" href="/css/detalleproductoprueba.css">
+    </head>
+<body>
+
+    <%- include("../partials/header")%> <!-- Se importa el header desde los archivos parciales -->
+
+    <main>
+        <section class="detalleProducto">
+            <div class="producto">
+                <div class="imagen">
+                    <img src="/img/catalogo/<%= product.image %>"  class="main-image">
+                </div>
+                <div class="detalles">
+                    <h1 class="product-name"><%= product.name %></h1>
+                        <div class="review">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <p class="buttons">3.2</p>    
+                            <p class="review-font">1 Reseña</p>
+                        </div>
+                    <div class="especificaciones">
+                        <div class="datos">
+                            <div class="precioYDescuento">
+                                <h2 class="product-price"><%= "$" + product.price %></h2>
+                                <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
+                              </div>
+                              <p><%= product.description %></p>
+                              <p><%= "Aroma: " + product['productFragance.fragance'] %></p>
+                              <p><%= "Tamaño: " + product['productSize.size'] %></p>
+                        </div>
+                    </div>
+                    <div class="comprar">
+                        <div class="cantidadProducto">
+                          <button class="qty-button">-</button>
+                          <p>1</p>
+                          <button class="qty-button">+</button>
+                        </div>
+                        <div class="carrito">
+                            <button class="add-to-cart-button"><a href="/carrito">Agregar al carrito</a></button>
+                        </div>
+                    </div>
+                    <div class="product-admin">
+                            <% if(locals.adminLogin){ %>
+                                <button class="editButton"><a href="/products/edit/<%= product.id %>" style="color:black">Editar Producto</a> </button>
+                                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                                <button class="deleteButton">Eliminar Producto</button>
+                                </form>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="reseñas">
+            <div class="rating">
+                <h3>RESEÑAS</h3>
+                <div class="review-punctuation">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p class="buttons">3.2</p>    
+                </div>
+                <div class="review-text">
+                    <p class="review-detail"> <%= product.rating %></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    
+    
+    <%- include("../partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+
+</body>
+</html>

@@ -71,7 +71,8 @@ a {
 }
 
 .main-image {
-    width: 80vw;
+    max-width: 260px;
+    max-height: 340px;
 }
 
 .linea-divisora {

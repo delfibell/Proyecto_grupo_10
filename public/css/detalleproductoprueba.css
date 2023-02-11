@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 main {
@@ -7,20 +9,27 @@ main {
     background-color: #ebebeb;
 }
 
-h1 {
-    padding-top: 30px;
+.producto {
+    display: flex;
+    margin: 10px;
 }
 
-h2 {
-    padding-top: 30px;
+.imagen {
+    display: flex;
+    width: 40%;
+    margin: 10px;
 }
 
-h3 {
-    margin-left: 10%;
-    padding-top: 15px;
-    font-size: 25px;
-
+.main-image {
+    max-width: 260px;
+    max-height: 340px;
 }
+
+
+
+
+
+
 
 img {
     border-radius: 20px;
@@ -139,9 +148,12 @@ a {
     padding-bottom: 5px;
     font-size: 20px;
     background-color: #D2AFFF;
-    color: white;
     font-family: teko;
     transition-duration: 450ms;
+}
+
+.add-to-cart-button a {
+    color: white;
 }
 
 .deleteButton {
