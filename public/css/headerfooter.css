@@ -376,12 +376,12 @@ footer .callUs {
   padding-bottom: 1em;
 }
 
-footer .callUs i {
+.social-media {
   font-size: 1em;
   padding-right: 10px;
 }
 
-footer .callUs i:hover{
+.social-media:hover{
   color: #d8ffd2;
   font-size: 2em;
 }
