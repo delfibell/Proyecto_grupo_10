@@ -34,7 +34,7 @@
               </div>
                 <div class="cajaChica"> 
                     <button id="detalles" class="detalles"><a href="products/<%= product.id %>" style="color: white">Más Detalles </a></button>
-                    <button class="comprar"><a href="/carrito"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Comprar</a></button>
+                    <button class="comprar" data-id="<%= product.id %>"><a href="/carrito"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Comprar</a></button>
                 </div>
             </ul>
         </article>
@@ -60,7 +60,7 @@
             </div>
               <div class="cajaChica"> 
                 <button id="detalles" class="detalles"><a href="products/<%= product.id %>" style="color: white">Más Detalles </a></button>
-                <button class="comprar"><a href="/carrito"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Comprar</a></button>
+                <button class="comprar" data-id="<%= product.id %>"><a href="/carrito"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Comprar</a></button>
               </div>
           </ul>
       </article>
@@ -86,7 +86,7 @@
             </div>
               <div class="cajaChica"> 
                 <button id="detalles" class="detalles"><a href="products/<%= product.id %>" style="color: white">Más Detalles </a></button>
-                <button class="comprar"><a href="/carrito"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Comprar</a></button> 
+                <button class="comprar" data-id="<%= product.id %>"><a href="/carrito"><i id="carrito" class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;&nbsp;Comprar</a></button> 
               </div>
           </ul>
       </article>
@@ -101,6 +101,12 @@
     </main>
 
     <%- include("./partials/footer")%> <!-- Se importa el footer desde los archivos parciales -->
+
+    <!-- Toastr -->
+<script src="/vendor/toastr/toastr.js"></script>
+<!-- Main Script -->
+<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/scripts.js"></script>
 
   </body>
 </html>

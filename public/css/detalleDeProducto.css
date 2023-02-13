@@ -128,7 +128,7 @@ a {
     font-size: 25px;
 }
 
-.add-to-cart-button {
+.comprar {
     border: solid 0px #000;
     border-radius: 10px;
     padding-left: 32px;
@@ -141,7 +141,7 @@ a {
     transition-duration: 450ms;
 }
 
-.add-to-cart-button a {
+.comprar a {
     color: white;
 }
 
@@ -254,7 +254,7 @@ a {
     text-decoration: underline;
 }
 
-.add-to-cart-button:hover {
+.comprar:hover {
     color:#000;
     transform: scale(1.2);
 }
