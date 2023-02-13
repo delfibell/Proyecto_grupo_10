@@ -91,11 +91,15 @@ a {
 
 .product-details {
     
-    font-size: 25px;
+    font-size: 40px;
     bottom: 5px;
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+}
+
+.description {
+    font-size: 1.2rem;
 }
 
 .precioYDescuento {
@@ -272,6 +276,7 @@ article:hover .add-also-images {
 article:hover .add-also-details {
     color:#FF9900
 }
+
 
 @media (max-width: 768px){
     .more-reviews {

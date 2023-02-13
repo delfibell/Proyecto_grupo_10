@@ -31,9 +31,9 @@
               <h2><%= "$" + product.price %></h2>
               <p class="descuento"> <%= product['productDiscount.discount'] + "% OFF"%></p>
             </div>
-            <p><%= product.description %></p>
-            <p><%= "Aroma: " + product['productFragance.fragance'] %></p>
-            <p><%= "Tamaño: " + product['productSize.size'] %></p>
+            <p class="description"><%= product.description %></p>
+            <p class="description"><%= "Aroma: " + product['productFragance.fragance'] %></p>
+            <p class="description"><%= "Tamaño: " + product['productSize.size'] %></p>
         </div>
         <div class="editDelete">
             <div>
