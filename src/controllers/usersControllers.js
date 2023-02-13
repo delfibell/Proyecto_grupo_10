@@ -15,18 +15,18 @@ const usersControllers = {
         oldData: req.body,
       });
     }
-
+    console.log(req.body.email);
     db.Users.findByPk(req.body.email).then(function (user) {
       if (user) {
         return res.render("users/formularioDeRegistro", {
           errorInEmail: {
             msg: "Este email ya está registrado",
           },
-          oldData: req.body 
+          // oldData: req.body
         });
       }
     });
-    console.log(req.body);
+
     const isAdmin = req.body.email.endsWith("@oft.com");
     const admin = isAdmin ? "1" : "2";
     db.Users.create({
