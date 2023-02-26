@@ -1,0 +1,7 @@
+.nav-link.active {
+  color: white !important;
+}
+
+.nav-link.active i {
+  color: white !important;
+}
