@@ -4,7 +4,7 @@ import LastProductInDb from "./LastProductCard";
 function BigCardRow() {
   return (
     <div className="row">
-      {/* <!-- Last Movie in DB --> */}
+      {/* <!-- Last Product in DB --> */}
       <LastProductInDb />
       <UsersInDbCard />
     </div>

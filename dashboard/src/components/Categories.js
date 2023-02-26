@@ -32,13 +32,13 @@ class Categories extends Component {
     );
   }
 
-  async componentDidMount() {
-    const response = await fetch("http://localhost:3000/api/categories/detail");
-    const categoriesListData = await response.json();
-    this.setState({
-      categories: categoriesListData.categories,
-    });
-  }
+  // async componentDidMount() {
+  //   const response = await fetch("http://localhost:3000/api/categories/detail");
+  //   const categoriesListData = await response.json();
+  //   this.setState({
+  //     categories: categoriesListData.categories,
+  //   });
+  // }
 }
 
 export default Categories;

@@ -6,7 +6,7 @@ import logo from "../assets/logo1.png";
 function SideBar() {
   return (
     <ul
-      className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"
+      className="navbar-nav bg-dark sidebar sidebar-dark accordion"
       id="accordionSidebar"
     >
       {/* <!-- Sidebar - Brand --> */}
@@ -16,7 +16,7 @@ function SideBar() {
           href="/"
         >
           <div className="sidebar-brand-icon">
-            <img className="w-75" src={logo} alt="OFT" />
+            <img className="w-25" src={logo} alt="OFT" />
           </div>
         </a>
       }
@@ -28,7 +28,7 @@ function SideBar() {
       <li className="nav-item ">
         <NavLink className="nav-link" to="/" exact activeClassName="active">
           <i className="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard - Enruedas</span>
+          <span>Dashboard - OFT</span>
         </NavLink>
       </li>
 
@@ -36,13 +36,13 @@ function SideBar() {
       <hr className="sidebar-divider" />
 
       {/* <!-- Heading --> */}
-      <div className="sidebar-heading">Actions</div>
+      <div className="sidebar-heading">¿Qué estás buscando?</div>
 
       {/* <!-- Nav Item - Usuarios --> */}
       <li className="nav-item">
         <NavLink className="nav-link" to="/users" activeClassName="active">
           <i className="fas fa-fw fa-folder"></i>
-          <span>Productos por categoria</span>
+          <span>Productos por categoría</span>
         </NavLink>
       </li>
 
@@ -54,7 +54,7 @@ function SideBar() {
           activeClassName="active"
         >
           <i className="fas fa-fw fa-chart-area"></i>
-          <span>Ultimo producto</span>
+          <span>Último producto</span>
         </NavLink>
       </li>
 
@@ -62,7 +62,7 @@ function SideBar() {
       <li className="nav-item">
         <NavLink className="nav-link" to="/products" activeClassName="active">
           <i className="fas fa-fw fa-table"></i>
-          <span>Productos</span>
+          <span>Todos los productos</span>
         </NavLink>
       </li>
 

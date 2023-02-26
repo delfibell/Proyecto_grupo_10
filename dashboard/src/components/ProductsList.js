@@ -13,7 +13,7 @@ class ProductsList extends Component {
   }
 
   async updateProducts() {
-    const response = await fetch(`http://localhost:3000/api/products`);
+    const response = await fetch(`http://localhost:3030/api/products`);
     const productsData = await response.json();
 
     this.setState({
@@ -44,15 +44,8 @@ class ProductsList extends Component {
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nombre</th>
-              <th scope="col">Año</th>
-              <th scope="col">Color</th>
-              <th scope="col">Puertas</th>
-              <th scope="col">Transmision</th>
-              <th scope="col">Motor</th>
-              <th scope="col">Descripcion</th>
-              <th scope="col">Precio de lista</th>
-              <th scope="col">Descuento</th>
-              <th scope="col">Precio final</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Precio</th>
             </tr>
           </thead>
           <tbody>
@@ -61,15 +54,8 @@ class ProductsList extends Component {
                 <tr key={product.id}>
                   <th scope="row">{product.id}</th>
                   <td>{product.name}</td>
-                  <td>{product.manufacture_year}</td>
-                  <td>{product.color}</td>
-                  <td>{product.door_number}</td>
-                  <td>{product.transmission}</td>
-                  <td>{product.motor_type}</td>
                   <td>{product.description}</td>
                   <td>{product.price}</td>
-                  <td>{product.discount} %</td>
-                  <td>{product.price * ((100 - product.discount) / 100)}</td>
                 </tr>
               );
             })}

@@ -5,3 +5,8 @@
 .nav-link.active i {
   color: white !important;
 }
+
+body {
+  margin: 0;
+  font-family: "Nunito";
+}
