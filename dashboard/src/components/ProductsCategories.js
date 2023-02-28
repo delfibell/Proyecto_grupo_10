@@ -37,23 +37,21 @@ class ProductsList extends Component {
     return (
       <>
         <div className="d-sm-flex align-items-center justify-content-between mb-4">
-          <h1 className="h3 mb-0 text-gray-800">Listado de productos</h1>
+          <h1 className="h3 mb-0 text-gray-800">Productos por categoria</h1>
         </div>
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Descripción</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Total Productos</th>
             </tr>
           </thead>
           <tbody>
             {this.state.products.map((product) => {
               return (
-                <tr key={product.id}>
-                  <th scope="row">{product.id}</th>
-                  <td>{product.name}</td>
-                  <td>{product.description}</td>
+                <tr key={product.category}>
+                  <th scope="row">{product.name}</th>
+                  <td>{product.id}</td>
                 </tr>
               );
             })}

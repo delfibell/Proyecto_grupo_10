@@ -1,23 +1,21 @@
 import "../assets/styles.css";
-function BigCard({ product }) {
+function BigCard2({ user }) {
   return (
     <div>
       <div className="col-lg-6 mb-4">
         <div className="card shadow mb-4">
           <div className="card-header py-3">
             <h5 className="m-0 font-weight-bold text-gray-800">
-              {product.name}
+              {user.username}
             </h5>
           </div>
           <div className="card-body">
-            <div className="lastProduct">
-              <img
-                className="lastProductImage"
-                src={product.image}
-                alt="image"
-              />
+            <div className="lastUser">
+              <img className="lastUserImage" src={user.img} alt="image" />
             </div>
-            {product.description}
+            <div>{user.firstName}</div>
+            <div>{user.lastName}</div>
+            <div>{user.email}</div>
           </div>
         </div>
 
@@ -34,4 +32,4 @@ function BigCard({ product }) {
   );
 }
 
-export default BigCard;
+export default BigCard2;

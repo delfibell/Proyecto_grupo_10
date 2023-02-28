@@ -5,7 +5,7 @@ export default function LastProductInDb() {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3030/api/products")
+    fetch("http://localhost:3030/api/products/")
       .then((value) => value.json())
       .then((value) => {
         const product = value;
@@ -17,19 +17,8 @@ export default function LastProductInDb() {
   }, []);
 
   return (
-    <BigCard title="Último producto en base de datos">
-      <div className="text-center">
-        <h4>{product.name}</h4>
-        <img
-          className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-          style={{
-            width: "40rem",
-          }}
-          src={product.image}
-          alt={product.name}
-        />
-      </div>
-      <p>{product.description}</p>
-    </BigCard>
+    <div>
+      <BigCard product={product} />
+    </div>
   );
 }

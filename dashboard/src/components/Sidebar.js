@@ -26,7 +26,12 @@ function SideBar() {
 
       {/* <!-- Nav Item - Dashboard --> */}
       <li className="nav-item ">
-        <NavLink className="nav-link" to="/" exact activeClassName="active">
+        <NavLink
+          className="nav-link"
+          to="/panel"
+          exact
+          activeClassName="active"
+        >
           <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard - OFT</span>
         </NavLink>
@@ -38,9 +43,21 @@ function SideBar() {
       {/* <!-- Heading --> */}
       <div className="sidebar-heading">¿Qué estás buscando?</div>
 
+      {/* <!-- Nav Item - Tables --> */}
+      <li className="nav-item">
+        <NavLink className="nav-link" to="/products" activeClassName="active">
+          <i className="fas fa-fw fa-table"></i>
+          <span>Todos los productos</span>
+        </NavLink>
+      </li>
+
       {/* <!-- Nav Item - Usuarios --> */}
       <li className="nav-item">
-        <NavLink className="nav-link" to="/users" activeClassName="active">
+        <NavLink
+          className="nav-link"
+          to="/productsCategories"
+          activeClassName="active"
+        >
           <i className="fas fa-fw fa-folder"></i>
           <span>Productos por categoría</span>
         </NavLink>
@@ -58,11 +75,11 @@ function SideBar() {
         </NavLink>
       </li>
 
-      {/* <!-- Nav Item - Tables --> */}
+      {/* <!-- Nav Item - Charts --> */}
       <li className="nav-item">
-        <NavLink className="nav-link" to="/products" activeClassName="active">
-          <i className="fas fa-fw fa-table"></i>
-          <span>Todos los productos</span>
+        <NavLink className="nav-link" to="/last-user" activeClassName="active">
+          <i className="fas fa-fw fa-chart-area"></i>
+          <span>Último Usuario</span>
         </NavLink>
       </li>
 

@@ -10,3 +10,16 @@ body {
   margin: 0;
   font-family: "Nunito";
 }
+
+.lastProduct {
+  display: flex;
+  justify-content: center;
+}
+
+.lastProductImage {
+  width: 300px;
+}
+
+.lastUserImage {
+  width: 300px;
+}

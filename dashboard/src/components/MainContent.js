@@ -1,9 +1,10 @@
 import { Route, Switch } from "react-router-dom";
 import DashboardContent from "./DashboardContent";
 import Footer from "./Footer";
-import UsersInDbCard from "./UsersInDBCard";
 import LastProductInDb from "./LastProductCard";
+import LastUserInDb from "./LastUserCard";
 import ProductsList from "./ProductsList";
+import ProductsCategories from "./ProductsCategories";
 import TopBar from "./TopBar";
 
 function MainContent() {
@@ -14,10 +15,11 @@ function MainContent() {
 
         <div className="container-fluid">
           <Switch>
-            <Route path="/" exact component={DashboardContent} />
-            <Route path="/users" component={UsersInDbCard} />
-            <Route path="/last-product" component={LastProductInDb} />
+            <Route path="/panel" exact component={DashboardContent} />
             <Route path="/products" component={ProductsList} />
+            <Route path="/productsCategories" component={ProductsCategories} />
+            <Route path="/last-product" component={LastProductInDb} />
+            <Route path="/last-user" component={LastUserInDb} />
           </Switch>
         </div>
       </div>
