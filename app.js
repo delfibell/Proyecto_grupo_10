@@ -10,6 +10,7 @@ const usersRoutes = require("./src/routes/users");
 const cartRoutes = require("./src/routes/cart");
 const notFoundRoutes = require("./src/routes/notFound");
 const apiRoutes = require("./src/routes/api");
+const cors = require("cors");
 
 const methodOverride = require("method-override"); //requerimiento del metodo override para poder utilizar PUT
 const app = express(); //necesario para poder usar todos los metodos de express que aparecen abajo
@@ -25,6 +26,7 @@ app.use(
   })
 );
 
+app.use(cors());
 app.use(cookies());
 
 app.use(loggedMiddleware);

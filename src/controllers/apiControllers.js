@@ -35,6 +35,25 @@ const apiControllers = {
     });
   },
 
+  reactUsers: async (req, res) => {
+    const count = await db.Users.count();
+    const allUsers = await db.Users.findAll();
+    const users = allUsers.map((user) => {
+      return {
+        id: user.id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        username: user.username,
+        img: `http://localhost:3030/img/users/${user.profilePic}`,
+      };
+    });
+    res.status(200).json({
+      count,
+      users,
+    });
+  },
+
   products: async (req, res) => {
     const count = await db.Products.count();
     const allProducts = await db.Products.findAll();
@@ -44,6 +63,7 @@ const apiControllers = {
         name: product.name,
         description: product.description,
         categories: product.category,
+        image: `http://localhost:3030/img/catalogo/${product.image}`,
         detail: `http://localhost:3030/api/products/${product.id}`,
       };
     });

@@ -100,6 +100,7 @@ a {
 
 .description {
     font-size: 1.2rem;
+    width: 500px;
 }
 
 .precioYDescuento {
@@ -127,6 +128,7 @@ a {
     padding-bottom: 5px;
     font-size: 25px;
     width: 155px;
+    text-align: center;
 }
 
 .comprar {
